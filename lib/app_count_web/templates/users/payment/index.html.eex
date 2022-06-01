@@ -1,0 +1,210 @@
+<script>
+  function autopayModal(){
+    $('#autopayModal').modal({
+      show: true
+    })
+  }
+
+  function autopayCollapse(e){
+    e.childNodes[1].className === "fas fa-chevron-right text-success" ?
+      e.childNodes[1].className = "fas fa-chevron-down text-success" :
+      e.childNodes[1].className = "fas fa-chevron-right text-success"
+  }
+</script>
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 text-sm-left mb-0">
+    <h3 class="page-title">
+    </h3>
+  </div>
+</div>
+<div class="container">
+  <!-- Payment Terms Modal - 1 time payment -->
+  <div class="modal" id="agreementTermsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="padding: 0px 20px 0px 20px;">
+        <div class="modal-header">
+          <h5 class="modal-title pt-2" id="exampleModalLongTitle">Payment Terms Agreement</h5>
+          <button type="button" class="close pr-0" data-dismiss="modal" aria-label="Cancel">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="overflow-auto" style="max-height:25em" id="agreementTerms">
+          <%= raw(@agreement_text) %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" id="oneTimePaymentIAgree">I Agree</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Payment Terms Modal -->
+  <div class="row">
+    <div class="col">
+      <div class="card card-small mb-4" style="background-color:#f6fbf8">
+        <div class="spinner-overlay" id="spinner-overlay">
+          <div class="spinner-container">
+            <i class="fas fa-cog fa-spin text-secondary"></i>
+          </div>
+        </div>
+        <%= if @active_lock do %>
+          <div class="spinner-overlay d-flex align-items-center justify-content-center" style="font-size: 185%">
+            <div class="spinner-container">
+              <i class="fas fa-lock fa-2x text-secondary"></i>
+              <div class="ml-3" style="font-weight: bold">
+                Your account has been locked.<br/>Reason: <%= @active_lock.reason %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="card-header border-bottom d-flex justify-content-between px-4 bg-transparent">
+          <div class="d-flex flex-column">
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0 small" style="color:#8f949a">Payment Due Date: </h6>
+              <h6 class="mb-0 small" style="color:#4f505d;"><%= due_date(@billing_info) %></h6>
+            </div>
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0 small" style="color:#8f949a">Autopay: </h6>
+              <h6 class="mb-0 small" style="color:#4f505d;"><%= enable_disable(@autopay, :inverse) %>d</h6>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-end">
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0 small" style="color:#8f949a">Amount Due: </h6>
+              <h6 class="mb-0 text-danger small"><%= number_to_currency(total_due(@billing_info)) %></h6>
+            </div>
+          </div>
+        </div>
+        <div class="card-header border-bottom d-flex justify-content-between px-4 bg-transparent">
+          <div class="d-flex flex-column">
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0" style="color:#8f949a">MoneyGram</h6>
+            </div>
+            <div class="d-flex">
+              <a href="https://www.moneygram.com/mgo/us/en/locations" target="_blank">
+                <h6 class="mr-2 mb-0 small" style="color:#8f949a">Find Locations</h6>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-end">
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0 small" style="color:#8f949a">Company Receive Code: </h6>
+              <h6 class="mb-0 text-info small">17178</h6>
+            </div>
+            <div class="d-flex">
+              <h6 class="mr-2 mb-0 small" style="color:#8f949a">Account Number: </h6>
+              <h6 class="mb-0 text-info small"><%= account_num(@user.property.id) %><%= @user.id %></h6>
+            </div>
+          </div>
+        </div>
+        <%= if @user.payment_status == "approved" || @active_lock do %>
+          <form id="oneTimePayment">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-4 bg-transparent">
+                <div class="row">
+                  <div class="form-group col-sm-6 labeled-box flex-auto px-3">
+                    <select id="paymentSource" class="form-control">
+                      <%= Enum.map @payment_sources, fn ps -> %>
+                        <option value="<%= ps.id %>" data-type="<%= ps.type %>" <%= if ps.is_default do "selected" end %>>
+                          <%= payment_source_display_name(ps) %>
+                        </option>
+                      <% end %>
+                    </select>
+                    <div class="labeled-box-label mx-3">Payment Method</div>
+                  </div>
+                  <div class="form-group col-sm-6 labeled-box flex-auto px-3">
+                    <select id="paymentType" class="form-control">
+                      <option selected value="<%= total_due(@billing_info) %>">
+                      Pay All: <%= number_to_currency(total_due(@billing_info)) %>
+                      </option>
+                      <option value="<%= total_due(@billing_info) %>">
+                      Pay Current: <%= number_to_currency(total_due(@billing_info)) %>
+                      </option>
+                      <option value="custom">Pay Custom</option>
+                    </select>
+                    <div class="labeled-box-label mx-3">Payment</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6 labeled-box flex-auto px-3">
+                    <input id="paymentAmount" type="number" name="amount" class="form-control" step="0.01"/>
+                    <div class="labeled-box-label mx-3">Amount</div>
+                  </div>
+                  <div class="form-group col-sm-6 labeled-box flex-auto px-3">
+                    <button
+                      <%= if length(@payment_sources) == 0, do: "disabled" %>
+                      class="btn btn-primary btn-block"
+                    >
+                      Pay
+                    </button>
+                  </div>
+                </div>
+                <div class="row" id="surcharge-text-container">
+                  <div class="col-sm-12 flex-auto px-3">
+                    <p id="surchargeText"></p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+          <a class="mb-3 text-success ml-4" style="font-size:13px;" href="/payment_sources">Add payment method</a>
+          <ul class="list-group list-group-flush" >
+            <%= if is_list(@billing_info) do %>
+              <%= Enum.map @billing_info, fn(i) ->  %>
+                <li class="list-group-item px-4 d-flex justify-content-between bg-transparent">
+                  <div style="background-color: transparent; color:#8f949a"><%= i.date %></div>
+                  <div style="background-color: transparent; color:#4f505d">
+                    <%= number_to_currency(i.balance) %>
+                  </div>
+                </li>
+              <% end %>
+            <% end %>
+            <li class="list-group-item px-4 bg-transparent">
+              <div class="d-flex justify-content-between">
+                <strong class="text-muted d-block " >AutoPay</strong>
+                <button onClick="autopayModal(this)" class="btn btn-outline-success badge-pill px-4">
+                  Update Autopay
+                </button>
+              </div>
+            </li>
+          </ul>
+        <% else %>
+          <div class="text-danger text-center p-4">
+            <h6 class="m-0 text-danger">Your account is currently blocked from making online payments.</h6>
+            <h6 class="text-danger">Please contact your property manager or support@apprent.com for further details.</h6>
+          </div>
+        <% end %>
+      </div>
+      <%= render "_autopay_form.html", assigns %>
+    </div>
+    <div class="col">
+      <div class="card card-small mb-4">
+        <div class="card-header border-bottom" style="background-color:#f6fbf8">
+          <h6 style="font-size:12px; color:#8f949a" class="d-flex justify-content-between mb-0">
+            <span>Payment History</span>
+          </h6>
+        </div>
+        <ul class="list-group list-group-flush">
+          <%= Enum.map @payments, fn(p) ->  %>
+            <li class="list-group-item px-4 d-flex justify-content-between align-items-center">
+              <div style="line-height: 0.6em">
+                <h5 style="font-size:14px; color:#676a73;" class="m-0"><%= number_to_currency(p.amount) %></h5>
+                <span style="font-size:10px"  class="text-muted"><%= p.date %></span>
+              </div>
+              <div class="text-right" style="line-height: 1.05em">
+                <div style="font-size:11px"  class="m-0 text-muted">
+                  <%= if p.brand do %>
+                    <%= String.capitalize(p.brand) %> - <%= p.num %>
+                  <% else %>
+                    <%= p.description %>
+                  <% end %>
+                </div>
+                <span class="text-muted">Transaction ID: <%= p.transaction_id %></span>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

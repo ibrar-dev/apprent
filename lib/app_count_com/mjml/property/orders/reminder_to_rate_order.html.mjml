@@ -1,0 +1,41 @@
+<mj-text>
+  Hello <%= @tenant %> from AppRent.
+</mj-text>
+<mj-text>
+  Your work order #<%= @ticket %> has been completed.
+</mj-text>
+<mj-text>
+	Please remember to rate your work order.
+</mj-text>
+<mj-table>
+    <tr>
+        <td style="width: 1px; white-space: pre; padding-bottom: 5px">
+            Please rate this work order &nbsp;
+        </td>
+        <td style="width: 1px;">
+          <a href="https://<%= @property.code %>.apprent.com/work_orders/<%= @id %>/rate">
+            <img src="<%= AppCount.env()[:home_url] %>/images/grey-star.png" width="30" />
+          </a>
+        </td>
+        <td style="width: 1px;">
+            <a href="https://<%= @property.code %>.apprent.com/work_orders/<%= @id %>/rate">
+                <img src="<%= AppCount.env()[:home_url] %>/images/grey-star.png" width="30" />
+            </a>
+        </td>
+        <td style="width: 1px;">
+          <a href="https://<%= @property.code %>.apprent.com/work_orders/<%= @id %>/rate">
+            <img src="<%= AppCount.env()[:home_url] %>/images/grey-star.png" width="30" />
+          </a>
+        </td>
+        <td style="width: 1px;">
+           <a href="https://<%= @property.code %>.apprent.com/work_orders/<%= @id %>/rate">
+             <img src="<%= AppCount.env()[:home_url] %>/images/grey-star.png" width="30" />
+           </a>
+        </td>
+        <td>
+          <a href="https://<%= @property.code %>.apprent.com/<%= @id %>/rate">
+            <img src="<%= AppCount.env()[:home_url] %>/images/grey-star.png" width="30" />
+          </a>
+        </td>
+    </tr>
+</mj-table>

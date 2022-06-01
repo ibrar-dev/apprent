@@ -1,0 +1,63 @@
+<script>
+  $('.collapse').collapse()
+  function toggleCard() {
+    const icon = this.querySelector('i.fas');
+    icon.classList.toggle('fa-angle-down');
+    icon.classList.toggle('fa-angle-up');
+  }
+ </script>
+
+<div class="container">
+  <div class="row" style="width:1200px">
+     <div class="col-md-4">
+     <div class="card my-4">
+      <div  class="d-flex align-items-center justify-content-center">
+        <img class="img-fluid" src= <%= @property_info.logo %> />
+      </div>
+      <div style="text-align:center; margin-top:15px;">
+       <h6 style="font-size:13px;text-align:center; color:#adadad;"><%= @property_info.address["street"] %></h6>
+       <h6 style="font-size:13px;text-align:center; color:#adadad;"><%= @property_info.address["city"] %>, <%= @property_info.address["state"]%> <%= @property_info.address["zip"] %></h6>
+      </div>
+      <div style="text-align:center; margin-bottom:60px">
+        <%= for {type, url} <- @property_info.social do %>
+          <a href="<%= url %>" target="_blank">
+            <i class="fab fa-<%= icon(type) %>" style="font-size:19px; margin:10px; color:#22994c"></i>
+          </a>
+        <% end %>
+       <!-- <i class="fab fa-facebook-f" style="font-size:19px; margin:10px; color:#22994c"></i>
+       <i class="fab fa-instagram" style="font-size:20px; margin:10px; color:#22994c"></i>
+       <i class="fab fa-twitter" style="font-size:20px; margin:10px; color:#22994c"></i> -->
+      </div>
+      </div>
+     </div>
+     <div class="col-md-8">
+      <div class="container my-4" style="text-align:center;">
+        <h5 style=" color:#22994c;"> Meet Our Team </h5>
+        <h6 style="margin-top:15px; margin-bottom:25px; font-size:14px; color:#737373;"> A mixture of experience, creativity and passion</h6>
+        <div class="container" style="padding-bottom:120px;">
+          <div class="row justify-content-center">
+            <%= Enum.map @property_info.team, fn s -> %>
+              <div class="col-md-25 p-0">
+                <div class="card card-small" onclick="toggleCard.call(this)" data-toggle="collapse" data-target="#s<%= s["id"] %>" style="width:247px; margin:10px; cursor:pointer; position:relative;" >
+                  <img class="card-img-top" height= "201" alt="Card image cap" src= "<%= s["image"] %>" onerror="this.src='images/userGreen.png';" style="" />
+                  <div class="card-body" style= "padding-bottom: 0px; padding:0px">
+                    <div style="background-color: #f6fbf8">
+                      <h6 class="card-title" style="font-size:15px; color:#7d7d7d; margin:0px; padding-top:10px;"><%= s["name"] %></h6>
+                      <h6 class="card-title" style="font-size:11px; color:#afafaf; padding-bottom:10px; "><%= s["title"] || "Title" %></h6>
+                    </div>
+                    <div class="collapse" id="s<%= s["id"] %>" style="text-align:left;">
+                      <p class="card-text m-0" style="font-size:14px; color:#afafaf; font-weight:normal; margin: 10px; padding: 15px;" id="user<%= s["id"] %>" ><%= s["bio"] %></p>
+                    </div>
+                   </div>
+                   <div class="text-center">
+                     <i class="fas fa-angle-down text-center" style="font-size:20px; color:#22994c;"></i>
+                   </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>

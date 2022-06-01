@@ -1,0 +1,196 @@
+<div class="container" style="padding-left:60px; padding-right:60px;">
+  <div class="col">
+    <div id="welcomeMessage" class="d-flex flex-column justify-content-center" style="font-size: 1.4em; margin-bottom:100px; margin-top:100px;"></div>
+    <div class="card mb-4 pt-0 my-4">
+      <div class="d-flex">
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+          <div>
+            <div class="row d-flex justify-content-center" >
+              <img src=<%= image_url(@property_info.icon) %> height="80" width="80"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8" style="background-color: #f6fbf8; border-top-right-radius:0.625rem; border-bottom-right-radius:0.625rem">
+          <div style="background-color: transparent; padding-top: 10px; padding-bottom: 10px" class="border-bottom">
+            <h6 class="mb-0" style="font-size: 18px; font-weight: bold">Payment</h6>
+          </div>
+          <div class="d-flex" style="padding-right:80px; padding-left:80px;background-color: #f6fbf8;">
+            <div class="col mt-3">
+              <div class="row d-flex flex-column">
+                <button
+                  onClick="autopayModal(this)",
+                  class="btn badge badge-pill badge-success mb-2"
+                  style="background-color:white; border:solid; border-width:thin; border-color:#22994c; color:#22994c"
+                  <%= if @active_lock && @active_lock.enabled do "disabled" end %>
+                >
+                  Autopay <%= if @autopay && @autopay.active do "enabled" else "disabled" end %>
+                </button>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h6 style="font-size: 10px; margin:0px; color:#7A8089">Due</h6>
+                  <h6 style="font-size: 10px; color:#22994c;"><%= due_date_short(@billing_info) %></h6>
+                </div>
+                <div class="col">
+                  <h6 style="font-size: 10px; margin:0px; color:#7A8089">Amount</h6>
+                  <h6 style="font-size: 10px; color:#22994c;"><%= number_to_currency(total_due(@billing_info)) %></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col mt-3 mx-3">
+              <div class="row">
+                <div class="col">
+                  <a
+                    href="/payments"
+                    style="width:100%; margin-bottom:10px; background-color:#22994c; color:white;"
+                    class="badge badge-pill"
+                  >
+                    Pay
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <a
+                    href="/payment_sources"
+                    style="width:100%; background-color:white; border:solid; border-width:thin; border-color:#22994c; color:#22994c"
+                    class="badge badge-pill badge-success"
+                  >
+                    Edit Payment Methods
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <div class="card  mb-4 pt-0" id="maintenanceButton" style="cursor:pointer;">
+          <div class="border-bottom" style=" background-color: transparent; padding-top: 10px; padding-bottom: 10px; margin-Left:30px; margin-right:30px;">
+            <h6 class="mb-0" style="font-size: 12px; font-weight: bold">Maintenance</h6>
+          </div>
+          <div class="card-body">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <h3 style="margin-bottom:0px; color:#22994c;"><%= length(filtered_orders(@orders, ["unassigned", "assigned"])) %></h3>
+                  </div>
+                  <div class="row">
+                    <h6 style="font-size:12px">open orders</h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row d-flex justify-content-end">
+                    <img src="/images/tools.png" style="height:50px"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card  mb-4 pt-0" id="rewardButton" style="cursor: pointer">
+          <div class="border-bottom" style="background-color: transparent; padding-top: 10px; padding-bottom: 10px; margin-Left:30px; margin-right:30px;">
+            <h6 class="mb-0" style="font-size: 12px; font-weight: bold">Rewards</h6>
+          </div>
+          <div class="card-body">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <h3 style="margin-bottom:0px; color:#22994c;"><%= @points %></h3>
+                  </div>
+                  <div class="row">
+                    <h6 style="font-size:12px">points</h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row d-flex justify-content-end">
+                    <img src="/images/medal.png" style="height:50px"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 pt-0" id="packageButton" style="cursor: pointer">
+          <div class="border-bottom" style="background-color: transparent; padding-top: 10px; padding-bottom: 10px; margin-Left:30px; margin-right:30px;">
+            <h6 class="mb-0" style="font-size: 12px; font-weight: bold">Packages</h6>
+          </div>
+          <div class="card-body">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <h3 style="margin-bottom:0px; color:#22994c;"><%= length(filter_packages(@packages, "Pending")) %></h3>
+                  </div>
+                  <div class="row">
+                    <h6 style="font-size:12px">packages</h6>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row d-flex justify-content-end">
+                    <img src="/images/gift-box.png" style="height:50px"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render AppCountWeb.Users.PaymentView, "_autopay_form.html", assigns %>
+</div>
+<script>
+  $('#autopayToggle').click(() => {
+    const icon = $('#autopayToggleIcon');
+    if (icon.hasClass('fa-chevron-right')) {
+      icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+    } else {
+      icon.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+    }
+  });
+</script>
+
+<script type="text/javascript">
+  document.getElementById("rewardButton").onclick = function () {
+    location.href = "/rewards";
+  };
+  document.getElementById("maintenanceButton").onclick = function () {
+    location.href = "/work_orders";
+  };
+  document.getElementById("packageButton").onclick = function () {
+    location.href = "/packages";
+  };
+</script>
+
+<script >
+  function welcomeMessage(name) {
+    var currentHour = new Date().getHours();
+    if (currentHour < 12) {
+      return `Good morning ${name}, welcome to AppRent.`
+    } else if (currentHour < 18) {
+      return `Good afternoon ${name}, welcome to AppRent.`
+    } else {
+      return `Good evening ${name}, welcome to AppRent.`
+    }
+  }
+  document.getElementById("welcomeMessage").innerText = welcomeMessage("<%= @conn.assigns.user.name %>")
+</script>
+<script>
+  function autopayModal(){
+    $('#autopayModal').modal({
+      show: true
+    })
+  }
+</script>

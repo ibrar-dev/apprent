@@ -1,0 +1,285 @@
+.logo {
+  width: 150px;
+}
+.spinner-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 400%;
+  z-index: 100;
+  display: none;
+  .spinner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn-round{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-round-outline{
+  background-color: transparent;
+  border: none;
+  color: #22994c;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+button:focus {outline:0;}
+
+.dropzone {
+  text-align: center;
+  border: 1px solid #e1e5eb;
+  padding: .75rem;
+  position: relative;
+  border-radius: .375rem;
+  will-change: border-color,background;
+  transition: border-color 250ms ease-in-out,background 250ms ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  //img {
+  //  width: 100%;
+  //  position: absolute;
+  //  z-index: 90;
+  //  top: 0;
+  //}
+  input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+.table td{
+  border-bottom: 1px solid #dee2e6;
+  border-top:none;
+}
+.circle-icon {
+  box-shadow: 0 0 0 1px white, inset 0 0 3px rgba(0, 0, 0, 0.2);
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.table.data-table {
+  td {
+    padding: 0.3rem 0.75rem;
+  }
+}
+.rewards-button {
+  padding: 1px 1px 0 0;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #439c05;
+  i {
+    text-shadow: 0 0 1px #296003;
+  }
+}
+
+.login-screen-flash {
+  border-radius: 11px 11px 0 0;
+  margin: -30px -34px 20px -33px;
+}
+
+///////////////////////
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #22994c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #22994c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+///////////////////////
+
+
+
+
+//.bootstrap-switch-container {
+//  height:8px;
+//}
+//.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary{
+// font-size: 0px;
+//  padding:0px;
+//}
+//////////////////////////////
+.labeled-box {
+  position: relative;
+  margin-top: 20px;
+
+  .labeled-box-label {
+    display: inline-block;
+    background: white;
+    font-size: 70%;
+    position: absolute;
+    left: 10px;
+    top: -6px;
+    padding: 0 3px;
+    color: #5b697a;
+  }
+
+  input:focus + .labeled-box-label {
+    color: #319a36;
+    border-color: #319a36;
+  }
+}
+
+.circle {
+  width: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  border: 4px solid #d9d9da;
+}
+
+.rectangle {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.circle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+
+.rectangle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 70%;
+}
+
+.circle > img {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  //opacity: 0;
+  transition: opacity .4s;
+}
+
+.rectangle > img {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.circle > img.tallAndNarrow {
+  width: 100%;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  left: 0;
+  height: auto;
+}
+
+.rectangle > img.wide {
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  left: 0;
+  height: auto;
+}
+
+.circle > img.loaded {
+  opacity: 1;
+}
+
+.rectangle > img.loaded {
+  opacity: 1;
+}

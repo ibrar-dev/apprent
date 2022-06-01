@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AppRent | <%= if assigns[:title], do: @title %></title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/admin.css") %>">
+    <%= use_log_rocket(@conn)%>
+    <script>
+      window.admin_id = '<%= @conn.assigns.admin.id %>';
+      window.current_user = '<%= @conn.assigns.admin.name %>';
+      window.user = {name:'<%= @conn.assigns.admin.name %>', id: '<%= @conn.assigns.admin.id %>'};
+      window.properties = <%= raw @conn.assigns.properties %>;
+      window.roles = <%= raw inspect(MapSet.to_list(@roles)) %>;
+      window.url = '<%= AppCount.namespaced_url("administration") %>';
+		</script>
+    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <link rel="icon" href="<%= Routes.static_path(@conn, "/images/favicon.png") %>" sizes="any" type="image/png">
+  </head>
+
+  <body style="background-color: white;" class="app">
+    <div id="loading-container"></div>
+    <div id="snackbar-container"></div>
+    <div id="app-modal"></div>
+    <div class="app-body">
+     
+      <main class="main" role="main">
+        <%= if get_flash(@conn, :error) do %>
+          <p class="alert alert-danger"><%= get_flash(@conn, :error) %></p>
+        <% end %>
+        <ol class="breadcrumb mb-0" style="display:none">
+          <li class="breadcrumb-item"><a href="#/">Home</a></li>
+        </ol>
+        <div class="container-fluid" style="padding:5px">
+          <%= render "_header.html", title: "title", conn: @conn %>
+          <%= @inner_content %>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="<%= Routes.static_path(@conn, "/js/sidebar.js") %>"></script>
+</html>

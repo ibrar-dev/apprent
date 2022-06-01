@@ -1,0 +1,57 @@
+.SingleDatePickerInput {
+  .DateInput_input__focused {
+    border-bottom: none;
+  }
+}
+
+.SingleDatePickerInput_clearDate__small {
+  padding: 7px 4px;
+  margin: 0;
+  display: flex;
+}
+
+.form-control {
+  .DateInput_input__small {
+    padding: 0;
+  }
+}
+
+.SingleDatePicker_picker {
+  .DayPicker_weekHeaders {
+    display: none;
+  }
+  .CalendarMonth_caption {
+    padding-bottom: 0;
+    font-size: 80%;
+    .list-unstyled {
+      border-style: none;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+  .react-dates-label {
+    cursor: pointer;
+    padding: 0.36rem 0.5rem;
+    font-size: 115%;
+  }
+  .react-dates-date-select {
+    max-height: 200px;
+    left: -1px;
+    top: 35px;
+    overflow: scroll;
+    width: calc(100% + 2px);
+    a:hover {
+      background: #f2f2f2;
+    }
+  }
+}
+
+.CalendarMonth_table_1 {
+  td:not(.CalendarDay), th:not(.CalendarDay) {
+    border-top: inherit;
+  }
+  td, th {
+    padding: inherit;
+    vertical-align: inherit;
+  }
+}

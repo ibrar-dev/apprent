@@ -1,0 +1,19 @@
+<div class="row">
+  <%= Enum.map @leads, fn lead -> %>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <div class="card-title">
+          <h4><%= lead.name %></h4>
+        </div>
+        <div class="card-subtitle">
+          <%= lead.email %>
+        </div>
+        <div class="card-text">
+          <button class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

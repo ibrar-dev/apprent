@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#find the total number of functions inside lib and test
+function_count=$(find lib  -type f -exec grep -Hn "[Rr]epo\."  {} \;   | wc -l)
+
+#find the number of functions with "client_schema" inside the function args
+client_schema_function_count=$(find lib  -type f -exec grep -Hn "[Rr]epo\..*prefix"  {} \;  | wc -l)
+
+echo "The percentage of Repo calls with prefix in the args is"
+echo "scale=2;$client_schema_function_count/$function_count * 100" | bc

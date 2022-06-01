@@ -1,0 +1,12 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+  Your service request <%= @ticket %> has been completed by <%= @vendor %>.
+</mj-text>
+<mj-text>
+	Please feel free to reach out to the office if you would like to provide any feedback on the order.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

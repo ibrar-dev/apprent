@@ -1,0 +1,24 @@
+<div>
+  <%= form_for @conn, Routes.session_path(@conn, :create), [as: :create], fn f -> %>
+    <div class="d-flex justify-content-between">
+      <h1>Sign in to AppRent</h1>
+      <div class="pull-right">
+        <img src="images/logo.png" alt="Smiley face"  width="200px">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <%= text_input f, :email, class: "form-control", placeholder: "Email" %>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <%= password_input f, :password, class: "form-control", placeholder: "Password" %>
+    </div>
+    <div class="btn-group btn-block mt-4">
+	 		<%= submit "Login", class: "btn btn-ngt w-75" %>
+	 		<a href="/forgot_password" class="btn btn-ngt w-25">
+	 			Forgot Password
+	 		</a>
+    </div>
+  <% end %>
+</div>

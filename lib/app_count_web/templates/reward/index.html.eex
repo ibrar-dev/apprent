@@ -1,0 +1,4 @@
+<div id="rewards-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/rewards.js") %>"></script>

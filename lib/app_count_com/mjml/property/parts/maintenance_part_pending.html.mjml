@@ -1,0 +1,19 @@
+<mj-text>
+	Hello <%= @name %>
+</mj-text>
+
+<mj-text>
+	You are receiving this notification because your work order has been assessed, and certain parts need to be ordered.
+</mj-text>
+
+<mj-text>
+	The part necessary to complete your work order is <%= @part.name %>.
+</mj-text>
+
+<mj-text>
+	We will notify you when the part has been ordered.
+</mj-text>
+
+<mj-text>
+	Thank You
+</mj-text>

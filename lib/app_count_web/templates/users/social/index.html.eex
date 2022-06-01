@@ -1,0 +1,698 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="helpers/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+    if(localStorage.getItem("columnOrder") != "null"){
+      var currentOrder = JSON.parse(localStorage.getItem("columnOrder"));
+      var previousOrder = document.getElementById("sortableCol")
+      for(i = 0; i < 4; i++){
+       const element = document.createElement("div")
+       element.id = currentOrder[i];
+       element.style = "margin-top:10px; margin-bottom:10px;";
+       previousOrder.replaceChild(element,previousOrder.childNodes[i+1]);
+      }
+      } else {
+      }
+    })
+
+    $(function(){
+        $("#weather2").load("modules/weather.html.eex");
+    });
+
+    $(function(){
+        $("#package").load("modules/package.html.eex");
+    });
+
+    $(function(){
+        $("#payment").load("modules/payments.html.eex");
+     });
+
+    $(function(){
+        $("#maintenance").load("modules/maintenance.html.eex");
+     });
+
+    $(window).scroll(function() {
+        if($(window).scrollTop() == $(document).height() - $(window).height()) {
+           setTimeout(function(){ document.getElementById("mButton").style = "margin-top:15px; margin-bottom:15px; padding:6px; height:50px; width:50px; border-radius:50%;"; }, 1000);
+        }
+    });
+
+</script>
+
+<script>
+const weatherHttp = new XMLHttpRequest();
+const weatherHttp2 =  new XMLHttpRequest();
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=<%= @property_info.lat %>&lon=<%= @property_info.lng %>&units=imperial&APPID=b7fb4db4c09d4f59947c659d0d7330e2';
+const urlForcast = 'https://api.openweathermap.org/data/2.5/forecast?lat=<%= @property_info.lat %>&lon=<%= @property_info.lng %>&units=imperial&APPID=b7fb4db4c09d4f59947c659d0d7330e2';
+weatherHttp.open("GET", url);
+weatherHttp.send();
+
+var readyCheck = setInterval(function() {
+if (document.getElementById("weather") != null && weatherHttp.responseText !== "") {
+  document.getElementById("weather").style = " width: 300px; text-align:center; box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);";
+  if(localStorage.colorMode == "dark"){
+  document.getElementById("weather").style.backgroundColor = "#2f2f31"
+  document.getElementById("weather").childNodes[3].childNodes[1].style.color = "#868e96"
+  document.getElementById("weather").childNodes[3].childNodes[3].style.color = "#868e96"
+  document.getElementById("weather").childNodes[3].childNodes[5].style.color = "#868e96"
+  } else {
+  document.getElementById("weather").style.backgroundColor = "#F5F5E2";
+  }
+  const data = JSON.parse(weatherHttp.responseText)
+  document.getElementById("humidity").innerHTML = data.main.humidity + "%";
+  document.getElementById("pressure").innerHTML = data.main.pressure;
+  document.getElementById("speed").innerHTML = data.wind.speed;
+  document.getElementById("weather").childNodes[3].childNodes[1].innerHTML = data.name +", <%= @property_info.address["state"]%>";
+  document.getElementById("weather").childNodes[3].childNodes[3].innerHTML = data.weather[0].main;
+  document.getElementById("weather").childNodes[3].childNodes[5].innerHTML = data.main.temp + "°";
+ clearInterval(readyCheck);
+}
+}, .5);
+
+weatherHttp2.open("GET", urlForcast);
+weatherHttp2.send();
+var forcastDict = {};
+var readyCheck2 = setInterval(function() {
+  if (document.getElementById("weather") != null && weatherHttp2.responseText !== "") {
+     const data = JSON.parse(weatherHttp2.responseText);
+     var startDate = 0;
+     data.list.forEach((x, index) => {
+        var date = new Date(x.dt * 1000);
+        index === 0 && (startDate = date.getDay());
+        forcastDict[date.getDay()] ? forcastDict[date.getDay()].push(x) :  forcastDict[date.getDay()] = [x] ;
+     });
+     var count = 0;
+     var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+     while (count < 6 ){
+        document.getElementById(`${count}`).innerHTML = days[startDate];
+        document.getElementById(`${count}`).parentElement.value = startDate;
+        startDate < 6 ?  startDate ++ : startDate = 0;
+        count++;
+
+     }
+     clearInterval(readyCheck2);
+  }
+}, .5);
+
+    function dateSelected(element){
+        document.getElementById("weatherList").innerHTML = '';
+        forcastDict[element.childNodes[1].parentNode.value].forEach(x => {
+        var listItem = document.createElement("div");
+        listItem.className = `list-group-item`;
+        listItem.style = "padding: 0px; color:#868686; background-color: #f7f7ed; border-color:#eaead4";
+        var row = document.createElement("div");
+        row.className = 'row';
+        var col = document.createElement("div");
+        var col2 = document.createElement("div");
+        var col3 = document.createElement("div");
+        var img = document.createElement("img");
+        var date = new Date(x.dt * 1000);
+        img.src = 'http://openweathermap.org/img/w/' + x.weather[0].icon +".png";
+        img.height = 30;
+        col.className = 'col d-flex align-items-center justify-content-center';
+        col2.className = 'col';
+        col3.className = 'col d-flex align-items-center justify-content-center';
+        col.innerHTML = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        col2.appendChild(img);
+        col3.innerHTML = x.main.temp + "°";
+        row.appendChild(col);
+        row.appendChild(col2);
+        row.appendChild(col3);
+        listItem.appendChild(row);
+        document.getElementById("weatherList").appendChild(listItem).appendChild(row)
+        })
+    }
+
+    var readyCheck3 = setInterval(function() {
+       if (document.getElementById("packages") != null) {
+          document.getElementById("packages").style = "width: 300px; text-align:center; box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);";
+          localStorage.colorMode == "dark" ? document.getElementById("packages").style.backgroundColor = "#2f2f31" : document.getElementById("packages").style.backgroundColor = "#F5F5E2";
+          const pendingLength = <%= length(Enum.filter(@property_package, fn x -> x.status == "Pending" end)) %>
+          document.getElementById("packageNotification").innerHTML = pendingLength
+          clearInterval(readyCheck3);
+       }
+    }, .5);
+
+    var button = 0;
+    var countPack = 0;
+    function packageSelect(element){
+        var alreadyOpen = false
+        if (document.getElementById("packageList").childNodes[1] != null && (button != 1)){
+            alreadyOpen = true;
+        }
+        button = 1;
+        document.getElementById("packageList").innerHTML = ""
+        <%= Enum.map(@property_package, fn x -> %>
+            <%= if x.status == "Pending" do %>
+                var listItem = document.createElement("div");
+                listItem.className = `list-group-item`;
+                listItem.style = "padding: 0px; color:#868686; background-color: #f7f7ed; border-color:#eaead4"
+                var row = document.createElement("div");
+                row.className = 'row';
+                var col = document.createElement("div");
+                var col2 = document.createElement("div");
+                var col3 = document.createElement("div");
+                var date = new Date("<%= x.inserted_at %>");
+                col.className = 'col d-flex align-items-center justify-content-center';
+                col2.className = 'col';
+                col3.className = 'col d-flex align-items-center justify-content-center';
+                col.innerHTML = "<%= x.carrier %>";
+                col2.innerHTML = "<%= x.status %>";
+                col3.innerHTML = date.toLocaleDateString();
+                row.appendChild(col);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                listItem.appendChild(row);
+                document.getElementById("packageList").appendChild(listItem).appendChild(row)
+            <% end %>
+        <% end) %>
+        if(!alreadyOpen){$("#packageListCollapse").collapse("toggle");}
+    }
+
+    function packageHistory(element){
+        var alreadyOpen = false
+        if (document.getElementById("packageList").childNodes[1] != null && (button !== 2)){
+            alreadyOpen = true;
+        }
+        button = 2;
+        document.getElementById("packageList").innerHTML = ""
+        <%= Enum.map(@property_package, fn x -> %>
+            <%= if x.status != "Pending" do %>
+                var listItem = document.createElement("div");
+                listItem.className = `list-group-item`;
+                listItem.style = "padding: 0px; color:#868686; background-color: #f7f7ed; border-color:#eaead4"
+                var row = document.createElement("div");
+                var img = document.createElement("i");
+                img.className = 'fa fa-check';
+                var img2 = document.createElement("i");
+                img2.className = 'fa fa-times';
+                row.className = 'row';
+                var col = document.createElement("div");
+                var col2 = document.createElement("div");
+                var col3 = document.createElement("div");
+                var date = new Date("<%= x.inserted_at %>");
+                col.className = 'col-5 d-flex align-items-center justify-content-center';
+                col2.className = 'col';
+                col3.className = 'col-5 d-flex align-items-center justify-content-center';
+                col.innerHTML = "<%= x.carrier %>";
+                "<%= x.status %>" === 'Delivered' ? col2.appendChild(img) : col2.appendChild(img2);
+                col3.innerHTML = date.toLocaleDateString();
+                row.appendChild(col);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                listItem.appendChild(row);
+                document.getElementById("packageList").appendChild(listItem).appendChild(row);
+            <% end %>
+        <% end) %>
+        if(!alreadyOpen){$("#packageListCollapse").collapse("toggle");}
+    }
+
+var paymentCheck = setInterval(function() {
+    if (document.getElementById("payments") != null && document.getElementById("userBalance")!= null) {
+        document.getElementById("payments").style = " width: 300px; text-align:center; box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);";
+        if(localStorage.colorMode == "dark"){
+        document.getElementById("payments").style.backgroundColor = "#2f2f31"
+        document.getElementById("payments").childNodes[1].childNodes[3].childNodes[1].childNodes[1].childNodes[1].style.color = "#868e96"
+        document.getElementById("payments").childNodes[1].childNodes[3].childNodes[1].childNodes[3].childNodes[1].style.color = "#868e96"
+        }else
+        {
+        document.getElementById("payments").style.backgroundColor = "#F5F5E2";
+        }
+        var balance = <%= @user_balance.balance %>
+        document.getElementById("userBalance").innerHTML = "$" + Number(balance).toFixed(2);
+        var dueDate = '<%= @user_balance.due_date%>';
+        document.getElementById("userDueDate").innerHTML = dueDate;
+        clearInterval(paymentCheck);
+    }
+}, .5);
+
+
+function paymentHistory(element){
+    document.getElementById("paymentList").innerHTML = '';
+    <%= Enum.map(@user_payments, fn x -> %>
+        var listItem = document.createElement("div");
+        listItem.className = `list-group-item`;
+        listItem.style = "padding: 0px; color:#868686; background-color: #f7f7ed; border-color:#eaead4"
+        var row = document.createElement("div");
+        row.className = 'row';
+        var col = document.createElement("div");
+        var col2 = document.createElement("div");
+        col.className = 'col d-flex align-items-center justify-content-center';
+        col2.className = 'col';
+        col.innerHTML = "$<%= x.amount %>";
+        col2.innerHTML = "<%= x.date %>";
+        row.appendChild(col);
+        row.appendChild(col2);
+        listItem.appendChild(row);
+        document.getElementById("paymentList").appendChild(listItem).appendChild(row);
+    <% end) %>
+    $("#paymentListCollapse").collapse("toggle");
+}
+
+var orderCheck = setInterval(function() {
+    if (document.getElementById("maintenances") != null) {
+        document.getElementById("maintenances").style = " width: 300px; text-align:center; box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);";
+        localStorage.colorMode == "dark" ? document.getElementById("maintenances").style.backgroundColor = "#2f2f31" : document.getElementById("maintenances").style.backgroundColor = "#F5F5E2";
+        clearInterval(orderCheck);
+    }
+}, .5);
+
+var mainButton = 0;
+var countPack = 0;
+function maintenanceHistory(element){
+  var alreadyOpen = false
+  if(document.getElementById("maintenanceList").childNodes[1] != null && (mainButton !== 1)){
+    alreadyOpen = true;
+  }
+  mainButton = 1;
+  document.getElementById("maintenanceList").innerHTML = "";
+  <%= Enum.map @user_orders, fn x -> %>
+     <%= if List.last(x.assignments)["status"] == "completed" do %>
+         var listItem = document.createElement("div");
+         listItem.className = `list-group-item`;
+         listItem.style = "padding: 7px; color:#868686; background-color: #f7f7ed; border-color:#eaead4; text-align: left";
+         var row = document.createElement("div");
+         var row2 = document.createElement("span");
+         var col = document.createElement("div");
+         row.className = 'row';
+         row2.className = 'badge badge-pill badge-success';
+         row2.style = "position: relative; left:-8%; margin-top:4px;";
+         col.className = 'col';
+         col.style = "padding-left: ";
+         row.innerHTML = '<%= x.category %>';
+         row2.innerHTML = '<%= List.last(x.assignments)["status"] %>';
+         col.appendChild(row);
+         col.appendChild(row2);
+     document.getElementById("maintenanceList").appendChild(listItem).appendChild(col);
+    <% end %>
+  <% end %>
+  if(!alreadyOpen){$("#maintenanceListCollapse").collapse("toggle");}
+}
+
+function maintenanceSelect(element){
+var alreadyOpen = false;
+  if (document.getElementById("maintenanceList").childNodes[1] != null && (mainButton !== 2)){
+      alreadyOpen = true;
+  }
+  mainButton = 2;
+  document.getElementById("maintenanceList").innerHTML = "";
+  document.getElementById("maintenanceList").innerHTML = '';
+  <%= Enum.map(@user_orders, fn x -> %>
+     <%= if List.last(x.assignments)["status"] != "completed" do %>
+        var listItem = document.createElement("div");
+        listItem.className = `list-group-item`;
+        listItem.style = "padding: 7px; color:#868686; background-color: #f7f7ed; border-color:#eaead4; text-align: left";
+        var row = document.createElement("div");
+        var row2 = document.createElement("span");
+        var col = document.createElement("div");
+        row.className = 'row';
+        row2.className = 'badge badge-pill badge-danger';
+        row2.style = "position: relative; left:-8%; margin-top:4px;";
+        col.className = 'col';
+        col.style = "padding-left: ";
+        row.innerHTML = '<%= x.category %>';
+        row2.innerHTML = 'Pending';
+        col.appendChild(row);
+        col.appendChild(row2);
+        document.getElementById("maintenanceList").appendChild(listItem).appendChild(col);
+     <% end %>
+  <% end) %>
+  if(!alreadyOpen){$("#maintenanceListCollapse").collapse("toggle");}
+}
+
+function postToggle(){
+  $("#postAreaCollapse").collapse("toggle");
+  document.getElementById("postArea").value = "";
+}
+
+function setColumn(){
+  setTimeout(
+      function(){
+        var currentOrder = [];
+
+          for(i = 0; i < 9; i++){
+            var element = document.getElementById("sortableCol");
+             switch(element.childNodes[i].id){
+               case "weather2" :
+                 currentOrder.push("weather2")
+                 break;
+               case "payment" :
+                 currentOrder.push("payment")
+                 break;
+               case "package" :
+                 currentOrder.push("package")
+                 break;
+               case "maintenance" :
+                 currentOrder.push("maintenance")
+                 break;
+               default:
+             }
+          }
+          localStorage.setItem("columnOrder", JSON.stringify(currentOrder));
+      }, 1000);
+  }
+
+$( function() {
+    $("#sortableCol").sortable({placeholder: "ui-state-highlight",helper:'clone',change: setColumn});
+  } );
+
+function fixAspect(img) {
+   var $img = $(img),
+      width = $img.width(),
+      height = $img.height(),
+      tallAndNarrow = width / height < 1;
+   if(tallAndNarrow){
+      $img.addClass('tallAndNarrow');
+   }
+   $img.addClass('loaded');
+}
+
+function reportSelected(element){
+  if(document.getElementsByClassName("active-report").length != 0){
+    document.getElementsByClassName("active-report")[0].className = "list-group-item report-reason";
+  }
+  element.className = "list-group-item report-reason active-report";
+  document.getElementById("reportButton").setAttribute('reason', element.getAttribute("value"));
+  document.getElementById("reportButton").disabled = false;
+}
+function colorMode(element){
+if(element.parentNode.parentNode.parentNode.style["background-color"] == "rgb(245, 245, 226)"){
+localStorage.setItem("colorMode","dark");
+location.reload();
+}else{
+localStorage.setItem("colorMode","light");
+location.reload();
+}
+}
+
+</script>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+  <div class="d-flex justify-content-center colorModeBack">
+     <div class="row" height="100%" style="background-color:transparent; width:1200px">
+        <div class="col" style="padding-left:0px; background-color: transparent">
+            <div class="card" style="margin-top:10px;width: 100%; width:270px; background-color:white ; border-radius:0px;box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);">
+            <div class="container">
+            <div class="row colorMode1" style="">
+                <div class="col d-flex align-items-center" style="padding-top:12px; padding-bottom: 12px">
+                <div class="circle colorMode2 align-items-center" >
+                  <img  src="<%= @user.profile_pic %>" onload='fixAspect(this);' onerror="this.src='images/noUserImage.svg';"/>
+                </div>
+                </div>
+              <div class="col d-flex align-items-center ">
+                 <div>
+                 <img src='images/sun.svg' height="20px" style="position: absolute; top: 5px; right:5px; cursor: pointer;" onclick="colorMode(this)">
+                 <div class="row">
+                 <h5 class="colorMode5" style="color:#9b9c8a"><%= @user.name %></h5>
+                 </div>
+                 <div class="row">
+                 <h5 style="color:#ababab;">@isaacy</h5>
+                 </div>
+                 </div>
+              </div>
+            </div>
+            </div>
+              <div class="card-body colorMode2" style="padding-top: 10px; padding-bottom: 10px">
+                 <div class="row">
+                    <div class="col">
+                        <div class="row d-flex justify-content-center" style="color:#bbbbbb; font-size: 12px">
+                        POSTS
+                        </div>
+                        <div class="row d-flex justify-content-center" style="color:#3bca74;">
+                        <%= length(@user_posts) %>
+                        </div>
+                    </div>
+                    <div class="col" style="opacity:.5">
+                        <div class="row d-flex justify-content-center" style="color:#bbbbbb; font-size: 12px">
+                        FRIENDS
+                        </div>
+                        <div class="row d-flex justify-content-center" style="color:#3bca74;">
+                        0
+                        </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <div class="card colorMode2" style="width: 100%; width:270px; margin-top: 10px; box-shadow: 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0px 0rem 0rem rgba(90, 97, 105, 0.1), 0 0.25rem 1rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);">
+              <div class="container">
+              <div class="card-body " style="padding:15px; ">
+                <div class=" row d-flex justify-content-between" >
+                <h6 style="font-size: 14px; margin-bottom: 0px; color:#b3b3b3;">Total Points: </h6>
+                <h6 style="font-size: 14px; margin-bottom: 0px; color:#3bca74;"> <%= format_number(@points) %></h6>
+                </div>
+                <div class="row">
+                  <%= Enum.map @rewards, fn reward -> %>
+                    <% percent = Decimal.div(@points, Decimal.new(reward.points)) |> Decimal.mult(Decimal.new(100)) %>
+                    <div class="my-2 d-flex align-items-center" style="width:100%;">
+                      <div>
+                        <div class="circle-icon mr-2 d-flex align-items-center">
+                          <img class="w-100" src="<%= reward.icon %>" onerror="this.src='images/gold-medal.svg';"/>
+                        </div>
+                      </div>
+                      <div style="flex: auto">
+                        <div class="d-flex justify-content-between">
+                          <strong class="text-muted d-block" style="font-size:13px;"><%= reward.name %></strong>
+                          <strong class="text-muted d-block" style="font-size:13px;"><%= format_number(reward.points) %></strong>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="progress progress-sm mt-0 mr-3" style="flex: auto">
+                            <div id="progress-bar-example-1"
+                                 class="progress-bar" style="width: <%= percent %>%"></div>
+                          </div>
+                          <div class="badge badge-primary badge-pill" style="color: #bbbbbb; background-color: transparent; font-size: 13px;"><%= Decimal.round(percent) %> %</div>
+                        </div>
+                      </div>
+                    </div>
+                   <% end %>
+                   </div>
+              </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-6" style="padding-left:0px; padding-right:0px;background-color: transparent ">
+          <div class="container" style="margin-top:10px;">
+             <div class= "row colorMode2">
+                <nav class="nav nav-pills flex-column flex-sm-row colorMode2" style="width:100%; border-radius:0px; background-color:white; border-bottom: 1px solid #eaeaea;">
+                   <a class="flex-sm text-sm-center nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true" style="width:18%; border-radius:0px;" >All</a>
+                   <a class="flex-sm text-sm-center nav-link" id="pills-you-tab" data-toggle="pill" href="#pills-you" role="tab" aria-controls="pills-you" aria-selected="true" style="width:18%; border-radius:0px;">You</a>
+                   <a class="flex-sm text-sm-center nav-link" id="pills-events-tab" data-toggle="pill" href="#pills-events" role="tab" aria-controls="pills-events" aria-selected="true" style="width:18%; border-radius:0px;">Events</a>
+                   <i class="fas fa-edit" style="font-size: 25px; color:#73b939; cursor: pointer; position: relative; left:40%; top: 14%" onclick="postToggle(this)" href="#postAreaCollapse"></i>
+                </nav>
+             </div>
+             <div class= "row">
+                <div class="collapse" id="postAreaCollapse" style="width:100%">
+                   <%= form_for @post, Routes.user_social_path(@conn, :create), fn f -> %>
+                      <div class="card colorMode2" style="width:100%; border-radius:0%; box-shadow: none">
+                         <div class="card-body colorMode2" style="padding:15px;">
+                            <%= textarea f, :text, class: "form-control", rows: 5 %>
+                         </div>
+                         <div class="card-footer colorMode2" style="padding-top:0px; padding-bottom: 15px; padding-left: 15px;">
+                            <button type="submit" class="btn btn-primary btn-sm" onclick="packageSelect(this)">Share</button>
+                         </div>
+                      </div>
+                   <% end %>
+                </div>
+             </div>
+            <div class="row" id="timeLine" style="min-height:200px;">
+
+            </div>
+            <div id="buttonMore" class="d-flex justify-content-center" style="width:100%">
+            </div>
+          </div>
+        </div>
+        <div class="col" id="sortableCol" style="padding-right:0px;background-color: transparent">
+            <div class="sortable" id="payment" style="margin-bottom: 5px; margin-top: 10px"></div>
+            <div class="sortable" id="weather2" style="margin-bottom: 5px; margin-top: 10px"></div>
+            <div class="sortable" id="package" style="margin-bottom: 5px; margin-top: 10px"></div>
+            <div class="sortable" id="maintenance" style="margin-bottom: 5px; margin-top: 10px"></div>
+        </div>
+     </div>
+  </div>
+  <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          Select your reason for reporting this post?
+          <ul class="list-group" style="margin-top: 15px;">
+            <li class="list-group-item report-reason" onclick="reportSelected(this)" value="offensive language">This post uses offensive language</li>
+            <li class="list-group-item report-reason" onclick="reportSelected(this)" value="spam">This post is spam </li>
+            <li class="list-group-item report-reason" onclick="reportSelected(this)" value="inappropiate">This post is inappropriate </li>
+            <li class="list-group-item report-reason" onclick="reportSelected(this)" value="other">other</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary report" id="reportButton" disabled="true">Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="helpers/moment.js"></script>
+<script type="text/javascript" src="helpers/times.js"></script>
+<script>
+currentPostChunk = 0;
+var button = document.createElement("button");
+   button.style = "margin-top:15px; margin-bottom:15px; padding:6px; height:50px; width:50px; border-radius:50%; display:none;";
+   button.innerHTML = "More";
+   button.className = "btn btn-outline-primary btn-sm";
+   button.id = "mButton";
+   document.getElementById("buttonMore").appendChild(button);
+
+document.getElementById("mButton").onclick = function() {
+   if("<%= length(@posts) %>" != currentPostChunk){
+       document.getElementById(`post-chunk-${currentPostChunk + 1}`).style = "display:inline; width:100%;";
+       currentPostChunk ++;
+       document.getElementById("mButton").style = "margin-top:15px; margin-bottom:15px; padding:6px; height:50px; width:50px; border-radius:50%; display:none;";
+   }
+};
+
+
+var postCount = 0;
+var start = 0;
+if(start == 0){
+    loadPosts();
+}
+
+function loadPosts(){
+  var chunkCount = 0;
+  <%= Enum.map(Enum.chunk_every(Enum.sort(Enum.concat(@posts, @events), fn d1, d2 -> NaiveDateTime.compare(d1.inserted_at, d2.inserted_at) == :gt end), 14), fn post -> %>
+  var postChunk = document.createElement("div");
+  postChunk.style = chunkCount != 0 ? "display:none; width:100%" : "width:100%"
+  postChunk.id = "post-chunk-" + chunkCount;
+  document.getElementById("timeLine").appendChild(postChunk);
+  <%= Enum.map(post, fn x -> %>
+     var postID = `post-${postCount}` ;
+     <%= if  !Map.has_key?(x,:info)  do %>
+        var post = document.createElement("div");
+        post.id = `post-${postCount}` ;
+        post.style = "width:100%; ";
+        postChunk.appendChild(post);
+        var profilePic = "<%= x.profile_pic %>";
+        var text = "<%= x.text%>";
+        var name = "<%= x.username%>";
+        var time = moment.utc("<%= x.inserted_at %>").fromNow();
+        var id = "<%= x.id %>";
+        var t_id = "<%= @user.id %>";
+        var post_t_id = "<%= x.tenant_id %>";
+        var likes = "<%= length(x.likes) %>";
+        var like_id = "<%= if length(Enum.filter(x.likes, fn x -> x["tenant_id"] == @user.id end)) != 0 do "ploop"else "" end %>"
+        $(`#${postID}`).load("modules/post.html.eex");
+        (function(profilePic,post,text, name,postID,time,id,t_id,like_id,likes,post_t_id){
+           var readyCheck = setInterval(function(){
+              if(document.getElementById(postID).childNodes[1]){
+                 if(like_id != ""){
+                     post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[3].childNodes[1].id = "liked";
+                 }
+                 if(localStorage.colorMode == "dark"){
+                   post.childNodes[1].style.backgroundColor = "#53545f";
+                   post.childNodes[1].style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 0.46875rem 2.1875rem, rgba(0, 0, 0, 0.1) 0px 0.9375rem 1.40625rem, rgba(0, 0, 0, 0.12) 0px 0.25rem 0.53125rem, rgba(0, 0, 0, 0.1) 0px 0.125rem 0.1875rem';
+                   post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].style.color = "#868e96";
+                   post.childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].style.color = "#a8aeb3";
+                   post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].style.color = "#2f2f31";
+                 } else
+                 {post.style.backgroundColor = "white"};
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[3].childNodes[1].params = [id,t_id,like_id];
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[3].childNodes[3].innerHTML = likes;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[3].childNodes[1].t_id = t_id;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].innerHTML = name;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerHTML = time;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerHTML = text;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[1].src = profilePic;
+                 post.childNodes[1].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[5].childNodes[1].id= `tools-${postID}`;
+                 $(`#tools-${postID}`).popover(t_id == post_t_id ?
+                 {content: `<ul class='list-group' style='box-shadow: 0 3px 15px rgba(216, 216, 216, 0.1), 0 2px 3px rgba(160, 160, 160, 0.2);'><li class='list-group-item delete' id=${id} data-post=${postID} style='border-color: #b3b3b320'>Delete</li></ul>`, html: true, trigger: 'focus', placement:"bottom"} :
+                 {content: `<ul class='list-group' style='box-shadow: 0 3px 15px rgba(216, 216, 216, 0.1), 0 2px 3px rgba(160, 160, 160, 0.2);'><li class='list-group-item block' style='border-color: #b3b3b320' id=${post_t_id} value=${t_id}>Block</li><li style='border-color: #b3b3b320' class='list-group-item' data-toggle="modal" data-target="#reportModal" data-reportee=${t_id} data-post=${id}>Report</li></ul>`, html: true, trigger: 'focus', placement:"bottom"});
+                 clearInterval(readyCheck);
+              }
+           }, 50);
+        })(profilePic, post, text, name, postID, time, id, t_id,like_id,likes,post_t_id)
+     <% else %>
+        var post = document.createElement("div");
+        post.id = `post-${postCount}` ;
+        post.style = "width:100%"
+        postChunk.appendChild(post);
+        var eventPic = "<%= x.image %>";
+        var info = "<%= x.info%>";
+        var name = "<%= x.name%>";
+        var date = moment.utc("<%= x.inserted_at %>").format("MMM Do YY");
+        var start_time = times.filter(time => time.value == "<%= x.start_time%>")[0].label;
+        var end_time = times.filter(time => time.value == "<%= x.end_time%>")[0].label;
+        var location = "<%= x.location %>"
+        var timeString = start_time + " - " + end_time;
+        var id = "<%= x.id %>";
+        var t_id = "<%= @user.id %>";
+        $(`#${postID}`).load("modules/event.html.eex");
+           (function(post,info,name, timeString, location, date, eventPic){
+              var readyCheck = setInterval(function(){
+                 if(document.getElementById(postID).childNodes[1]){
+                    if(localStorage.colorMode == "dark"){
+                      post.childNodes[0].style.backgroundColor = "#4b4c56"
+                      post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[1].style.color = "#2f2f31"
+                      post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[3].style.color = "#868e96"
+                      post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1].style.color = "#868e96"
+                      post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[0].style.color = "#868e96"
+                      post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[7].style.color = "#a8aeb3"
+                    }
+                      else {
+                      post.childNodes[0].style.backgroundColor = "white"
+                    }
+                    post.childNodes[0].childNodes[1].childNodes[1].childNodes[1].childNodes[1].src = eventPic;
+                    post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[3].innerHTML = location;
+                    post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1].innerHTML = timeString;
+                    post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[0].innerHTML = date;
+                    post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[7].innerHTML = info
+                    post.childNodes[0].childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerHTML = name;
+                    clearInterval(readyCheck);
+                 }
+              }, 50);
+           })(post,info, name, timeString, location, date, eventPic)
+     <% end %>
+     postCount ++;
+  <% end) %>
+  chunkCount++;
+  <% end) %>
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  if (localStorage.colorMode === "dark") {
+    var elements = document.getElementsByClassName("colorMode1");
+    var elements2 = document.getElementsByClassName("colorMode2");
+    var elements3 = document.getElementsByClassName("colorMode3");
+    var elements4 = document.getElementsByClassName("colorMode4");
+    var elements5 = document.getElementsByClassName("colorMode5");
+    for( let e of elements ){
+        e.style.backgroundColor = "#2f2f31"
+    }
+    for( let e of elements2 ){
+        e.style.backgroundColor = "#53545f"
+        e.style.borderColor = "#53545f"
+    }
+    for( let e of elements3 ){
+        e.style.color = "#3e3e3e"
+    }
+    for( let e of elements4 ){
+        e.style.color = "#696868"
+    }
+    for( let e of elements5 ){
+            e.style.color = "#7e7f8c"
+        }
+    document.getElementsByClassName("main-content-container")[0].style.backgroundColor = "#343640";
+  } else{
+    var elements = document.getElementsByClassName("colorMode1");
+    Array.prototype.forEach.call(elements, x => x.style.backgroundColor = "#F5F5E2");
+  }
+
+});
+
+
+</script>

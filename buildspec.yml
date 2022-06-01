@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - compile.sh
+artifacts:
+  files:
+    - /app_count.tar.gz
+    - codedeploy/appspec.yml
+    - codedeploy/install.sh
+    - codedeploy/run.sh
+    - codedeploy/verify.sh
+    - crypto/crypto
+  discard-paths: yes

@@ -1,0 +1,18 @@
+<mj-text font-size='25px'>MoneyGram Payments</mj-text>
+<mj-text font-size='15px'>Past 24 Hours</mj-text>
+
+
+</mj-column>
+<mj-table>
+    <%= Enum.map @property_payments, fn(p) -> %>
+    <tr style="background-color:#bfbfbf;font-size: large;"><td colspan="2"><%= p.property%></td></tr>
+    <%= Enum.map p.payments, fn(payment) -> %>
+    <tr>
+        <td><%= payment["tenant_name"] %></td>
+        <td>$<%= payment["amount"] %></td>
+    </tr>
+    <% end %>
+    <% end %>
+</mj-table>
+
+

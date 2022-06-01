@@ -1,0 +1,5 @@
+<mj-raw>
+  <div style="font-size: 16px">
+	  <%= raw(@body) %>
+	</div>
+</mj-raw>

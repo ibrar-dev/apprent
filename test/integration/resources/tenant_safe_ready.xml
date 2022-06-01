@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<BackgroundReports userId="" password="" databaseset="">
+    <BackgroundReportPackage>
+        <ReferenceId><![CDATA[--id_here--]]></ReferenceId>
+        <OrderId>901421</OrderId>
+        <ScreeningStatus>
+            <OrderStatus flag="FALSE">x:ready</OrderStatus>
+            <OrderDecision>Approve</OrderDecision>
+        </ScreeningStatus>
+        <Screenings>
+            <Screening>
+                <ScreeningResults type="result" mediaType="html" resultType="report">
+                    <InternetWebAddress>
+                        <![CDATA[https://tenantsafe.instascreen.net/send/interchangeview/?a=m7qbln5do27n9soo1bup4o5bm12nvkc4g429ImllqeGpWJHxjxLzphiSUORYtVmdPBRXGTcnEeSGgd91L&b=540&c=rptview&file=901421]]></InternetWebAddress>
+                </ScreeningResults>
+            </Screening>
+        </Screenings>
+    </BackgroundReportPackage>
+</BackgroundReports>

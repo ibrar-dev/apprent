@@ -1,0 +1,9 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+  This is a notice that the order for <%= @order%> for unit <%= @unit%> has been outsourced to <%= @vendor%>.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

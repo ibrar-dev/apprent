@@ -1,0 +1,4 @@
+<div id="letter-app" class="px-3">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/letters.js") %>"></script>

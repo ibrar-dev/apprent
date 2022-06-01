@@ -1,0 +1,77 @@
+$lightGreen: #c1e2c9;
+$green: #3fa048;
+$width: 24px;
+label.fancy-check {
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+
+  input[type=checkbox] {
+    display: none;
+
+    & + .checkbox {
+      position: relative;
+      width: $width;
+      height: $width;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: 0.3s all ease;
+
+      &:before, &:after {
+        position: absolute;
+      }
+
+      & + .wipe {
+        position: absolute;
+        width: $width - 2px;
+        height: $width - 2px;
+        top: 1px;
+        right: 1px;
+        border-radius: 4px;
+        background-position: 100% 50%;
+      }
+    }
+
+    &:indeterminate + .checkbox {
+      &:before {
+        width: 10px;
+        top: 10px;
+        left: 6px;
+      }
+    }
+
+    &:checked + .checkbox {
+      &:before {
+        width: 14px;
+        top: 10px;
+        left: 6px;
+        transform: rotate(-47deg);
+      }
+
+      &:after {
+        width: 6px;
+        top: 12px;
+        left: 4px;
+        transform: rotate(47deg);
+      }
+    }
+
+    &:checked + .checkbox, &:indeterminate + .checkbox {
+      background: $green;
+      border-color: #38a250;
+
+      &:before, &:after {
+        content: '';
+        border-bottom: 3px solid #fff;
+      }
+
+      & + .wipe {
+        transition: 0.6s background-position ease 0.1s;
+        background-image: linear-gradient(90deg, transparent 50%, $green 50%);
+        background-size: 200% 200%;
+        background-position: 0 0;
+        left: 1px;
+      }
+    }
+  }
+}

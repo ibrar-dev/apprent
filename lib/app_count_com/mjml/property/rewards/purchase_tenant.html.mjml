@@ -1,0 +1,7 @@
+<mj-text>Hello from AppRent</mj-text>
+<mj-text>
+  We have received your redemption of the following Dasmen Reward:
+</mj-text>
+<mj-text>
+  <%= @purchase.reward.name %>: <%= @purchase.points %>
+</mj-text>

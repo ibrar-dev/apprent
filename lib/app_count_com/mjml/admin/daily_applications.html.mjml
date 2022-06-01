@@ -1,0 +1,62 @@
+<mj-text>
+	Hello <%= @admin.name %>
+</mj-text>
+<mj-text>
+  The following applications have been received so far today
+</mj-text>
+<mj-table>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+	<th style="padding: 0 15px 0 0;"></th>
+    <th style="padding: 0 15px 0 0;">Property</th>
+    <th style="padding: 0 15px;">Applicants</th>
+    <th style="padding: 0 15px;">Payment</th>
+    <th style="padding: 0 15px;">Date</th>
+  </tr>
+  <%= Enum.map @properties,fn(property)-> %>
+    <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+	  <td>
+	  	<img width="25" height="25" src="<%= property.icon %>" />
+	  </td>
+      <th>
+        <%= property.property %>
+      </th>
+			<th />
+			<th />
+			<th />
+		</tr>
+		<%= Enum.map property.apps, fn(app)-> %>
+			<tr style="text-align:left">
+				<td />
+	      <td>
+	        <%= Enum.map app["people"], fn(person)-> %>
+	          <%= person["full_name"] %>
+	          <br>
+	        <% end %>
+	      </td>
+	      <td style="text-align:right">
+	      	$<%= app["payment_amount"] %>
+	      </td>
+	      <td style="text-align:right">
+	      	<%= utc_convert(app["inserted_at"]) %>
+	      </td>
+	    </tr>
+		<% end %>
+		<tr style="border-top:1px solid #ecedee;text-align:left;">
+			<th>
+
+			</th>
+			<th>
+				Applications: <%= property.total_apps %>
+			</th>
+			<th style="text-align:right">
+				Total Paid: $<%= property.sum %>
+			</th>
+			<th />
+		</tr>
+		<tr style="padding=15px">
+		</tr>
+  <% end %>
+</mj-table>
+<mj-text>
+  Thank you.
+</mj-text>

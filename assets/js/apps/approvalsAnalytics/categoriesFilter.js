@@ -1,0 +1,26 @@
+const doNotShow = [
+  "utilities",
+  "reno path",
+  "reno playground",
+  "reno roofs",
+  "reno units",
+  "renovations",
+  "taxes and insurance",
+  "unctrl operating expenses",
+  "operating expenses",
+  "non-operating expenses",
+  "other non-operating expense",
+  "payroll",
+  "reno club house",
+  "reno dog park",
+  "reno exterior",
+  "reno other exp",
+  "building",
+  "cip",
+  "management fees",
+  "mortgage interest",
+  "other capital expenditures",
+  "taxes  & insurance",
+  "unit turns"
+]
+export default doNotShow;

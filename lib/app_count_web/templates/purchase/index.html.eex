@@ -1,0 +1,4 @@
+<div id="redemptions-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/purchases.js") %>"></script>

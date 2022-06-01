@@ -1,0 +1,15 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+  To provide the best and fastest results, it has been determined that it is necessary to outsource your service request to a third party vendor.
+</mj-text>
+<mj-text>
+	You work order, <%= @ticket %> for <%= @category %>, has been assigned to <%= @vendor %>
+</mj-text>
+<mj-text>
+	We will send you another update once we have a date scheduled for the vendor to come.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

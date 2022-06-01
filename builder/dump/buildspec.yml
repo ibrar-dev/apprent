@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - dump.sh
+artifacts:
+  files:
+    - db.dump.zip
+  discard-paths: yes

@@ -1,0 +1,7 @@
+<h5 class="auth-form__title text-center mb-4">Enter Your Account Username</h5>
+<%= form_for @conn, Routes.user_password_path(@conn, :create), [as: :reset], fn f -> %>
+  <div class="form-group">
+    <%= text_input f, :username, class: "form-control", id: "email-input", placeholder: "Username" %>
+  </div>
+  <button type="submit" class="btn btn-pill btn-accent d-table mx-auto">Reset Password</button>
+<% end %>

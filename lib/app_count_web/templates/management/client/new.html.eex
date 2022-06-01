@@ -1,0 +1,4 @@
+<h2>New Client</h2>
+
+<%= render "new_form.html", Map.put(assigns, :action, Routes.client_path(@conn, :create)) %>
+

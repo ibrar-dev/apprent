@@ -1,0 +1,33 @@
+<mj-text>
+  The following applications have been received for the period from <%= datetime_display(@from) %> to <%= datetime_display(AppCount.current_time()) %>
+</mj-text>
+<mj-table>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+    <th style="padding: 0 15px 0 0;">Property</th>
+    <th style="padding: 0 15px;">Applicants</th>
+    <th/>
+  </tr>
+  <%= Enum.map @applications,fn(app)-> %>
+    <tr>
+      <td>
+        <%= app.property["name"] %>
+        <br>
+        <%= utc_convert(app.inserted_at) %>
+      </td>
+      <td>
+        <%= Enum.map app.persons, fn(person)-> %>
+          <%= person["full_name"] %>: <%= person["status"] %>
+          <br>
+        <% end %>
+      </td>
+      <td>
+        <a href="<%= AppCount.namespaced_url(:administration) %>/applications/<%= app.id %>">
+          View
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</mj-table>
+<mj-text>
+  Thank you.
+</mj-text>

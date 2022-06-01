@@ -1,0 +1,4 @@
+<mj-text>Hello <%= @prospect.name %>,</mj-text>
+
+<mj-text>You are invited to submit an application to <%= @property.name %>.</mj-text>
+<mj-text><a href="<%= @url %>">Apply Now!</a></mj-text>

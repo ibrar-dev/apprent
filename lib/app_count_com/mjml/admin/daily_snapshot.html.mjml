@@ -1,0 +1,29 @@
+<mj-text>
+  Here is a daily snapshot of maintenance at your properties for.
+</mj-text>
+<mj-table>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+    <th style="padding: 0 15px 0 0;">Property</th>
+    <th style="padding: 0 15px;">Work Orders Created</th>
+    <th style="padding: 0 15px;">Work Orders Completed</th>
+  </tr>
+  <%= Enum.map @properties,fn(p)-> %>
+    <tr>
+      <td>
+        <%= p.name %>
+      </td>
+      <td>
+        <%= p.created %>
+      </td>
+      <td>
+        <%= p.completed %>
+      </td>
+    </tr>
+  <% end %>
+</mj-table>
+<mj-text>
+  If you would like to add some features to a daily report please feel free to reach out to your friendly neighborhood programmer.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

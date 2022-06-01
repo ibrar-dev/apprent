@@ -1,0 +1,4 @@
+<div id="batches-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/batches.js") %>"></script>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ns1="https://www.bluemoonforms.com/services/lease.php">
+    <SOAP-ENV:Body>
+        <ns1:ListCustomFormsResponse>
+            <ListCustomFormsResult>
+                <item>
+                    <Id>BLUEMOON_SAMPLECUSTOMFORM</Id>
+                    <Title>Sample Custom Form with Custom Fields</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>custom</FormType>
+                </item>
+                <item>
+                    <Id>BLUEMOON_YARDITESTFORM</Id>
+                    <Title>Yardi Test Form</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>custom</FormType>
+                </item>
+            </ListCustomFormsResult>
+        </ns1:ListCustomFormsResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

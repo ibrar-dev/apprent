@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<BackgroundReports userId="" password="" databaseset="">
+    <BackgroundReportPackage>
+        <ReferenceId><![CDATA[--id_here--]]></ReferenceId>
+        <OrderId>901421</OrderId>
+        <ScreeningStatus>
+            <OrderStatus flag="FALSE">x:partial</OrderStatus>
+            <OrderDecision>Approve</OrderDecision>
+        </ScreeningStatus>
+        <Screenings>
+            <Screening type="eviction" qualifier="multistate">
+                <ScreeningResults type="result" mediaType="html" resultType="report">
+                    <InternetWebAddress>
+                        <![CDATA[https://tenantsafe.instascreen.net/send/interchangeview/?a=m7qbln5do27n9soo1bup4o5bm12nvkc4g429ImllqeGpWJHxjxLzphiSUORYtVmdPBRXGTcnEeSGgd91L&b=540&c=rptview&file=901421]]></InternetWebAddress>
+                </ScreeningResults>
+                <GatewayXml>
+                    <ResponseData>
+                        <GeneralMessages>
+                            <Message>No address/identity history located</Message>
+                        </GeneralMessages>
+                        <Records count="0"/>
+                    </ResponseData>
+                </GatewayXml>
+            </Screening>
+        </Screenings>
+    </BackgroundReportPackage>
+</BackgroundReports>

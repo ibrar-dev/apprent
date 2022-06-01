@@ -1,0 +1,15 @@
+<mj-text>
+  Your maintenance technician is on their way.
+</mj-text>
+<mj-text>
+  <%= @tech %> is working on your service request.
+</mj-text>
+<mj-text>
+  They will be there in approximately <%= @time %> minutes.
+</mj-text>
+<mj-text>
+  If you opted to be home when the tech is there please be available to answer the door.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

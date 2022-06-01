@@ -1,0 +1,4 @@
+<div id="timecards-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/timecards.js") %>"></script>

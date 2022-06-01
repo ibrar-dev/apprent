@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h2>Current Leads</h2>
+    <div id="inbox-app">
+
+
+    </div>
+  </div>
+</div>
+
+<script>window.INBOX_MODE = 'leads';</script>
+<script src="<%= Routes.static_path(@conn, "/js/apps/inbox.js") %>"></script>

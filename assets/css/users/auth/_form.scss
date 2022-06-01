@@ -1,0 +1,25 @@
+.auth-form {
+  min-width: 19.375rem;
+  max-width: 350px;
+  .card-body {
+    overflow: hidden;
+    box-shadow: inset 0 4px 0 0 $blue;
+    border-radius: .625rem;
+  }
+}
+.auth-form__social-icons li {
+  list-style: none;
+  display: inline-block;
+}
+.auth-form__meta a {
+  font-weight: 400;
+  color: #818ea3;
+}
+.auth-form__title {
+  font-size: 1.125rem;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+.auth__alert {
+  margin: -30px -30px 20px -30px;
+  text-align: center;
+}

@@ -1,0 +1,11 @@
+// Icons adjustments
+
+i.material-icons {
+  top: 2px;
+}
+
+.blank-rating {
+  color: transparent;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: $fiord-blue;
+}

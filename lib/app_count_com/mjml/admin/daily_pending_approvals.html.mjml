@@ -1,0 +1,41 @@
+<mj-text>
+	Hello <%= @admin.name %>
+</mj-text>
+<mj-text>
+	Just a friendly little reminder that you have <%= length(@pending) %> requests patiently awaiting your attention.
+</mj-text>
+<mj-section full-width="full-width">
+	<mj-table>
+		<tr>
+			<th>
+				Vendor
+			</th>
+			<th>
+				Amount
+			</th>
+			<th>
+				Approved By
+			</th>
+		</tr>
+		<%= Enum.map @pending, fn a -> %>
+			<tr>
+				<td>
+					<%= get_payee(a.params) %>
+				</td>
+				<td>
+					<%= get_amount(a.params) %>
+				</td>
+				<td>
+					<mj-text>
+						<%= Enum.map get_all_approved(a.logs), fn l -> %>
+							<p><%= l["admin"] %></p>
+						<% end %>
+					</mj-text>
+				</td>
+			</tr>
+		<% end %>
+	</mj-table>
+</mj-section>
+<mj-button background-color="#3fa048" color="black" href="https://administration.apprent.com/approvals" font-family="Helvetica">
+	View All Approvals
+</mj-button>

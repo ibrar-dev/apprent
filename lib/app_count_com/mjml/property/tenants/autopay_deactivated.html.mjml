@@ -1,0 +1,23 @@
+<mj-text>
+  <h3>Hi
+    <%= @first_name %>,</h3>
+</mj-text>
+<mj-text>
+  This email is to confirm that Autopay for your account has been turned off.
+  Your rent payments will need to be paid manually through the resident
+  dashboard, the AppRent app, or via MoneyGram.
+</mj-text>
+
+<mj-text>
+  To modify your autopay settings, please visit our resident dashboard at
+  <a href="https://residents.apprent.com">https://residents.apprent.com</a> or
+  through the AppRent mobile app.
+</mj-text>
+
+<mj-text>
+  Thank you,
+</mj-text>
+
+<mj-text>
+  The AppRent Team
+</mj-text>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <ImportResidentTransactions_LoginResponse
+                xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfResidentTransactions20">
+            <ImportResidentTransactions_LoginResult>
+                <Messages xmlns="">
+                    <Message messageType="FYI">1 receipts were successfully imported into batch 1296679.</Message>
+                </Messages>
+            </ImportResidentTransactions_LoginResult>
+        </ImportResidentTransactions_LoginResponse>
+    </soap:Body>
+</soap:Envelope>

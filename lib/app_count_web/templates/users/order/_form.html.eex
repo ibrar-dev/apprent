@@ -1,0 +1,50 @@
+<div class="form-row">
+  <div class="form-group col-md-3" style="margin-top:20px;
+  ">
+    <div class="dropzone h-100 d-flex align-items-center justify-content-center">
+      <%= if has_image(@order.data) do %>
+        <img id="orderImage" src="<%= image_note_url(@order.data.notes) %>"/>
+      <% else %>
+        <span id="orderImage">Attach Image</span>
+      <% end %>
+      <input type="file" name="order[image]" id="fileInput">
+    </div>
+  </div>
+  <div class="form-group col-md-9 labeled-box flex-auto">
+    <div for="notes" class="labeled-box-label mx-3">Notes</div>
+    <%= textarea @order, :notes, class: "form-control", rows: 5, required: true, value: text_note(@order.data.notes), id: "notes" %>
+  </div>
+</div>
+<div class="form-row">
+<!--
+  <div class="form-group col-md-6">
+    <label for="category">Category</label>
+    <%= select @order, :category_id,
+                        Enum.map(@categories, fn(c) -> {c.name, Enum.map(c.children, & {&1["name"], &1["id"]})} end),
+                        class: "form-control",
+                        prompt: "Choose Category" %>
+  </div>
+  -->
+  <div class="form-group col-md-6 d-flex flex-column justify-content-end">
+    <div class="custom-control custom-checkbox ml-4 mb-2">
+      <%= checkbox(@order, :has_pet, class: "custom-control-input", id: "hasPet") %>
+      <label class="custom-control-label" for="hasPet">I do have a pet</label>
+    </div>
+    <div class="custom-control custom-checkbox ml-4">
+      <%= checkbox(@order, :entry_allowed, class: "custom-control-input", id: "entry") %>
+      <label class="custom-control-label" for="entry">Technician may enter my house if I am not home</label>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between">
+  <a href="/work_orders" class="btn btn-danger">Cancel</a>
+  <button type="submit" class="btn btn-outline-accent">Create Order</button>
+</div>
+<script>
+  $('#fileInput').change((e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => $('#orderImage').replaceWith(`<img id="orderImage" src="${reader.result}"/>`);
+  })
+</script>

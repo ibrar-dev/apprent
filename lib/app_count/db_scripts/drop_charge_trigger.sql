@@ -1,0 +1,1 @@
+DROP TRIGGER IF EXISTS charge_update_trigger ON accounting__charges;

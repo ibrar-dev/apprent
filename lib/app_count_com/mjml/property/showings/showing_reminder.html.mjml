@@ -1,0 +1,20 @@
+<mj-text>
+  Hello <%= @name %>!
+</mj-text>
+<mj-text>
+  This is just a reminder that you have a tour coming up on <%= readable_date(@date) %>.
+  <br />
+  We will see you at <%= readable_time(@start_time) %>.
+  <br />
+  If you have any questions or would like to modify your scheduled tour, please give us a call.
+</mj-text>
+<mj-text>
+  <%= @property.name %>
+  <br />
+  <%= @property.address["street"] %>
+  <br />
+  <%= @property.address["city"] %>, <%= @property.address["state"] %> <%= @property.address["zip"] %>
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

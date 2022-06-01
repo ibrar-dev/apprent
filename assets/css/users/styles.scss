@@ -1,0 +1,85 @@
+/*
+ * Shards Dashboard Lite UI Kit v1.0.0
+ * Project URL: https://designrevision.com/downloads/shards-dashboard-lite
+ * Based on: Shards UI Kit v2.0.3 (https://designrevision.com/downloads/shards)
+ * Based on: Bootstrap v4.1.1 (https://getbootstrap.com)
+ * Copyright 2017-* DesignRevision (https://designrevision.com)
+ * Copyright 2017-* Catalin Vasile (contact@catalin.me)
+ * License: MIT
+ */
+
+// Shards variables overrides.
+@import "overrides";
+
+// Base Shards UI Kit
+
+@import "../../node_modules/shards-ui/node_modules/bootstrap/scss/functions";
+@import "../../node_modules/shards-ui/src/scss/variables";
+@import "../../node_modules/shards-ui/src/scss/mixins";
+@import "../../node_modules/shards-ui/node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/shards-ui/src/scss/reboot";
+@import "../../node_modules/shards-ui/src/scss/type";
+@import "../../node_modules/shards-ui/src/scss/card";
+@import "../../node_modules/shards-ui/src/scss/icons";
+@import "../../node_modules/shards-ui/src/scss/dropdown";
+@import "../../node_modules/shards-ui/src/scss/custom-forms";
+//@import "../../node_modules/shards-ui/src/scss/shards";
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css';
+/* Shards Dashboards Lite Styles */
+
+// Core
+@import "variables";
+
+// Components
+@import "reboot";
+@import "buttons";
+@import "button-group";
+@import "navbar";
+@import "badge";
+@import "alert";
+@import "input-group";
+@import "custom-forms";
+@import "custom-sliders";
+@import "images";
+@import "icons";
+@import "dropdown";
+@import "card";
+@import "utilities";
+@import "star-rating";
+
+// Auth
+@import "auth/form";
+// Blocks
+@import "blocks/main-navbar";
+@import "blocks/main-sidebar";
+@import "blocks/main-content";
+@import "blocks/main-footer";
+@import "blocks/page-header";
+
+// Templates
+@import "templates/common"; // Required common styles for all pages.
+@import "templates/blog-overview";
+@import "templates/blog-add-new-post";
+
+// Plugins
+@import "plugins/quill";
+@import "datatable/core";
+
+// Components
+@import "components/card-post";
+@import "components/error";
+@import "cards";
+@import "custom";
+
+.terms-container p {
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.dropdown-toggle:after {
+  content: none
+}

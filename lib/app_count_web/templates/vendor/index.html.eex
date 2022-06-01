@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div id="vendors-app">
+
+    </div>
+  </div>
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/vendors.js") %>"></script>

@@ -1,0 +1,4 @@
+<div id="payees-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/payees.js") %>"></script>

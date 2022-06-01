@@ -1,0 +1,115 @@
+<div class="page-header row no-gutters" style="background-color: #f6fbf8; padding-top:50px; padding-bottom:30px; margin-bottom:20px;">
+  <div class="col-10 offset-1 text-sm-left mb-0 d-flex justify-content-between">
+    <div class="col">
+      <h3 class="page-title" style="font-size:17px; color: #3a3c42;">
+        Maintenance Orders
+      </h3>
+      <h3 style="color:#73b939"><%= length(@orders) %></h3>
+    </div>
+    <div class="col">
+      <h3 class="page-title" style="font-size:17px; color: #3a3c42;">
+        Open Maintenance Orders
+      </h3>
+      <h3 style="color:#73b939"><%= length(filtered_orders(@orders, ["unassigned", "assigned"])) %></h3>
+    </div>
+    <div class="col">
+      <h3 class="page-title" style="font-size:17px; color: #3a3c42;">
+        Completed Maintenance Orders
+      </h3>
+      <h3 style="color:#73b939"><%= length(filtered_orders(@orders, "completed")) %></h3>
+    </div>
+    <a href="<%= Routes.user_order_path(@conn, :new) %>" class="btn btn-success" style="height:36px; background-color:#22994c; border-color:#22994c">New Work Order</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="card card-small overflow-hidden mb-4" style="box-shadow: none; border:solid thin #d5d7db;">
+      <ul class="list-group list-group-flush">
+        <%= Enum.map @orders, fn order -> %>
+          <li class="list-group-item px-4 d-flex justify-content-between">
+            <div class="d-flex">
+              <div class="mr-3 d-flex align-items-center" style="width: 85px; max-height: 85px; overflow: hidden">
+                <img class="w-100" src="<%= image_note_url(order.notes) %>"/>
+              </div>
+              <div class="text-muted">
+                <h5 class="m-0" style="font-weight: 200">
+                  <span class="text-secondary"><%= order.category %></span>
+                  on
+                  <span class="text-secondary"><%= Timex.format!(order.inserted_at, "{Mfull} {D}, {YYYY}")%></span>
+                </h5>
+                <div class="mb-3">
+                  <i class="material-icons text-<%= if order.has_pet, do: "primary", else: "danger" %>">
+                    pets
+                  </i> I <%= unless order.has_pet, do: "do not" %> have a pet
+                  <i class="material-icons text-<%= if order.entry_allowed, do: "primary", else: "danger" %>">
+                    vpn_key
+                  </i> Technician may <%= unless order.entry_allowed, do: "not" %> without my presence.
+                </div>
+                <div class="blog-comments__actions">
+                  <div class="btn-group btn-group-sm">
+                    <%= if List.first(order.assignments) do %>
+                      <button class="btn btn-white" disabled>
+                        <span class="text-danger"><i class="material-icons">clear</i></span> Delete
+                      </button>
+                    <% else %>
+                      <%= link to: "/work_orders/#{order.id}", method: :delete,
+                               class: "btn btn-white", "data-confirm": "Delete this order?" do %>
+                          <span class="text-danger"><i class="material-icons">clear</i></span> Delete
+                      <% end %>
+                    <% end %>
+                    <%= if !List.first(order.assignments) or List.first(order.assignments)["status"] != "completed" do %>
+                      <a class="btn btn-white" href="/work_orders/<%= order.id %>/edit">
+                        <span class="text-info"><i class="material-icons">edit</i></span> Edit
+                      </a>
+                    <% else %>
+                      <button class="btn btn-white" disabled>
+                        <span class="text-info"><i class="material-icons">edit</i></span> Edit
+                      </button>
+                    <% end %>
+                    <a class="btn btn-white" data-container="body" data-toggle="popover"
+                       style="color: initial !important" data-placement="right"
+                       data-content="<%= text_note(order.notes)%>">
+                      <span class="">
+                        <i class="material-icons">more_vert</i>
+                      </span> Notes
+                    </a>
+
+                    <%= if is_integer(List.first(order.assignments)["rating"]) do %>
+                      <a class="btn btn-white" href="/assignments/<%= List.first(order.assignments)["id"] %>/edit_rating">
+                        <span class="text-info"><i class="material-icons">star</i></span> Edit Rating
+                      </a>
+                    <% end %>
+                    <%= if order.status == "completed" do %>
+                      <a class="btn btn-white" href="/assignments/<%= List.first(order.assignments)["id"] %>/edit_rating">
+                        <span class="text-info"><i class="material-icons">star</i></span> Rate
+                      </a>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column justify-content-between w-25">
+              <%= raw(status_badge(order)) %>
+              <h5 class="m-0 text-right" style="font-weight: 200">Reference: <%= order.ticket %></h5>
+                <%= if is_integer(List.first(order.assignments)["rating"])  do %>
+                  <h5 class="m-0 text-right" style="font-weight: 200">Rating:
+                  <span class="fa fa-star <%= if (List.first(order.assignments)["rating"] > 0), do: "text-warning", else: "empty"%>"></span>
+                  <span class="fa fa-star <%= if (List.first(order.assignments)["rating"] > 1), do: "text-warning", else: "empty"%>"></span>
+                  <span class="fa fa-star <%= if (List.first(order.assignments)["rating"] > 2), do: "text-warning", else: "empty"%>"></span>
+                  <span class="fa fa-star <%= if (List.first(order.assignments)["rating"] > 3), do: "text-warning", else: "empty"%>"></span>
+                  <span class="fa fa-star <%= if (List.first(order.assignments)["rating"] > 4), do: "text-warning", else: "empty"%>"></span>
+                <% end %>
+                <%= if order.status == "completed" do %>
+                  <h5 class="m-0 text-right" style="font-weight: 200">Rating:
+                    <a class="btn btn-sm btn-white" href="/assignments/<%= List.first(order.assignments)["id"] %>/edit_rating">
+                      <span class="text-info"><i class="material-icons">star</i></span> Add Rating
+                    </a>
+                <% end %>
+              </h5>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

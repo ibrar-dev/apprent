@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetResidentTransactions_LoginResponse
+                xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfResidentTransactions20">
+            <GetResidentTransactions_LoginResult>
+                <ResidentTransactions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                      xmlns:MITS="http://my-company.com/namespace"
+                                      xmlns="http://yardi.com/ResidentTransactions20"
+                                      xsi:noNamespaceSchemaLocation="Itf_MITS_ResidentTransactions2.0.xsd">
+                    <Property>
+                        <PropertyID>
+                            <MITS:Identification Type="other">
+                                <MITS:PrimaryID>2010</MITS:PrimaryID>
+                                <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                            </MITS:Identification>
+                            <MITS:Address Type="property">
+                                <MITS:Address1>srgroup@dasmenresidential.com</MITS:Address1>
+                                <MITS:City>520.747.7280</MITS:City>
+                            </MITS:Address>
+                        </PropertyID>
+                        <RT_Customer>
+                            <CustomerID>t0005340</CustomerID>
+                            <Customers>
+                                <MITS:Customer Type="current resident">
+                                    <MITS:Description>7128</MITS:Description>
+                                    <MITS:CustomerID>t0005340</MITS:CustomerID>
+                                    <MITS:Property>
+                                        <MITS:PrimaryID>2010</MITS:PrimaryID>
+                                        <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                        <MITS:UnitID>0313</MITS:UnitID>
+                                    </MITS:Property>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Stacy</MITS:FirstName>
+                                        <MITS:MiddleName/>
+                                        <MITS:LastName/>
+                                    </MITS:Name>
+                                    <MITS:Address Type="property">
+                                        <MITS:Description>current</MITS:Description>
+                                        <MITS:Address1>5353 E. 22nd Street</MITS:Address1>
+                                        <MITS:Address2>Apt # 0313</MITS:Address2>
+                                        <MITS:City>Tucson</MITS:City>
+                                        <MITS:State>AZ</MITS:State>
+                                        <MITS:PostalCode>85711</MITS:PostalCode>
+                                        <MITS:Email>2sl.moll@gmail.com</MITS:Email>
+                                    </MITS:Address>
+                                    <MITS:Phone Type="office">
+                                        <MITS:PhoneDescription>office</MITS:PhoneDescription>
+                                        <MITS:PhoneNumber>5204272501</MITS:PhoneNumber>
+                                    </MITS:Phone>
+                                    <MITS:Phone Type="home">
+                                        <MITS:PhoneDescription>home</MITS:PhoneDescription>
+                                        <MITS:PhoneNumber>5203430788</MITS:PhoneNumber>
+                                    </MITS:Phone>
+                                    <MITS:Lease>
+                                        <MITS:CurrentRent>596.00</MITS:CurrentRent>
+                                        <MITS:ExpectedMoveInDate>2017-06-15</MITS:ExpectedMoveInDate>
+                                        <MITS:LeaseFromDate>2020-07-01</MITS:LeaseFromDate>
+                                        <MITS:LeaseToDate>2021-06-30</MITS:LeaseToDate>
+                                        <MITS:ActualMoveIn>2017-06-15</MITS:ActualMoveIn>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                            </Customers>
+                            <RT_Unit>
+                                <UnitID>0313</UnitID>
+                                <NumberOccupants Total="1"/>
+                                <Unit>
+                                    <MITS:Information>
+                                        <MITS:UnitID>0313</MITS:UnitID>
+                                        <MITS:UnitType>1.12_si</MITS:UnitType>
+                                        <MITS:UnitBedrooms>0</MITS:UnitBedrooms>
+                                        <MITS:UnitBathrooms>0.000000</MITS:UnitBathrooms>
+                                        <MITS:MinSquareFeet>560</MITS:MinSquareFeet>
+                                        <MITS:MaxSquareFeet>560</MITS:MaxSquareFeet>
+                                        <MITS:UnitRent>719.00</MITS:UnitRent>
+                                        <MITS:MarketRent>719.00</MITS:MarketRent>
+                                        <MITS:UnitEconomicStatus>residential</MITS:UnitEconomicStatus>
+                                        <MITS:UnitOccupancyStatus>occupied</MITS:UnitOccupancyStatus>
+                                        <MITS:UnitLeasedStatus>leased</MITS:UnitLeasedStatus>
+                                        <MITS:FloorPlanID>1.12_si</MITS:FloorPlanID>
+                                        <MITS:FloorplanName>1 Bedroom 1 Bath B</MITS:FloorplanName>
+                                    </MITS:Information>
+                                    <MITS:PropertyPrimaryID>2010</MITS:PropertyPrimaryID>
+                                    <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                </Unit>
+                            </RT_Unit>
+                            <PaymentAccepted>0</PaymentAccepted>
+                            <RTServiceTransactions>
+                                <Transactions>
+                                    <Payment Type="Other">
+                                        <Detail>
+                                            <Description>Open Pre-payment</Description>
+                                            <TransactionID>602728210</TransactionID>
+                                            <DocumentNumber>74842 Section 8</DocumentNumber>
+                                            <TransactionDate>2021-01-03</TransactionDate>
+                                            <GLAccountNumber>41760000</GLAccountNumber>
+                                            <CustomerID>t0005340</CustomerID>
+                                            <UnitID>0313</UnitID>
+                                            <Amount>21.25</Amount>
+                                            <Comment/>
+                                            <PropertyPrimaryID>2010</PropertyPrimaryID>
+                                        </Detail>
+                                    </Payment>
+                                </Transactions>
+                            </RTServiceTransactions>
+                        </RT_Customer>
+                        <RT_Customer>
+                            <CustomerID>t0027163</CustomerID>
+                            <Customers>
+                                <MITS:Customer Type="current resident">
+                                    <MITS:Description>38791</MITS:Description>
+                                    <MITS:CustomerID>t0027163</MITS:CustomerID>
+                                    <MITS:Property>
+                                        <MITS:PrimaryID>2010</MITS:PrimaryID>
+                                        <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                        <MITS:UnitID>0315</MITS:UnitID>
+                                    </MITS:Property>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Tisen</MITS:FirstName>
+                                        <MITS:MiddleName/>
+                                        <MITS:LastName>Edwin</MITS:LastName>
+                                    </MITS:Name>
+                                    <MITS:Address Type="property">
+                                        <MITS:Description>current</MITS:Description>
+                                        <MITS:Address1>5353 E. 22nd Street</MITS:Address1>
+                                        <MITS:Address2>Apt # 0315</MITS:Address2>
+                                        <MITS:City>Tucson</MITS:City>
+                                        <MITS:State>AZ</MITS:State>
+                                        <MITS:PostalCode>85711</MITS:PostalCode>
+                                        <MITS:Email>tisenedwin@icloud.com</MITS:Email>
+                                    </MITS:Address>
+                                    <MITS:Phone Type="home">
+                                        <MITS:PhoneDescription>home</MITS:PhoneDescription>
+                                        <MITS:PhoneNumber>5203696494</MITS:PhoneNumber>
+                                    </MITS:Phone>
+                                    <MITS:Lease>
+                                        <MITS:CurrentRent>787.00</MITS:CurrentRent>
+                                        <MITS:ExpectedMoveInDate>2019-07-26</MITS:ExpectedMoveInDate>
+                                        <MITS:LeaseFromDate>2020-05-01</MITS:LeaseFromDate>
+                                        <MITS:LeaseToDate>2021-04-30</MITS:LeaseToDate>
+                                        <MITS:ActualMoveIn>2019-07-26</MITS:ActualMoveIn>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                                <MITS:Customer Type="customer">
+                                    <MITS:CustomerID>r0009358</MITS:CustomerID>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Judy</MITS:FirstName>
+                                        <MITS:LastName>Tolwi</MITS:LastName>
+                                    </MITS:Name>
+                                    <MITS:Address Type="current">
+                                        <MITS:Address1>2485 N Alvernon way 211</MITS:Address1>
+                                        <MITS:City>Tucson</MITS:City>
+                                        <MITS:State>AZ</MITS:State>
+                                        <MITS:PostalCode>85712</MITS:PostalCode>
+                                    </MITS:Address>
+                                    <MITS:Lease>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                                <MITS:Customer Type="customer">
+                                    <MITS:CustomerID>r0009487</MITS:CustomerID>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Tisen</MITS:FirstName>
+                                        <MITS:LastName>Edwin</MITS:LastName>
+                                    </MITS:Name>
+                                    <MITS:Address Type="current"/>
+                                    <MITS:Lease>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                            </Customers>
+                            <RT_Unit>
+                                <UnitID>0315</UnitID>
+                                <NumberOccupants Total="3"/>
+                                <Unit>
+                                    <MITS:Information>
+                                        <MITS:UnitID>0315</MITS:UnitID>
+                                        <MITS:UnitType>1.12_si</MITS:UnitType>
+                                        <MITS:UnitBedrooms>0</MITS:UnitBedrooms>
+                                        <MITS:UnitBathrooms>0.000000</MITS:UnitBathrooms>
+                                        <MITS:MinSquareFeet>560</MITS:MinSquareFeet>
+                                        <MITS:MaxSquareFeet>560</MITS:MaxSquareFeet>
+                                        <MITS:UnitRent>719.00</MITS:UnitRent>
+                                        <MITS:MarketRent>719.00</MITS:MarketRent>
+                                        <MITS:UnitEconomicStatus>residential</MITS:UnitEconomicStatus>
+                                        <MITS:UnitOccupancyStatus>occupied</MITS:UnitOccupancyStatus>
+                                        <MITS:UnitLeasedStatus>leased</MITS:UnitLeasedStatus>
+                                        <MITS:FloorPlanID>1.12_si</MITS:FloorPlanID>
+                                        <MITS:FloorplanName>1 Bedroom 1 Bath B</MITS:FloorplanName>
+                                    </MITS:Information>
+                                    <MITS:PropertyPrimaryID>2010</MITS:PropertyPrimaryID>
+                                    <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                </Unit>
+                            </RT_Unit>
+                            <PaymentAccepted>0</PaymentAccepted>
+                            <RTServiceTransactions/>
+                        </RT_Customer>
+                        <RT_Customer>
+                            <CustomerID>t0023580</CustomerID>
+                            <Customers>
+                                <MITS:Customer Type="current resident">
+                                    <MITS:Description>32932</MITS:Description>
+                                    <MITS:CustomerID>t0023580</MITS:CustomerID>
+                                    <MITS:Property>
+                                        <MITS:PrimaryID>2010</MITS:PrimaryID>
+                                        <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                        <MITS:UnitID>0925</MITS:UnitID>
+                                    </MITS:Property>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Lynnzianna</MITS:FirstName>
+                                        <MITS:MiddleName/>
+                                        <MITS:LastName>Frazier</MITS:LastName>
+                                    </MITS:Name>
+                                    <MITS:Address Type="property">
+                                        <MITS:Description>current</MITS:Description>
+                                        <MITS:Address1>5353 E. 22nd Street</MITS:Address1>
+                                        <MITS:Address2>Apt # 0925</MITS:Address2>
+                                        <MITS:City>Tucson</MITS:City>
+                                        <MITS:State>AZ</MITS:State>
+                                        <MITS:PostalCode>85711</MITS:PostalCode>
+                                        <MITS:Email>ziannafrazier@gmail.com</MITS:Email>
+                                    </MITS:Address>
+                                    <MITS:Phone Type="home">
+                                        <MITS:PhoneDescription>home</MITS:PhoneDescription>
+                                        <MITS:PhoneNumber>5207714513</MITS:PhoneNumber>
+                                    </MITS:Phone>
+                                    <MITS:Lease>
+                                        <MITS:CurrentRent>489.00</MITS:CurrentRent>
+                                        <MITS:ExpectedMoveInDate>2019-03-25</MITS:ExpectedMoveInDate>
+                                        <MITS:ExpectedMoveOutDate>2021-03-25</MITS:ExpectedMoveOutDate>
+                                        <MITS:LeaseFromDate>2020-03-25</MITS:LeaseFromDate>
+                                        <MITS:LeaseToDate>2021-03-24</MITS:LeaseToDate>
+                                        <MITS:ActualMoveIn>2019-03-25</MITS:ActualMoveIn>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                            </Customers>
+                            <RT_Unit>
+                                <UnitID>0925</UnitID>
+                                <NumberOccupants Total="1"/>
+                                <Unit>
+                                    <MITS:Information>
+                                        <MITS:UnitID>0925</MITS:UnitID>
+                                        <MITS:UnitType>0.1_si</MITS:UnitType>
+                                        <MITS:UnitBedrooms>0</MITS:UnitBedrooms>
+                                        <MITS:UnitBathrooms>0.000000</MITS:UnitBathrooms>
+                                        <MITS:MinSquareFeet>380</MITS:MinSquareFeet>
+                                        <MITS:MaxSquareFeet>380</MITS:MaxSquareFeet>
+                                        <MITS:UnitRent>594.00</MITS:UnitRent>
+                                        <MITS:MarketRent>594.00</MITS:MarketRent>
+                                        <MITS:UnitEconomicStatus>residential</MITS:UnitEconomicStatus>
+                                        <MITS:UnitOccupancyStatus>occupied</MITS:UnitOccupancyStatus>
+                                        <MITS:UnitLeasedStatus>on notice</MITS:UnitLeasedStatus>
+                                        <MITS:FloorPlanID>0.1_si</MITS:FloorPlanID>
+                                        <MITS:FloorplanName>Studio A</MITS:FloorplanName>
+                                    </MITS:Information>
+                                    <MITS:PropertyPrimaryID>2010</MITS:PropertyPrimaryID>
+                                    <MITS:MarketingName>Sienna Ridge Apartments</MITS:MarketingName>
+                                </Unit>
+                            </RT_Unit>
+                            <PaymentAccepted>0</PaymentAccepted>
+                            <RTServiceTransactions>
+                                <Transactions>
+                                    <Payment Type="Other">
+                                        <Detail>
+                                            <Description>Open Pre-payment</Description>
+                                            <TransactionID>602723122</TransactionID>
+                                            <DocumentNumber>20975974084</DocumentNumber>
+                                            <TransactionDate>2021-01-03</TransactionDate>
+                                            <GLAccountNumber>41760000</GLAccountNumber>
+                                            <CustomerID>t0023580</CustomerID>
+                                            <UnitID>0925</UnitID>
+                                            <Amount>30.57</Amount>
+                                            <Comment/>
+                                            <PropertyPrimaryID>2010</PropertyPrimaryID>
+                                        </Detail>
+                                    </Payment>
+                                </Transactions>
+                            </RTServiceTransactions>
+                        </RT_Customer>
+                        <RT_Customer>
+                            <CustomerID>t0019239</CustomerID>
+                            <Customers>
+                                <MITS:Customer Type="current resident">
+                                    <MITS:Description>26985</MITS:Description>
+                                    <MITS:CustomerID>t0019239</MITS:CustomerID>
+                                    <MITS:Property>
+                                        <MITS:PrimaryID>4010</MITS:PrimaryID>
+                                        <MITS:MarketingName>Lavana Falls</MITS:MarketingName>
+                                        <MITS:UnitID>207</MITS:UnitID>
+                                    </MITS:Property>
+                                    <MITS:Name>
+                                        <MITS:FirstName>Stephanie</MITS:FirstName>
+                                        <MITS:MiddleName/>
+                                        <MITS:LastName>Ballard</MITS:LastName>
+                                    </MITS:Name>
+                                    <MITS:Address Type="property">
+                                        <MITS:Description>current</MITS:Description>
+                                        <MITS:Address1>7200 Marion Ave 207</MITS:Address1>
+                                        <MITS:City>Levittown</MITS:City>
+                                        <MITS:State>PA</MITS:State>
+                                        <MITS:PostalCode>19055</MITS:PostalCode>
+                                        <MITS:Email>mrsballard1983@g8p3c.com</MITS:Email>
+                                    </MITS:Address>
+                                    <MITS:Phone Type="cell">
+                                        <MITS:PhoneDescription>cell</MITS:PhoneDescription>
+                                        <MITS:PhoneNumber>2159545856</MITS:PhoneNumber>
+                                    </MITS:Phone>
+                                    <MITS:Lease>
+                                        <MITS:CurrentRent>900.00</MITS:CurrentRent>
+                                        <MITS:ExpectedMoveInDate>2015-07-01</MITS:ExpectedMoveInDate>
+                                        <MITS:LeaseFromDate>2020-06-01</MITS:LeaseFromDate>
+                                        <MITS:LeaseToDate>2021-06-01</MITS:LeaseToDate>
+                                        <MITS:ActualMoveIn>2015-07-01</MITS:ActualMoveIn>
+                                        <MITS:ActualMoveOut>2021-06-01</MITS:ActualMoveOut>
+                                        <MITS:ResponsibleForLease>true</MITS:ResponsibleForLease>
+                                    </MITS:Lease>
+                                </MITS:Customer>
+                            </Customers>
+                            <RT_Unit>
+                                <UnitID>207</UnitID>
+                                <NumberOccupants Total="1"/>
+                                <Unit>
+                                    <MITS:Information>
+                                        <MITS:UnitID>207</MITS:UnitID>
+                                        <MITS:UnitType>1.1_ee</MITS:UnitType>
+                                        <MITS:UnitBedrooms>1</MITS:UnitBedrooms>
+                                        <MITS:UnitBathrooms>1.000000</MITS:UnitBathrooms>
+                                        <MITS:MinSquareFeet>685</MITS:MinSquareFeet>
+                                        <MITS:MaxSquareFeet>685</MITS:MaxSquareFeet>
+                                        <MITS:UnitRent>1119.00</MITS:UnitRent>
+                                        <MITS:MarketRent>1119.00</MITS:MarketRent>
+                                        <MITS:UnitEconomicStatus>residential</MITS:UnitEconomicStatus>
+                                        <MITS:UnitOccupancyStatus>occupied</MITS:UnitOccupancyStatus>
+                                        <MITS:UnitLeasedStatus>leased</MITS:UnitLeasedStatus>
+                                        <MITS:FloorPlanID>1.1_ee</MITS:FloorPlanID>
+                                        <MITS:FloorplanName>1 Bed 1 Bath</MITS:FloorplanName>
+                                    </MITS:Information>
+                                    <MITS:PropertyPrimaryID>4010</MITS:PropertyPrimaryID>
+                                    <MITS:MarketingName>Lavana Falls</MITS:MarketingName>
+                                </Unit>
+                            </RT_Unit>
+                            <PaymentAccepted>2</PaymentAccepted>
+                            <RTServiceTransactions/>
+                        </RT_Customer>
+                    </Property>
+                </ResidentTransactions>
+            </GetResidentTransactions_LoginResult>
+        </GetResidentTransactions_LoginResponse>
+    </soap:Body>
+</soap:Envelope>

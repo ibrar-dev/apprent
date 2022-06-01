@@ -1,0 +1,27 @@
+<html>
+	<style>
+		body {
+			background-image: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/apprentDasmenWatermark2.png")}" %>');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		/*.footer{margin-bottom: -10px}*/
+		.dasmen_logo {width: 100px; height: 110px;}
+		.footer_logo {width: 60px; height: 75px; opacity: .25; margin-top: 10px;}
+		.right{float: right;}
+		.center{margin: auto; text-align: center}
+		p {font-size: 10pt}
+		.resident_info {line-height:.1;}
+		.acceptance_area {line-height:.5;}
+		.mtm_box, .packages_table {width: 100%; border: 1px solid black;}
+		table, th, td {border: 1px solid black; font-size:10pt; text-align:center; border-collapse:collapse;}
+		ul, li {list-style:none;}
+	</style>
+	<body>
+		<div class="header">
+			<div class="center"><span style="font-size:14pt;"><%= @property.name %>Resident Ledger</span></div>
+			<div class="right"><img class="dasmen_logo" src=<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/dasmen_logo_no_name.png")}" %> /></div>
+		</div>
+	</body>
+</html>

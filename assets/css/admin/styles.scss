@@ -1,0 +1,100 @@
+/**
+ * GenesisUI - Bootstrap 4 Admin Template
+ * @version v1.8.0
+ * @link https://genesisui.com
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @license Commercial
+ */
+// Core variables and mixins
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  pro: 1025px,
+  xl: 1200px
+);
+@import '../../node_modules/react-widgets/lib/scss/react-widgets';
+@import "bootstrap-variables";
+// @import "bootstrap_src/variables";
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/simple-line-icons/scss/simple-line-icons';
+@import '../../node_modules/react-dates/lib/css/_datepicker.css';
+@import '../../node_modules/react-toastify/dist/ReactToastify.css';
+@import '../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+@import '../../node_modules/draft-js-static-toolbar-plugin/lib/plugin.css';
+@import '../../node_modules/draft-js-mention-plugin/lib/plugin.css';
+@import '../../node_modules/react-sortable-tree/style.css';
+@import '../../node_modules/react-image-lightbox/style.css';
+@import '../../node_modules/react-vertical-timeline-component/style.min.css';
+@import '../../node_modules/react-tagsinput/react-tagsinput.css';
+@import '../../node_modules/antd/dist/antd.css';
+
+
+@import "custom-variables";
+@import "core/mixins";
+
+@import "bootstrap_custom/tables";
+
+@import "bootstrap_custom/buttons";
+
+// Components
+@import "bootstrap_custom/dropdown";
+@import "bootstrap_custom/input-group";
+@import "bootstrap_custom/nav";
+@import "bootstrap_custom/navbar";
+@import "bootstrap_custom/card";
+@import "bootstrap_custom/breadcrumb";
+@import "bootstrap_custom/badge";
+@import "bootstrap_custom/progress";
+@import "bootstrap_custom/modal";
+
+// CoreUI Styles
+
+@import "core/typography";
+
+// Animations
+@import "core/animate";
+
+// Core files
+@import "core/grid";
+@import "core/layout";
+@import "core/navigation";
+@import "core/aside";
+@import "core/loading";
+@import "core/widgets";
+@import "core/footer";
+@import "core/buttons";
+@import "core/others";
+@import "core/breadcrumb-menu";
+@import "core/avatars";
+@import "core/callout";
+@import "core/switches";
+@import "core/charts";
+@import "core/utilities-border";
+
+// Temporary fixes
+@import "core/temp";
+
+// Mobile View
+@import "core/mobile";
+
+// UI Kits
+@import "uikits/uikits";
+
+// Misc
+@import "./prospects";
+@import "./fancy_check";
+@import "./month_picker";
+@import "./admins";
+@import "./ladda";
+@import "./loader";
+@import "./label";
+@import "./rangeslider";
+@import "./draft-js";
+@import "./custom";
+@import "./mentions";

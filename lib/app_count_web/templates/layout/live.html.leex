@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "AppRent" %>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="<%= Routes.static_path(@socket, "/css/admin.css") %>">
+     <%# <script defer type="text/javascript" src="<%= Routes.static_path(@socket, "/js/app.js") %  >"> %>
+     <%# </script>  %>
+  </head>
+  <body class="app">
+    <div class="container-fluid">
+      <%= if live_flash(@flash, :success) do %>
+        <div class="text-center alert alert-success mt-4">
+          <%= live_flash(@flash, :success) %>
+        </div>
+      <% end %>
+      <%= if live_flash(@flash, :error) do %>
+        <div class="text-center text-danger alert alert-danger mt-4">
+          <%= live_flash(@flash, :error) %>
+        </div>
+      <% end %>
+      <%= @inner_content %>
+    </div>
+  </body>
+</html>

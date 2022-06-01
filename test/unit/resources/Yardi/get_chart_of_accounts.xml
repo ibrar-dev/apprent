@@ -1,0 +1,2392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <ExportChartOfAccountsResponse xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfResidentTransactions20">
+            <ExportChartOfAccountsResult>
+                <Accounts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+                    <Account>
+                        <Code>41330000</Code>
+                        <Description>Bad Debt Recovery</Description>
+                    </Account>
+                    <Account>
+                        <Code>90994000</Code>
+                        <Description>Licenses and Permits</Description>
+                    </Account>
+                    <Account>
+                        <Code>90993000</Code>
+                        <Description>Settlements</Description>
+                    </Account>
+                    <Account>
+                        <Code>90992000</Code>
+                        <Description>Debt Forgiveness Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>90991000</Code>
+                        <Description>Loss/Gain in Disposition</Description>
+                    </Account>
+                    <Account>
+                        <Code>90990000</Code>
+                        <Description>Loss/Gain on Investment</Description>
+                    </Account>
+                    <Account>
+                        <Code>90670000</Code>
+                        <Description>Non-Operating IT Support/Software Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90660000</Code>
+                        <Description>3rd Party Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>90650000</Code>
+                        <Description>Donations</Description>
+                    </Account>
+                    <Account>
+                        <Code>90600000</Code>
+                        <Description>Corporate Suites</Description>
+                    </Account>
+                    <Account>
+                        <Code>90550000</Code>
+                        <Description>Prior Year Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90500000</Code>
+                        <Description>Training/Education</Description>
+                    </Account>
+                    <Account>
+                        <Code>90470000</Code>
+                        <Description>Company Event</Description>
+                    </Account>
+                    <Account>
+                        <Code>90460000</Code>
+                        <Description>Resident Retention Functions</Description>
+                    </Account>
+                    <Account>
+                        <Code>90450000</Code>
+                        <Description>Corporate Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>90400000</Code>
+                        <Description>Acquisition/Sale Costs</Description>
+                    </Account>
+                    <Account>
+                        <Code>90380000</Code>
+                        <Description>Casualty Loss</Description>
+                    </Account>
+                    <Account>
+                        <Code>90370000</Code>
+                        <Description>Marketing</Description>
+                    </Account>
+                    <Account>
+                        <Code>50360000</Code>
+                        <Description>Management Software</Description>
+                    </Account>
+                    <Account>
+                        <Code>90350002</Code>
+                        <Description>Legal Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>90350001</Code>
+                        <Description>MBA Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>90350000</Code>
+                        <Description>Professional / Consulting Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>90340001</Code>
+                        <Description>Asset Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>90340000</Code>
+                        <Description>Asset Management Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>90330000</Code>
+                        <Description>Non-Operating Partnership Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90320000</Code>
+                        <Description>Partner Distribution Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90310000</Code>
+                        <Description>Line of Credit Interest Exp.</Description>
+                    </Account>
+                    <Account>
+                        <Code>92013030</Code>
+                        <Description>Other Interest Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>92013020</Code>
+                        <Description>Mezz Interest</Description>
+                    </Account>
+                    <Account>
+                        <Code>92013010</Code>
+                        <Description>Mortgage Interest</Description>
+                    </Account>
+                    <Account>
+                        <Code>90250000</Code>
+                        <Description>Amortization Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90210000</Code>
+                        <Description>Depreciation Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125350</Code>
+                        <Description>Office Equipment</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125344</Code>
+                        <Description>Gates / Fencing</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121350</Code>
+                        <Description>Ceiling Fans</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121950</Code>
+                        <Description>Sink Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125341</Code>
+                        <Description>Furniture and Fixtures</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125340</Code>
+                        <Description>Major Signage</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125339</Code>
+                        <Description>Major Pool Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125338</Code>
+                        <Description>Major Parking Lot Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125337</Code>
+                        <Description>Major Plumbing Improvements</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125336</Code>
+                        <Description>Major Electrical Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121900</Code>
+                        <Description>Cabinet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125334</Code>
+                        <Description>Roof Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121200</Code>
+                        <Description>Floor/Tile Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121460</Code>
+                        <Description>Washer/Dryer Combo Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121490</Code>
+                        <Description>Water Heater Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121430</Code>
+                        <Description>Stove Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121420</Code>
+                        <Description>Refrigerator Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121410</Code>
+                        <Description>Microwave Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121500</Code>
+                        <Description>HVAC Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125326</Code>
+                        <Description>Exterior Painting</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121800</Code>
+                        <Description>Door/Screens/Windows Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121400</Code>
+                        <Description>Dishwasher Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121150</Code>
+                        <Description>Partial Carpet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121100</Code>
+                        <Description>Carpet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125321</Code>
+                        <Description>Concrete/Masonry/Sidewalk</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125320</Code>
+                        <Description>Gutters/Spouts/Power Washing</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125319</Code>
+                        <Description>Building Exterior Upgrades</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125318</Code>
+                        <Description>Maintenance Equipment &amp; Tools</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125317</Code>
+                        <Description>Landscaping/Drainage</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125316</Code>
+                        <Description>Interior Renovation / Remodeling</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125315</Code>
+                        <Description>Construction Supervision</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125314</Code>
+                        <Description>Club House/Gym</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125313</Code>
+                        <Description>Amenities Upgrade</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121300</Code>
+                        <Description>Blinds</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125311</Code>
+                        <Description>Exterior Siding</Description>
+                    </Account>
+                    <Account>
+                        <Code>54071000</Code>
+                        <Description>Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>90690000</Code>
+                        <Description>Utility Bond</Description>
+                    </Account>
+                    <Account>
+                        <Code>54054000</Code>
+                        <Description>Personal Property Tax</Description>
+                    </Account>
+                    <Account>
+                        <Code>54053000</Code>
+                        <Description>Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>54052000</Code>
+                        <Description>Other Taxes</Description>
+                    </Account>
+                    <Account>
+                        <Code>54051000</Code>
+                        <Description>Real Estate Taxes</Description>
+                    </Account>
+                    <Account>
+                        <Code>50580000</Code>
+                        <Description>Fines &amp; Violations</Description>
+                    </Account>
+                    <Account>
+                        <Code>53380000</Code>
+                        <Description>Parking Lot Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>53480000</Code>
+                        <Description>Gate/Fence Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>53470000</Code>
+                        <Description>Roof/Siding Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>53460000</Code>
+                        <Description>Fire / Safety Equipment Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>52280000</Code>
+                        <Description>Cable Service</Description>
+                    </Account>
+                    <Account>
+                        <Code>50807000</Code>
+                        <Description>Alarm &amp; Security Protection</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010008</Code>
+                        <Description>Make Ready Punch</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010006</Code>
+                        <Description>Resurfacing Countertop/Tub</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010005</Code>
+                        <Description>Drywall Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010004</Code>
+                        <Description>Turnover Cleaning</Description>
+                    </Account>
+                    <Account>
+                        <Code>53440000</Code>
+                        <Description>Tile Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010001</Code>
+                        <Description>Carpet Cleaning &amp; Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>53400000</Code>
+                        <Description>Golf Cart Supplies/Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>53390000</Code>
+                        <Description>Pest Control - Non Contract</Description>
+                    </Account>
+                    <Account>
+                        <Code>53370000</Code>
+                        <Description>Pool Repair/Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53350000</Code>
+                        <Description>Cleaning Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53330000</Code>
+                        <Description>Cleaning - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53280000</Code>
+                        <Description>Golf Cart Lease</Description>
+                    </Account>
+                    <Account>
+                        <Code>53270000</Code>
+                        <Description>General Maintenance</Description>
+                    </Account>
+                    <Account>
+                        <Code>53260000</Code>
+                        <Description>Painting Supplies (OP)</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121050</Code>
+                        <Description>Water Damage Repairs to Unit</Description>
+                    </Account>
+                    <Account>
+                        <Code>53190000</Code>
+                        <Description>Building R&amp;M - Misc.</Description>
+                    </Account>
+                    <Account>
+                        <Code>53180000</Code>
+                        <Description>Maintenance Equipment &amp; Tools</Description>
+                    </Account>
+                    <Account>
+                        <Code>50804500</Code>
+                        <Description>Washer/Dryer Rental</Description>
+                    </Account>
+                    <Account>
+                        <Code>92028020</Code>
+                        <Description>Reno Storage Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>52260000</Code>
+                        <Description>Gas- Vacant Units</Description>
+                    </Account>
+                    <Account>
+                        <Code>52250000</Code>
+                        <Description>Gas- Common Areas</Description>
+                    </Account>
+                    <Account>
+                        <Code>50803000</Code>
+                        <Description>Valet Trash Removal</Description>
+                    </Account>
+                    <Account>
+                        <Code>50802000</Code>
+                        <Description>Trash Removal</Description>
+                    </Account>
+                    <Account>
+                        <Code>52230001</Code>
+                        <Description>Water and Sewer - Vacant</Description>
+                    </Account>
+                    <Account>
+                        <Code>52230000</Code>
+                        <Description>Water and Sewer - Property</Description>
+                    </Account>
+                    <Account>
+                        <Code>52220000</Code>
+                        <Description>Electricity - Vacant Units</Description>
+                    </Account>
+                    <Account>
+                        <Code>52210001</Code>
+                        <Description>Electricity - Occupied</Description>
+                    </Account>
+                    <Account>
+                        <Code>52210000</Code>
+                        <Description>Electricity - Common Areas</Description>
+                    </Account>
+                    <Account>
+                        <Code>51520000</Code>
+                        <Description>NOI Bonus</Description>
+                    </Account>
+                    <Account>
+                        <Code>51510000</Code>
+                        <Description>Time Management Software</Description>
+                    </Account>
+                    <Account>
+                        <Code>51500000</Code>
+                        <Description>Human Resources Recruitment</Description>
+                    </Account>
+                    <Account>
+                        <Code>51490000</Code>
+                        <Description>Payroll Administrative Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>51480000</Code>
+                        <Description>Employment Screening</Description>
+                    </Account>
+                    <Account>
+                        <Code>90360000</Code>
+                        <Description>Accounting/Invoicing Reimb</Description>
+                    </Account>
+                    <Account>
+                        <Code>51460000</Code>
+                        <Description>Renewal Bonus</Description>
+                    </Account>
+                    <Account>
+                        <Code>51450000</Code>
+                        <Description>Temporary Labor</Description>
+                    </Account>
+                    <Account>
+                        <Code>51440000</Code>
+                        <Description>Health Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>51430001</Code>
+                        <Description>Disability Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>51430000</Code>
+                        <Description>Employee Benefits</Description>
+                    </Account>
+                    <Account>
+                        <Code>51420002</Code>
+                        <Description>Workman's Comp.</Description>
+                    </Account>
+                    <Account>
+                        <Code>51420001</Code>
+                        <Description>Payroll Taxes</Description>
+                    </Account>
+                    <Account>
+                        <Code>90490000</Code>
+                        <Description>Corporate Bonus</Description>
+                    </Account>
+                    <Account>
+                        <Code>51400000</Code>
+                        <Description>Employee Bonus</Description>
+                    </Account>
+                    <Account>
+                        <Code>51390000</Code>
+                        <Description>Maintenance Overtime</Description>
+                    </Account>
+                    <Account>
+                        <Code>51380000</Code>
+                        <Description>Office Overtime</Description>
+                    </Account>
+                    <Account>
+                        <Code>51370000</Code>
+                        <Description>Maintenance Salaries</Description>
+                    </Account>
+                    <Account>
+                        <Code>51360000</Code>
+                        <Description>Office Salaries</Description>
+                    </Account>
+                    <Account>
+                        <Code>51250000</Code>
+                        <Description>Locator Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>51240000</Code>
+                        <Description>Social Media Marketing</Description>
+                    </Account>
+                    <Account>
+                        <Code>51230000</Code>
+                        <Description>Promotional Giveaways</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125342</Code>
+                        <Description>Signage</Description>
+                    </Account>
+                    <Account>
+                        <Code>51210000</Code>
+                        <Description>Resident Retention and Resident Functions</Description>
+                    </Account>
+                    <Account>
+                        <Code>51180000</Code>
+                        <Description>Community Newsletters</Description>
+                    </Account>
+                    <Account>
+                        <Code>51170000</Code>
+                        <Description>Collateral Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>51130000</Code>
+                        <Description>Newspaper/Magazine Advertising</Description>
+                    </Account>
+                    <Account>
+                        <Code>51120000</Code>
+                        <Description>Direct Mailing</Description>
+                    </Account>
+                    <Account>
+                        <Code>51110000</Code>
+                        <Description>Internet Advertising</Description>
+                    </Account>
+                    <Account>
+                        <Code>53520000</Code>
+                        <Description>Flower Beds Seasonal</Description>
+                    </Account>
+                    <Account>
+                        <Code>53510000</Code>
+                        <Description>Snow Removal</Description>
+                    </Account>
+                    <Account>
+                        <Code>53500000</Code>
+                        <Description>Mulch/Pinestraw</Description>
+                    </Account>
+                    <Account>
+                        <Code>53490000</Code>
+                        <Description>Tree/Plant Placement/Trimming</Description>
+                    </Account>
+                    <Account>
+                        <Code>50801000</Code>
+                        <Description>Grounds Maintenance Contract</Description>
+                    </Account>
+                    <Account>
+                        <Code>50570000</Code>
+                        <Description>Corporate Meals and Travel</Description>
+                    </Account>
+                    <Account>
+                        <Code>50560000</Code>
+                        <Description>Furniture Rental</Description>
+                    </Account>
+                    <Account>
+                        <Code>90480000</Code>
+                        <Description>Uniforms</Description>
+                    </Account>
+                    <Account>
+                        <Code>50510000</Code>
+                        <Description>Parking Space Fee</Description>
+                    </Account>
+                    <Account>
+                        <Code>50500000</Code>
+                        <Description>Office Space rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>50490001</Code>
+                        <Description>Contracted Service Fee</Description>
+                    </Account>
+                    <Account>
+                        <Code>50490000</Code>
+                        <Description>Licenses and Permits</Description>
+                    </Account>
+                    <Account>
+                        <Code>50440000</Code>
+                        <Description>Legal/Eviction Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>50400000</Code>
+                        <Description>Equipment Rental</Description>
+                    </Account>
+                    <Account>
+                        <Code>50350000</Code>
+                        <Description>Software Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>50320000</Code>
+                        <Description>Call Answering Service</Description>
+                    </Account>
+                    <Account>
+                        <Code>50310000</Code>
+                        <Description>Telephone/Cellphone/Internet</Description>
+                    </Account>
+                    <Account>
+                        <Code>50250000</Code>
+                        <Description>Dues and Subscriptions</Description>
+                    </Account>
+                    <Account>
+                        <Code>50200000</Code>
+                        <Description>Postage and Delivery</Description>
+                    </Account>
+                    <Account>
+                        <Code>50140000</Code>
+                        <Description>Office Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>50130000</Code>
+                        <Description>Convenience / Merchant Processing Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>50120000</Code>
+                        <Description>Misc. Adminitration Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>90685000</Code>
+                        <Description>Bank Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>50060000</Code>
+                        <Description>Credit Reports/Resident Screening</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130006</Code>
+                        <Description>AppRent Processing Fees Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130024</Code>
+                        <Description>Credit Builder</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150014</Code>
+                        <Description>Amenity Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110012</Code>
+                        <Description>Rubs Income Fixed</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130021</Code>
+                        <Description>Insufficient Notice</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150005</Code>
+                        <Description>Washer/Dryer Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130018</Code>
+                        <Description>Misc. Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130014</Code>
+                        <Description>Transfer Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130013</Code>
+                        <Description>Month to Month Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130016</Code>
+                        <Description>Collection Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130015</Code>
+                        <Description>Interest Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130011</Code>
+                        <Description>Concession Chargeback</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130008</Code>
+                        <Description>Current Resident Damage Charge Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130012</Code>
+                        <Description>Lease Cancellation Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130007</Code>
+                        <Description>Key and Lock Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150009</Code>
+                        <Description>Access Card/Clicker Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130009</Code>
+                        <Description>Forfeit Security Deposit-Break Lease Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150008</Code>
+                        <Description>Storage Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150006</Code>
+                        <Description>Pet Rent Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130005</Code>
+                        <Description>Legal Fees Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130004</Code>
+                        <Description>Late Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130003</Code>
+                        <Description>NSF Fees Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110010</Code>
+                        <Description>Electric Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110009</Code>
+                        <Description>Vacant Cost Recovery Fee Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110008</Code>
+                        <Description>Pest Control Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110007</Code>
+                        <Description>Gas Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110004</Code>
+                        <Description>Trash Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110006</Code>
+                        <Description>Water Charge Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110005</Code>
+                        <Description>Utility Billing Fee Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130002</Code>
+                        <Description>Application Fees Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130001</Code>
+                        <Description>Administration Fees Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130019</Code>
+                        <Description>Insurance - Royalty</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150004</Code>
+                        <Description>Laundry &amp; Vending Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150003</Code>
+                        <Description>Renters Insurance Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110013</Code>
+                        <Description>Payment Arrangement</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150002</Code>
+                        <Description>Club House Rental Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110003</Code>
+                        <Description>Valet Trash Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110002</Code>
+                        <Description>Internet Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110001</Code>
+                        <Description>Cable Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150010</Code>
+                        <Description>Garage/Carport Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150001</Code>
+                        <Description>Parking Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>41760000</Code>
+                        <Description>Plus: Prepaid Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>41320000</Code>
+                        <Description>Bad Debt Write Offs</Description>
+                    </Account>
+                    <Account>
+                        <Code>41620000</Code>
+                        <Description>Less: Rent Adjustment</Description>
+                    </Account>
+                    <Account>
+                        <Code>41610000</Code>
+                        <Description>Less: Admin Units</Description>
+                    </Account>
+                    <Account>
+                        <Code>41600000</Code>
+                        <Description>Less: Down Units</Description>
+                    </Account>
+                    <Account>
+                        <Code>41500000</Code>
+                        <Description>Less: Model Units</Description>
+                    </Account>
+                    <Account>
+                        <Code>41400000</Code>
+                        <Description>Less: Vacancy</Description>
+                    </Account>
+                    <Account>
+                        <Code>41310000</Code>
+                        <Description>Less: Delinquency</Description>
+                    </Account>
+                    <Account>
+                        <Code>41300005</Code>
+                        <Description>Less: Employee Discounts</Description>
+                    </Account>
+                    <Account>
+                        <Code>41300004</Code>
+                        <Description>Less: Other Concessions</Description>
+                    </Account>
+                    <Account>
+                        <Code>41300002</Code>
+                        <Description>Less: Renewal Concession</Description>
+                    </Account>
+                    <Account>
+                        <Code>41300001</Code>
+                        <Description>Less: Move In Concession</Description>
+                    </Account>
+                    <Account>
+                        <Code>41290000</Code>
+                        <Description>Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>41110010</Code>
+                        <Description>Less: (Loss)/Gain to Lease</Description>
+                    </Account>
+                    <Account>
+                        <Code>41110005</Code>
+                        <Description>Gross Potential Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>40800000</Code>
+                        <Description>DMR - Other Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>40780000</Code>
+                        <Description>DMR-Contract Revenue</Description>
+                    </Account>
+                    <Account>
+                        <Code>40771000</Code>
+                        <Description>3rd Party - Other Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>40770000</Code>
+                        <Description>3rd Party Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>40760000</Code>
+                        <Description>DMR - Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>30002000</Code>
+                        <Description>Income Distribution</Description>
+                    </Account>
+                    <Account>
+                        <Code>30220000</Code>
+                        <Description>Preferred Equity</Description>
+                    </Account>
+                    <Account>
+                        <Code>30210005</Code>
+                        <Description>Capital - Outside Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>30210004</Code>
+                        <Description>Partner Capital- 4</Description>
+                    </Account>
+                    <Account>
+                        <Code>30210003</Code>
+                        <Description>Partner Capital- 3</Description>
+                    </Account>
+                    <Account>
+                        <Code>30001500</Code>
+                        <Description>Equity Receivable/Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>30001000</Code>
+                        <Description>Contribution- Investor</Description>
+                    </Account>
+                    <Account>
+                        <Code>30210000</Code>
+                        <Description>Partner Capital</Description>
+                    </Account>
+                    <Account>
+                        <Code>30200000</Code>
+                        <Description>Paid in Captial</Description>
+                    </Account>
+                    <Account>
+                        <Code>30002500</Code>
+                        <Description>Equity Distribution</Description>
+                    </Account>
+                    <Account>
+                        <Code>30030000</Code>
+                        <Description>Common Stock</Description>
+                    </Account>
+                    <Account>
+                        <Code>30020000</Code>
+                        <Description>Retained Earnings - Prior Years</Description>
+                    </Account>
+                    <Account>
+                        <Code>30010000</Code>
+                        <Description>Retained Earnings - Current Year</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228025</Code>
+                        <Description>Due To/From: Other II</Description>
+                    </Account>
+                    <Account>
+                        <Code>23280000</Code>
+                        <Description>Employee Supplemental Contribution</Description>
+                    </Account>
+                    <Account>
+                        <Code>23270000</Code>
+                        <Description>Employee Medical Contribution</Description>
+                    </Account>
+                    <Account>
+                        <Code>23260000</Code>
+                        <Description>Insurance Deposits for Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228035</Code>
+                        <Description>Due From/To: Garden Grove LLC Member Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>21230000</Code>
+                        <Description>Loan Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228020</Code>
+                        <Description>Due To/From: Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228050</Code>
+                        <Description>Timing Difference Deposits</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228000</Code>
+                        <Description>Due To: Timbers NC LLC</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221950</Code>
+                        <Description>Due From/To: Stoney Brook</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221900</Code>
+                        <Description>Due From/To: Brook Highland Place</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221850</Code>
+                        <Description>Due From/To: Copper Creek</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221800</Code>
+                        <Description>Due From/To: Parkland Commons</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221750</Code>
+                        <Description>Due From/To: GreenRock</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221000</Code>
+                        <Description>Due From/To: Laguna Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>21180000</Code>
+                        <Description>Due From/To: Adar Woods Holdings LLC</Description>
+                    </Account>
+                    <Account>
+                        <Code>21170000</Code>
+                        <Description>Credit Line</Description>
+                    </Account>
+                    <Account>
+                        <Code>21160000</Code>
+                        <Description>Credit Card Suspense Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>21150000</Code>
+                        <Description>Clearing - Exchange</Description>
+                    </Account>
+                    <Account>
+                        <Code>21140001</Code>
+                        <Description>Accrued Asset Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>21140000</Code>
+                        <Description>Accrued Management Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>21130002</Code>
+                        <Description>Accrued Federal-State Tax</Description>
+                    </Account>
+                    <Account>
+                        <Code>21130001</Code>
+                        <Description>Accrued Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>21019000</Code>
+                        <Description>Accrued Real Estate Tax</Description>
+                    </Account>
+                    <Account>
+                        <Code>21120000</Code>
+                        <Description>Construction Holdback</Description>
+                    </Account>
+                    <Account>
+                        <Code>21110000</Code>
+                        <Description>Prepaid Water Liability</Description>
+                    </Account>
+                    <Account>
+                        <Code>21100000</Code>
+                        <Description>Principle Amortization</Description>
+                    </Account>
+                    <Account>
+                        <Code>21090005</Code>
+                        <Description>Contingent Loan Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21090000</Code>
+                        <Description>Mortgage Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21080000</Code>
+                        <Description>Sales Tax Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21070000</Code>
+                        <Description>Notes Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21060005</Code>
+                        <Description>Deferred Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>21060000</Code>
+                        <Description>Prepaid Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>21050000</Code>
+                        <Description>Insurance Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21040000</Code>
+                        <Description>Personal Property Taxes</Description>
+                    </Account>
+                    <Account>
+                        <Code>21030000</Code>
+                        <Description>Real Estate Taxes Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21020004</Code>
+                        <Description>Security Deposit Clearing</Description>
+                    </Account>
+                    <Account>
+                        <Code>21020003</Code>
+                        <Description>Intrest on Tenant Deposits</Description>
+                    </Account>
+                    <Account>
+                        <Code>21020002</Code>
+                        <Description>Security Deposit OTHER Deposits</Description>
+                    </Account>
+                    <Account>
+                        <Code>21020001</Code>
+                        <Description>Security Deposit Pet Deposits</Description>
+                    </Account>
+                    <Account>
+                        <Code>21020000</Code>
+                        <Description>Security Deposit Refundable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010015</Code>
+                        <Description>Visas WF</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010013</Code>
+                        <Description>American Express AMAZON 1001</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010012</Code>
+                        <Description>American Express Ashley Woods</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010001</Code>
+                        <Description>Credit Card Accounts Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010000</Code>
+                        <Description>Accounts Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>15290000</Code>
+                        <Description>Healthcare Clearing</Description>
+                    </Account>
+                    <Account>
+                        <Code>15280000</Code>
+                        <Description>Payroll Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>15270000</Code>
+                        <Description>Sec. Invest. In-Transit</Description>
+                    </Account>
+                    <Account>
+                        <Code>15260000</Code>
+                        <Description>Payroll Clearing</Description>
+                    </Account>
+                    <Account>
+                        <Code>15250000</Code>
+                        <Description>Undeposited Funds</Description>
+                    </Account>
+                    <Account>
+                        <Code>15200000</Code>
+                        <Description>Construction In Process</Description>
+                    </Account>
+                    <Account>
+                        <Code>15170000</Code>
+                        <Description>Escrows Pending From Bank</Description>
+                    </Account>
+                    <Account>
+                        <Code>15160001</Code>
+                        <Description>Draw Liability</Description>
+                    </Account>
+                    <Account>
+                        <Code>15160000</Code>
+                        <Description>Draw Receivable</Description>
+                    </Account>
+                    <Account>
+                        <Code>12062000</Code>
+                        <Description>Interest Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>12061000</Code>
+                        <Description>Other Reserves</Description>
+                    </Account>
+                    <Account>
+                        <Code>12060000</Code>
+                        <Description>Replacement Reserves</Description>
+                    </Account>
+                    <Account>
+                        <Code>15140000</Code>
+                        <Description>Escrow: Hazard/Windstorm</Description>
+                    </Account>
+                    <Account>
+                        <Code>15130000</Code>
+                        <Description>Escrow: Flood Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>15110000</Code>
+                        <Description>Escrow: Liability/Flood Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>12050000</Code>
+                        <Description>Property Taxes Escrow</Description>
+                    </Account>
+                    <Account>
+                        <Code>15010000</Code>
+                        <Description>Advance Escrow from Lender</Description>
+                    </Account>
+                    <Account>
+                        <Code>12000500</Code>
+                        <Description>Land</Description>
+                    </Account>
+                    <Account>
+                        <Code>14620000</Code>
+                        <Description>Casualty Damage</Description>
+                    </Account>
+                    <Account>
+                        <Code>14610000</Code>
+                        <Description>Construction in Progress</Description>
+                    </Account>
+                    <Account>
+                        <Code>12055000</Code>
+                        <Description>Insurance Escrow</Description>
+                    </Account>
+                    <Account>
+                        <Code>12001400</Code>
+                        <Description>Accumulated Depreciation</Description>
+                    </Account>
+                    <Account>
+                        <Code>14200000</Code>
+                        <Description>Accumulated Depr.-Renovations</Description>
+                    </Account>
+                    <Account>
+                        <Code>14050001</Code>
+                        <Description>Accumulated Depr - FF&amp;E 5 yrs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12000520</Code>
+                        <Description>Furniture, Fixtures &amp; Equipment - 5 yrs</Description>
+                    </Account>
+                    <Account>
+                        <Code>14040001</Code>
+                        <Description>Accumulated Depr - Bldg Improvements - 15 yrs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12000550</Code>
+                        <Description>Bldg Improvements - 15 yrs</Description>
+                    </Account>
+                    <Account>
+                        <Code>14030001</Code>
+                        <Description>Accum Depr - Land Improvement</Description>
+                    </Account>
+                    <Account>
+                        <Code>14030000</Code>
+                        <Description>Land Improvements</Description>
+                    </Account>
+                    <Account>
+                        <Code>14020000</Code>
+                        <Description>Tenant Improvements</Description>
+                    </Account>
+                    <Account>
+                        <Code>14010000</Code>
+                        <Description>Building Improvements</Description>
+                    </Account>
+                    <Account>
+                        <Code>12001500</Code>
+                        <Description>Accum Depr - Buildings</Description>
+                    </Account>
+                    <Account>
+                        <Code>12001000</Code>
+                        <Description>Buildings</Description>
+                    </Account>
+                    <Account>
+                        <Code>13800000</Code>
+                        <Description>Accum. Depreciation: Auto/Trucks</Description>
+                    </Account>
+                    <Account>
+                        <Code>13700000</Code>
+                        <Description>Automobiles/Trucks</Description>
+                    </Account>
+                    <Account>
+                        <Code>13600000</Code>
+                        <Description>Trademark/Intangible Asset</Description>
+                    </Account>
+                    <Account>
+                        <Code>12001100</Code>
+                        <Description>Leasehold Improvement</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100026</Code>
+                        <Description>Floor / Tile</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100025</Code>
+                        <Description>Termite Treatment</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100024</Code>
+                        <Description>Subfloor / Lightweight</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100023</Code>
+                        <Description>Signage</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100022</Code>
+                        <Description>Roof Repairs</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100021</Code>
+                        <Description>Pool</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100020</Code>
+                        <Description>Plumbing</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100019</Code>
+                        <Description>Miscellaneous</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100018</Code>
+                        <Description>Blinds / Drapes</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100017</Code>
+                        <Description>Sidewalks</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100016</Code>
+                        <Description>HVAC</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100015</Code>
+                        <Description>Equipment</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100014</Code>
+                        <Description>Electrical</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100013</Code>
+                        <Description>Cert of Occupancy / Life Safety</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100012</Code>
+                        <Description>Floor - Hardwood</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100011</Code>
+                        <Description>Floor - Vinyl</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100010</Code>
+                        <Description>Carpets</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100009</Code>
+                        <Description>Carpentry</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100008</Code>
+                        <Description>Building - Interior</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100007</Code>
+                        <Description>Building - Exterior</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100006</Code>
+                        <Description>Appliances - Washer/Dryer</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100005</Code>
+                        <Description>Appliances - Water Heaters</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100004</Code>
+                        <Description>Appliances - Dishwashers</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100003</Code>
+                        <Description>Appliances - Microwaves</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100002</Code>
+                        <Description>Appliances - Stoves</Description>
+                    </Account>
+                    <Account>
+                        <Code>13100001</Code>
+                        <Description>Appliances - Refrigerators</Description>
+                    </Account>
+                    <Account>
+                        <Code>13020001</Code>
+                        <Description>Accumulated Depr. Artwork</Description>
+                    </Account>
+                    <Account>
+                        <Code>13020000</Code>
+                        <Description>Artwork</Description>
+                    </Account>
+                    <Account>
+                        <Code>13010001</Code>
+                        <Description>Accumulated Depr.-Equipment</Description>
+                    </Account>
+                    <Account>
+                        <Code>13010000</Code>
+                        <Description>Equipment</Description>
+                    </Account>
+                    <Account>
+                        <Code>13000001</Code>
+                        <Description>Accumulated Depr.-Furniture and Fixtures</Description>
+                    </Account>
+                    <Account>
+                        <Code>12000501</Code>
+                        <Description>Furniture/Fixtures/Equipment</Description>
+                    </Account>
+                    <Account>
+                        <Code>12850000</Code>
+                        <Description>Insurance Loss Held</Description>
+                    </Account>
+                    <Account>
+                        <Code>12002100</Code>
+                        <Description>Loan Cost</Description>
+                    </Account>
+                    <Account>
+                        <Code>12002400</Code>
+                        <Description>Accumulated Amortization</Description>
+                    </Account>
+                    <Account>
+                        <Code>12150000</Code>
+                        <Description>Purchase Deposit</Description>
+                    </Account>
+                    <Account>
+                        <Code>12002500</Code>
+                        <Description>Accum Depr - Acquisition Costs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12002000</Code>
+                        <Description>Acquisition Costs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12130000</Code>
+                        <Description>Cash Advance</Description>
+                    </Account>
+                    <Account>
+                        <Code>12120000</Code>
+                        <Description>Amortization Loan Costs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12110001</Code>
+                        <Description>Accum Amort - Loan Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>12110000</Code>
+                        <Description>Green Improvement Reserve (Escrow)</Description>
+                    </Account>
+                    <Account>
+                        <Code>12100000</Code>
+                        <Description>Preferred Equity Costs</Description>
+                    </Account>
+                    <Account>
+                        <Code>12040000</Code>
+                        <Description>Utility Deposit</Description>
+                    </Account>
+                    <Account>
+                        <Code>12080000</Code>
+                        <Description>Construction Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>12070000</Code>
+                        <Description>Capital Improvement Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>12035000</Code>
+                        <Description>Prepaid Real Estate Taxes</Description>
+                    </Account>
+                    <Account>
+                        <Code>12010000</Code>
+                        <Description>Prepaid Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>12030000</Code>
+                        <Description>Prepaid Flood Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>12025000</Code>
+                        <Description>Prepaid Hazard/Windstorm</Description>
+                    </Account>
+                    <Account>
+                        <Code>12020000</Code>
+                        <Description>Prepaid Property Insurance</Description>
+                    </Account>
+                    <Account>
+                        <Code>11800000</Code>
+                        <Description>Petty Cash</Description>
+                    </Account>
+                    <Account>
+                        <Code>11750000</Code>
+                        <Description>Secondary Bank Acct</Description>
+                    </Account>
+                    <Account>
+                        <Code>11960650</Code>
+                        <Description>Authorize.net Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228030</Code>
+                        <Description>Due To/From: Kanew LLC</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228001</Code>
+                        <Description>Due To: Dasmen Residential</Description>
+                    </Account>
+                    <Account>
+                        <Code>11700000</Code>
+                        <Description>Acquisition Account WF</Description>
+                    </Account>
+                    <Account>
+                        <Code>11960008</Code>
+                        <Description>Allowance for Bad Debt</Description>
+                    </Account>
+                    <Account>
+                        <Code>11960006</Code>
+                        <Description>Reimbursable Tenant Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>11960005</Code>
+                        <Description>Due From 3rd Party for Health Care</Description>
+                    </Account>
+                    <Account>
+                        <Code>21222040</Code>
+                        <Description>Due From/To: Westchester xx4034</Description>
+                    </Account>
+                    <Account>
+                        <Code>11960000</Code>
+                        <Description>Rent Receivable</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010002</Code>
+                        <Description>American Express 6024 (old 4029 &amp; 5026)</Description>
+                    </Account>
+                    <Account>
+                        <Code>41300007</Code>
+                        <Description>Less: Maintenance Concession One Time</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150007</Code>
+                        <Description>Pet Fee One Time</Description>
+                    </Account>
+                    <Account>
+                        <Code>53220001</Code>
+                        <Description>Carpet Cleaning Occupied</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110011</Code>
+                        <Description>Sewer Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121700</Code>
+                        <Description>Counter Top Replacement/ Upgrades</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021010</Code>
+                        <Description>Reno Unit Demolition</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021020</Code>
+                        <Description>Reno Unit Electrical</Description>
+                    </Account>
+                    <Account>
+                        <Code>92028030</Code>
+                        <Description>Reno Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021030</Code>
+                        <Description>Reno Unit Drywall</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021040</Code>
+                        <Description>Reno Unit Painting</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021050</Code>
+                        <Description>Reno Unit Windows/Doors</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021001</Code>
+                        <Description>Reno Unit Upgrade</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021130</Code>
+                        <Description>Reno Unit Trim</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021060</Code>
+                        <Description>Reno Unit Resurface Kitchen/Bathroom</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021070</Code>
+                        <Description>Reno Unit Punch</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021150</Code>
+                        <Description>Reno Unit Construction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021210</Code>
+                        <Description>Reno Unit Lighting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021080</Code>
+                        <Description>Reno Unit Plumbing</Description>
+                    </Account>
+                    <Account>
+                        <Code>52270000</Code>
+                        <Description>Utility Billing Fee Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>50806000</Code>
+                        <Description>Pond Lake Maintenance</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125360</Code>
+                        <Description>Trash Removal</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121440</Code>
+                        <Description>Washer Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121450</Code>
+                        <Description>Dryer Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125352</Code>
+                        <Description>Security, Alarm, and Protection</Description>
+                    </Account>
+                    <Account>
+                        <Code>53110001</Code>
+                        <Description>Electrical Repairs - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53110002</Code>
+                        <Description>Electrical Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53120001</Code>
+                        <Description>Plumbing Repairs - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53120002</Code>
+                        <Description>Plumbing Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53130001</Code>
+                        <Description>HVAC Repairs - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53130002</Code>
+                        <Description>HVAC Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53140001</Code>
+                        <Description>Appliances Repair - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53140002</Code>
+                        <Description>Appliances Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53150001</Code>
+                        <Description>Windows Repair - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53150002</Code>
+                        <Description>Windows Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53160002</Code>
+                        <Description>Lighting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53240001</Code>
+                        <Description>Door Repairs - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>53240002</Code>
+                        <Description>Door Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010009</Code>
+                        <Description>Painting Expense - Third Party</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021160</Code>
+                        <Description>Reno Unit Painting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>53420000</Code>
+                        <Description>Hardware Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021120</Code>
+                        <Description>Reno Unit Backsplash</Description>
+                    </Account>
+                    <Account>
+                        <Code>90680000</Code>
+                        <Description>Cost Seg Consulting</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130017</Code>
+                        <Description>Cable Income - Royalties</Description>
+                    </Account>
+                    <Account>
+                        <Code>41290001</Code>
+                        <Description>HAP Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>53430000</Code>
+                        <Description>Mold Remediation/Hazmat Descontamination</Description>
+                    </Account>
+                    <Account>
+                        <Code>51250001</Code>
+                        <Description>Resident Referral Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130010</Code>
+                        <Description>Forfeit Security Deposit-Tenant Damage Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>51430002</Code>
+                        <Description>Employee Housing</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130025</Code>
+                        <Description>5 day Certification of Service Processor and Notice Fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>52320000</Code>
+                        <Description>Utilities - Other Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>54010011</Code>
+                        <Description>Vinyl Flooring Cleaning</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022110</Code>
+                        <Description>Reno CH Landscaping</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026010</Code>
+                        <Description>Reno Path Paving</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125361</Code>
+                        <Description>Golf Cars Purchase</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021090</Code>
+                        <Description>Reno Unit HVAC</Description>
+                    </Account>
+                    <Account>
+                        <Code>50804000</Code>
+                        <Description>Pool Service</Description>
+                    </Account>
+                    <Account>
+                        <Code>50805000</Code>
+                        <Description>Pest Control - Monthly Contract</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025010</Code>
+                        <Description>Reno Exterior Painting</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130026</Code>
+                        <Description>Conditional Rent</Description>
+                    </Account>
+                    <Account>
+                        <Code>50808000</Code>
+                        <Description>IT Support</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150011</Code>
+                        <Description>Gym Membership</Description>
+                    </Account>
+                    <Account>
+                        <Code>11100000</Code>
+                        <Description>Operating Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>11300000</Code>
+                        <Description>Security Deposit Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>50809000</Code>
+                        <Description>Fitness Service</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130027</Code>
+                        <Description>Furniture Rental Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021170</Code>
+                        <Description>Reno Unit Plumbing Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021180</Code>
+                        <Description>Reno Unit Electrical Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021190</Code>
+                        <Description>Reno Unit Hardware Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021200</Code>
+                        <Description>Reno Unit HVAC Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>11200000</Code>
+                        <Description>Sweep Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021100</Code>
+                        <Description>Reno Unit Blinds</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021110</Code>
+                        <Description>Reno Unit Floor/Tile/Carpet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92028010</Code>
+                        <Description>Reno Trash/Dumpster Removal</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025020</Code>
+                        <Description>Reno Exterior Painting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92024010</Code>
+                        <Description>Reno Playground Labor</Description>
+                    </Account>
+                    <Account>
+                        <Code>92024020</Code>
+                        <Description>Reno Playground</Description>
+                    </Account>
+                    <Account>
+                        <Code>92024030</Code>
+                        <Description>Reno Playground Demolition</Description>
+                    </Account>
+                    <Account>
+                        <Code>92024040</Code>
+                        <Description>Reno Playground Construction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92023010</Code>
+                        <Description>Reno Dog Park</Description>
+                    </Account>
+                    <Account>
+                        <Code>92023020</Code>
+                        <Description>Reno Dog Park Labor</Description>
+                    </Account>
+                    <Account>
+                        <Code>92023030</Code>
+                        <Description>Reno Dog Park Demolition</Description>
+                    </Account>
+                    <Account>
+                        <Code>92023040</Code>
+                        <Description>Reno Dog Park Construction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92027010</Code>
+                        <Description>Reno Roof</Description>
+                    </Account>
+                    <Account>
+                        <Code>92027020</Code>
+                        <Description>Reno Roof Conrtruction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022010</Code>
+                        <Description>Reno Club House</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022020</Code>
+                        <Description>Reno CH Electrical</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022030</Code>
+                        <Description>Reno CH Drywall</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022050</Code>
+                        <Description>Reno CH Painting</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022060</Code>
+                        <Description>Reno CH Windows/Doors</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022080</Code>
+                        <Description>Reno CH Trim</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022100</Code>
+                        <Description>Reno CH Punch</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022120</Code>
+                        <Description>Reno CH Construction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022170</Code>
+                        <Description>Reno CH Lighting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022070</Code>
+                        <Description>Reno CH Plumbing</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022040</Code>
+                        <Description>Reno CH HVAC</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022130</Code>
+                        <Description>Reno CH Painting Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022140</Code>
+                        <Description>Reno CH Plumbing Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022150</Code>
+                        <Description>Reno CH Electrical Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022160</Code>
+                        <Description>Reno CH Hardware Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022180</Code>
+                        <Description>Reno CH HVAC Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022090</Code>
+                        <Description>Reno CH Floor/Tile/Carpet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021220</Code>
+                        <Description>Reno Unit Dishwasher Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021230</Code>
+                        <Description>Reno Unit Microwave Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021240</Code>
+                        <Description>Reno Unit Refrigerator Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021250</Code>
+                        <Description>Reno Unit Stove Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021260</Code>
+                        <Description>Reno Unit Washer Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021270</Code>
+                        <Description>Reno Unit Dryer Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021280</Code>
+                        <Description>Reno Unit Water Heater Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021290</Code>
+                        <Description>Reno Unit HVAC Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021300</Code>
+                        <Description>Reno Unit Counter Top Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021310</Code>
+                        <Description>Reno Unit Cabinet Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021320</Code>
+                        <Description>Reno Unit Sink Replacement</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026020</Code>
+                        <Description>Reno Path Demolition</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026030</Code>
+                        <Description>Reno Path Construction Materials</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026001</Code>
+                        <Description>Reno Path</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026040</Code>
+                        <Description>Reno Path Electrical</Description>
+                    </Account>
+                    <Account>
+                        <Code>92023050</Code>
+                        <Description>Reno Dog Park Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>92021330</Code>
+                        <Description>Reno Unit Cleaning</Description>
+                    </Account>
+                    <Account>
+                        <Code>53530000</Code>
+                        <Description>Misc Expense Rebate</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130028</Code>
+                        <Description>Insurance Violation Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025100</Code>
+                        <Description>Reno Breezeways</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022190</Code>
+                        <Description>Reno CH Cleaning</Description>
+                    </Account>
+                    <Account>
+                        <Code>92028040</Code>
+                        <Description>Reno Designer Services</Description>
+                    </Account>
+                    <Account>
+                        <Code>92022300</Code>
+                        <Description>Reno CH Furniture &amp; Decorations</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025200</Code>
+                        <Description>Reno Tennis Court</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025300</Code>
+                        <Description>Reno Pool</Description>
+                    </Account>
+                    <Account>
+                        <Code>92026050</Code>
+                        <Description>Reno Path Landscaping</Description>
+                    </Account>
+                    <Account>
+                        <Code>42110014</Code>
+                        <Description>Technology Package Upgrade</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025700</Code>
+                        <Description>Reno Bridge/Deck</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025600</Code>
+                        <Description>Reno Landscaping</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125335</Code>
+                        <Description>Major HVAC Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>90675000</Code>
+                        <Description>Non-Operating Pest Control</Description>
+                    </Account>
+                    <Account>
+                        <Code>90365000</Code>
+                        <Description>Non-Operating Labor- Maintenance</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125333</Code>
+                        <Description>Major Appliance Repair</Description>
+                    </Account>
+                    <Account>
+                        <Code>90676000</Code>
+                        <Description>Non-Operating Office Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>50803500</Code>
+                        <Description>Power Wash</Description>
+                    </Account>
+                    <Account>
+                        <Code>90366000</Code>
+                        <Description>Non-Operating Commissions</Description>
+                    </Account>
+                    <Account>
+                        <Code>90375000</Code>
+                        <Description>Rewards Redemption</Description>
+                    </Account>
+                    <Account>
+                        <Code>90677000</Code>
+                        <Description>Non-Operating Office Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121600</Code>
+                        <Description>HVAC Other Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>92028050</Code>
+                        <Description>Reno Housing Expenses</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221500</Code>
+                        <Description>Due From/To: Sedona Springs</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221550</Code>
+                        <Description>Due From/To:Verrano Park</Description>
+                    </Account>
+                    <Account>
+                        <Code>21227700</Code>
+                        <Description>Due From/To: Madison Place</Description>
+                    </Account>
+                    <Account>
+                        <Code>21227800</Code>
+                        <Description>Due From/To: Vestavia Place</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221600</Code>
+                        <Description>Due From/To: Summit Ridge</Description>
+                    </Account>
+                    <Account>
+                        <Code>50590000</Code>
+                        <Description>Renter Insuraunce Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>21090001</Code>
+                        <Description>Mezzanine Payable</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130029</Code>
+                        <Description>Concession for Application/Admin fees</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221960</Code>
+                        <Description>Due From/To: Carmel Brook</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221970</Code>
+                        <Description>Due From/To: Laguna Creek</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221980</Code>
+                        <Description>Due From/To: Carmel Spring</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025800</Code>
+                        <Description>Reno Fountain</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025900</Code>
+                        <Description>Reno Siding</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025850</Code>
+                        <Description>Reno Fence</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025950</Code>
+                        <Description>Reno Outside Lights</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025750</Code>
+                        <Description>Reno Parking Lot/Sidewalks</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025650</Code>
+                        <Description>Reno Power Wash Ext Blgds</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025500</Code>
+                        <Description>Reno Signage</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025550</Code>
+                        <Description>Reno Curbing</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150012</Code>
+                        <Description>Smart Unit Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>50809500</Code>
+                        <Description>Smart Unit Service</Description>
+                    </Account>
+                    <Account>
+                        <Code>11600000</Code>
+                        <Description>Renovation Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>11755000</Code>
+                        <Description>Club House Store Bank Acct</Description>
+                    </Account>
+                    <Account>
+                        <Code>42150013</Code>
+                        <Description>Convenience Store Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>21221650</Code>
+                        <Description>Due From/To: Sienna Ridge</Description>
+                    </Account>
+                    <Account>
+                        <Code>21222000</Code>
+                        <Description>Due From/To: NOLA</Description>
+                    </Account>
+                    <Account>
+                        <Code>50805500</Code>
+                        <Description>Central Maintenance service</Description>
+                    </Account>
+                    <Account>
+                        <Code>90360500</Code>
+                        <Description>Central Maintenance Set Up</Description>
+                    </Account>
+                    <Account>
+                        <Code>53200000</Code>
+                        <Description>Misc Landscaping Maintenance</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125370</Code>
+                        <Description>Convenience Store Expense</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010006</Code>
+                        <Description>American Express LCF 62004</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121250</Code>
+                        <Description>Tile Replacement (Bathroom/Kitchen)</Description>
+                    </Account>
+                    <Account>
+                        <Code>11605000</Code>
+                        <Description>Interior Reno Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>11607000</Code>
+                        <Description>Exterior Reno Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>30002100</Code>
+                        <Description>Other Income Distribution</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121060</Code>
+                        <Description>Painting Expense and Supplies- Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>90125322</Code>
+                        <Description>Not for Units Painting Expense and Supplies- Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121070</Code>
+                        <Description>Drywall- Other</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121080</Code>
+                        <Description>Major Turnover Cleaning</Description>
+                    </Account>
+                    <Account>
+                        <Code>53110003</Code>
+                        <Description>Landscaping Supplies</Description>
+                    </Account>
+                    <Account>
+                        <Code>11605500</Code>
+                        <Description>Interior Reno Account WC</Description>
+                    </Account>
+                    <Account>
+                        <Code>11607500</Code>
+                        <Description>Exterior Reno Account WC</Description>
+                    </Account>
+                    <Account>
+                        <Code>11700010</Code>
+                        <Description>Acquisition Account WC</Description>
+                    </Account>
+                    <Account>
+                        <Code>12090000</Code>
+                        <Description>Managing Member Capex Reserve</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121090</Code>
+                        <Description>Resurfacing Countertop/Tub</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121040</Code>
+                        <Description>Building R&amp;M - Misc.</Description>
+                    </Account>
+                    <Account>
+                        <Code>90121030</Code>
+                        <Description>Central Maintenance service</Description>
+                    </Account>
+                    <Account>
+                        <Code>11105000</Code>
+                        <Description>Operating Account BOA</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130030</Code>
+                        <Description>Bad Debt Other Income</Description>
+                    </Account>
+                    <Account>
+                        <Code>41630000</Code>
+                        <Description>Less: Unit in Abatement</Description>
+                    </Account>
+                    <Account>
+                        <Code>21222175</Code>
+                        <Description>Due From/To: Bridlewood Member Mng XX2075</Description>
+                    </Account>
+                    <Account>
+                        <Code>21222176</Code>
+                        <Description>Due From/To: Sterlingwood Member Mng XX4956</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228040</Code>
+                        <Description>Due From/To: SomerStone</Description>
+                    </Account>
+                    <Account>
+                        <Code>11700015</Code>
+                        <Description>Acquisition Account BOA</Description>
+                    </Account>
+                    <Account>
+                        <Code>11105500</Code>
+                        <Description>Operating Account WC</Description>
+                    </Account>
+                    <Account>
+                        <Code>11604000</Code>
+                        <Description>Renovation Account BOA</Description>
+                    </Account>
+                    <Account>
+                        <Code>21185000</Code>
+                        <Description>Due From/To: Cambridge Apts Member Acct</Description>
+                    </Account>
+                    <Account>
+                        <Code>11605550</Code>
+                        <Description>Interior Reno Account BOA</Description>
+                    </Account>
+                    <Account>
+                        <Code>11607550</Code>
+                        <Description>Exterior Reno Account BOA</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010009</Code>
+                        <Description>American Express Kanew Tech 2025</Description>
+                    </Account>
+                    <Account>
+                        <Code>21195000</Code>
+                        <Description>Due From/To: MCG ASHFORD LLC Member Acct</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228026</Code>
+                        <Description>Due To: Dasmen Management</Description>
+                    </Account>
+                    <Account>
+                        <Code>92025005</Code>
+                        <Description>Reno Full Building</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228039</Code>
+                        <Description>Due From/To: Crossings at Ridgewood</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010016</Code>
+                        <Description>Capitol One Casa Luna</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228060</Code>
+                        <Description>Due From/To: Adar Bonita</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228070</Code>
+                        <Description>Due From/To: Adar Vistana</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228045</Code>
+                        <Description>Due From/To: Willow Point LLC Member Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>42130031</Code>
+                        <Description>Rent Recovered</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228061</Code>
+                        <Description>Due From/(To) WMF PPP</Description>
+                    </Account>
+                    <Account>
+                        <Code>21228055</Code>
+                        <Description>Due From/To: MCG Sapphire LLC Member Account</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010020</Code>
+                        <Description>GreenView East Chase Ink Credit Card</Description>
+                    </Account>
+                    <Account>
+                        <Code>21010021</Code>
+                        <Description>GreenView East Spark Business Credit Card</Description>
+                    </Account>
+                </Accounts>
+            </ExportChartOfAccountsResult>
+        </ExportChartOfAccountsResponse>
+    </soap:Body>
+</soap:Envelope>

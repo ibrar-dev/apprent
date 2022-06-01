@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppRent</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Start of apprent Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=b99f7242-1caa-46a1-afff-0e689c2e9a68"> </script>
+    <!-- End of apprent Zendesk Widget script -->
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/users.css") %>">
+    <link rel="icon" href="<%= Routes.static_path @conn, "/images/icon.png" %>" sizes="any" type="image/png">
+  </head>
+  <body class="h-100">
+    <div class="container-fluid h-100">
+      <main class="main-content h-100">
+        <div class="main-content-container my-auto h-100">
+          <div class="row no-gutters h-100">
+            <div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
+              <div class="card">
+                <div class="card-body">
+                  <%= if get_flash(@conn, :success) do %>
+                    <div class="alert alert-primary fade show auth__alert login-screen-flash">
+                      <%= get_flash(@conn, :success) %>
+                    </div>
+                  <% end %>
+                  <%= if get_flash(@conn, :error) do %>
+                    <div class="alert alert-danger fade show auth__alert login-screen-flash">
+                      <%= get_flash(@conn, :error) %>
+                    </div>
+                  <% end %>
+                  <img class="auth-form__logo d-table mx-auto mb-3" src="<%= Routes.static_path(@conn, "/images/favicon.png") %>" style="max-width: 40px">
+                  <%= @inner_content %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

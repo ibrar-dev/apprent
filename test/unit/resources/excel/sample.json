@@ -1,0 +1,127 @@
+[
+  {
+    "data": [
+      [
+        "2020-01-01",
+        "3:45",
+        [
+          "Chicago",
+          "Los Angeles"
+        ],
+        250
+      ],
+      [
+        "2020-01-02",
+        "3:25",
+        [
+          "New York",
+          "Los Angeles",
+          "Somewhere"
+        ],
+        200
+      ]
+    ],
+    "name": "First Sheet",
+    "sheet_headers": [
+      "First Sheet",
+      "12/12/2020",
+      "Fairy Tale Brook"
+    ],
+    "table_footer": [
+      "Total:",
+      "12345",
+      "",
+      450
+    ],
+    "table_head": [
+      "Date",
+      "Time",
+      "Places",
+      "Amount"
+    ]
+  },
+  {
+    "data": [
+      [
+        826,
+        "Studio",
+        385,
+        2602171,
+        "Ryan Devlin",
+        1050.00,
+        [
+          "Rent",
+          "HAPRent",
+          {"data":  "Total", "styles":  ["border-top", "bold"]}
+        ],
+        [
+          815,
+          135,
+          {"data":  950, "styles":  ["border-top", "bold"]}
+        ],
+        650.00,
+        "2019-05-01",
+        "2020-05-01",
+        "",
+        790.00
+      ],
+      [
+        901,
+        "One Bedroom",
+        415,
+        2602172,
+        "Schalon Lambert",
+        1000.00,
+        [
+          "Rent",
+          {"data":  "Total", "styles":  ["border-top", "bold"]}
+        ],
+        [
+          1050,
+          {"data":  1050, "styles":  ["border-top", "bold"]}
+        ],
+        750.00,
+        "2019-07-01",
+        "2020-07-01",
+        "",
+        55.00
+      ]
+    ],
+    "name": "Rent Roll",
+    "sheet_headers": [
+      "Rent Roll with Lease Charges",
+      "2020-02-01",
+      "Fairy Tale Brook"
+    ],
+    "table_footer": [
+      "Units: 2",
+      "",
+      "Sq Ft: 800",
+      "",
+      "",
+      "Market Rent: 2050",
+      "",
+      "Lease Charges: 2000",
+      "Deposits: 1500",
+      "",
+      "",
+      "",
+      "Balance: 845"
+    ],
+    "table_head": [
+      "Unit",
+      "Floor Plan",
+      "Sq Ft",
+      "Resident",
+      "Name",
+      "Market Rent",
+      "Charges",
+      "Amount",
+      "Deposit",
+      "Move In",
+      "Lease End",
+      "Move Out",
+      "Balance"
+    ]
+  }
+]

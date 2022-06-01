@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between">
+  <h2 class="mr-3">
+    Actions<%= if @module_id > 0, do: ": " <> Enum.find(@modules, & "#{&1.id}" == @module_id).name %>
+  </h2>
+  <%= form_for @conn, Routes.action_path(@conn, :index), [method: :get], fn f -> %>
+    <div class="d-flex">
+      <%= select f, :module_id, module_options(@modules), class: "form-control" %>
+      <%= submit "Search", class: "btn btn-success ml-3" %>
+    </div>
+  <% end %>
+</div>
+
+<span><%= link "New Action", to: Routes.action_path(@conn, :new), class: "btn btn-success mb-2"%></span>
+<table class="table m-0 undefined">
+  <thead>
+  <tr>
+    <th>Description</th>
+    <th>Permission Type</th>
+    <th>Module</th>
+
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= for action <- @actions do %>
+  <tr>
+    <td><%= action.description %></td>
+    <td><%= action.permission_type %></td>
+    <td><%= action.module.name %></td>
+
+    <td class="text-right">
+      <span><%= link "Edit", to: Routes.action_path(@conn, :edit, action), class: "btn btn-warning mb-2" %></span>
+      <span><%= link "Delete", to: Routes.action_path(@conn, :delete, action), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger mb-2" %></span>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+

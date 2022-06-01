@@ -1,0 +1,4 @@
+<div id="traffic-sources-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/trafficSources.js") %>"></script>

@@ -1,0 +1,14 @@
+<%= form_for @changeset, Routes.user_ps_path(@conn, :update, @payment_source.id), fn f -> %>
+  <div class="form-group">
+    <%= label f, :name, "Account Holder Name" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+  <div class="form-group">
+    <%= label f, :subtype, "Account Type" %>
+    <%= select f, :subtype, ["Checking": "checking", "Savings": "savings"], class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= submit "Update", class: "btn btn-primary" %>
+  </div>
+<% end %>

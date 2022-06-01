@@ -1,0 +1,18 @@
+<mj-text>
+	Hello <%= @prospect.name %>
+</mj-text>
+
+<mj-text>
+	Thank you for your interest in <%= @property.name %>
+</mj-text>
+
+<mj-text>
+	<%= @notes %>
+</mj-text>
+
+<mj-text>
+	Thank You
+</mj-text>
+<mj-text>
+	<%= @admin %>
+</mj-text>

@@ -1,0 +1,10 @@
+<mj-text>
+  Hi <%= @name %>,
+</mj-text>
+<mj-text>
+  There is an application that has been screened at <strong><%= @property.name %></strong>.
+  Please review this request at <a href="<%= @tenant_safe_url %>" target="blank">Click Here</a>.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

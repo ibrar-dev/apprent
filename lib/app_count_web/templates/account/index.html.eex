@@ -1,0 +1,4 @@
+<div id="accounts-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/accounts.js") %>"></script>

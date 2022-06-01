@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:ns1="https://www.bluemoonforms.com/services/lease.php">
+    <SOAP-ENV:Body>
+        <ns1:CreateLeaseResponse>
+            <CreateLeaseResult>15151515</CreateLeaseResult>
+        </ns1:CreateLeaseResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,71 @@
+.rdw-editor-wrapper {
+  .rdw-editor-toolbar {
+    margin-bottom: 0;
+    font-size: inherit;
+    background: #f9f9f9;
+    padding: 1px;
+  }
+  .rdw-editor-main {
+    border: 1px solid #f1f1f1;
+    border-top: none;
+    min-height: 15rem;
+    padding: 0 1rem;
+  }
+  .rdw-link-modal {
+    .rdw-link-modal-label {
+      margin: 0;
+    }
+  }
+  .rdw-dropdown-wrapper {
+    height: 35px;
+  }
+  .rdw-link-modal {
+    height: 220px;
+  }
+  .rdw-colorpicker-modal {
+    width: 210px;
+  }
+  .rdw-option-wrapper {
+    border: 1px solid #f9f9f9;
+    padding: 7px;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    box-shadow: 0 0 1px 1px inset #ececec;
+    &.rdw-option-active {
+      box-shadow: 1px 1px 0 #BFBDBD inset;
+    }
+    &:hover {
+      background: #fbfbfb;
+    }
+  }
+  div[class$='-wrapper'], .rdw-dropdown-wrapper {
+    margin: 0;
+  }
+  .rdw-dropdown-carettoopen {
+    top: 45%;
+    right: 8%;
+    border-top: 5px solid black;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+
+  .rdw-dropdown-carettoclose {
+    top: 45%;
+    right: 8%;
+    border-bottom: 5px solid black;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+  .rdw-embedded-modal-header-option {
+    width: auto;
+  }
+  div[class$='-modal'] {
+    right: 5px;
+    left: initial;
+  }
+  //.rdw-fontfamily-wrapper {
+  //  width: calc(100% - 160px);
+  //}
+}

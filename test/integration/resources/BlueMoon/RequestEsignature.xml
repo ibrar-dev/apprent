@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:ns1="https://www.bluemoonforms.com/services/lease.php">
+    <SOAP-ENV:Body>
+        <ns1:RequestEsignatureResponse>
+            <RequestEsignatureResult>161616161</RequestEsignatureResult>
+        </ns1:RequestEsignatureResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

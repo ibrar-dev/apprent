@@ -1,0 +1,37 @@
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 text-sm-left mb-0">
+    <h3 class="page-title text-center">
+      Edit Payment Method
+    </h3>
+  </div>
+</div>
+
+<div class="row">
+  <div id="ps-table" class="col-lg-8 offset-lg-2">
+    <div class="card card-small mb-4">
+      <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+        <h6 class="m-0" style="color:#8f949a">
+          Edit <%= payment_source_display_name(@payment_source_changeset.data) %>
+        </h6>
+        <%= if @payment_source.is_default do %>
+          <span class="ml-2">Default Payment Method</span>
+        <% else %>
+          <%= button "Make Default", to: Routes.user_ps_payment_source_path(@conn, :make_default, @payment_source.id), class: "btn btn-outline-primary ml-1" %>
+        <% end %>
+      </div>
+      <div class="card-body">
+        <%= if @payment_source.type == "ba" do %>
+          <%= render AppCountWeb.Users.PaymentSourceView, "_ba_edit_form.html", payment_source: @payment_source, changeset: @payment_source_changeset, conn: @conn %>
+        <% else %>
+          <%= render AppCountWeb.Users.PaymentSourceView, "_cc_edit_form.html", payment_source: @payment_source, changeset: @payment_source_changeset, conn: @conn %>
+        <% end %>
+        <hr>
+        <div class="d-flex align-items-center">
+          <%= link "Back to payment sources", to: Routes.user_ps_path(@conn, :index), class: "btn btn-outline-secondary mr-1" %>
+
+          <%= button "Delete", to: Routes.user_ps_path(@conn, :delete, @payment_source.id), method: :delete, class: "btn btn-outline-danger mx-1", data: [confirm: "Are you sure you want to delete this payment source?"] %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

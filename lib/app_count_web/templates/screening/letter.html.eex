@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Adverse Action Letter</title>
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/showings.css") %>">
+  <style>
+  @media print {
+    textarea {
+      resize: none
+    }
+  }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-between mt-4">
+      <div>
+        <%= @property.name %><br/>
+        <%= @property.address["street"] %><br/>
+        <%= @property.address["city"] %>, <%= @property.address["state"] %> <%= @property.address["zip"] %><br/>
+        Phone: <%= @property.phone %><br/>
+        Fax:
+      </div>
+      <h4 class="font-weight-bold mt-4">
+        ADVERSE IMPACT NOTICE
+      </h4>
+    </div>
+    <div class="m-4">
+      CONFIDENTIAL TO BE OPENED BY ADDRESSEE ONLY<br/>
+      <%= String.upcase(@name) %><br/>
+      <%= @street %><br/>
+      <%= @city %>, <%= @state %> <%= @zip %><br/>
+    </div>
+    <p>July 16, 2019</p>
+
+    <p>Hello <%= String.upcase(@name) %>,</p>
+
+    <p>Thank you for your recent rental application. After a review of the provided information, we find that we are only
+    able to accept your rental application with:</p>
+
+    <textarea class="form-control p-0 border-0 bg-transparent"></textarea>
+
+    <p>This decision was based in whole or in part on the information provided to us in a Consumer Report or
+    Investigative Consumer Report prepared for us by a consumer-reporting agency. Their mailing address and phone number
+    are listed below:</p>
+
+    <p class="font-weight-bold ml-4">
+      TenantSafe - Applicantsafe P.O. Box 1195<br/>
+      Jackson, NJ 08527<br/>
+      Phone: 800-498-3200<br/>
+      Fax: 800-596-5594
+    </p>
+
+    <p>TenantSafe - Applicantsafe plays no part in the decision to take any action on your rental application and is
+    unable to provide you with specifc reason(s) for not accepting your application.</p>
+
+    <p>You have the right to a free copy of the report within 60 days of receipt of this notice and to dispute the
+    completeness or accuracy of any information in the consumer report issued by the agency
+    with TenantSafe - Applicantsafe.</p>
+
+    <%= if @data.credit[:date] do %>
+      <p>
+        Your credit score: <%= @data.credit.value || "N/A" %> - <%= @data.credit.type %> - <%= String.upcase(@name) %><br/>
+        Date score was created: <%= String.replace(@data.credit.date, ~r"T.*", "") %><br/>
+        Scores range from a low of 300 to a high of 850.
+      </p>
+      <p>The top key factors that adversely affected your credit score:</p>
+
+      <ul class="list-unstyled">
+        <%= Enum.map @data.credit.factors, fn(factor) -> %>
+          <li>- <%= factor.text %> (CODE <%= factor.code %>)</li>
+        <% end %>
+      </ul>
+    <% end %>
+    <p>
+      Sincerely,<br/>
+      Lavana Falls
+    </p>
+
+    <div class="text-center font-weight-bold">
+      <%= @property.name %><br/>
+      <%= @property.address["street"] %><br/>
+      <%= @property.address["city"] %>, <%= @property.address["state"] %> <%= @property.address["zip"] %><br/>
+      Phone: <%= @property.phone %><br/>
+      Fax:
+    </div>
+    <hr style="border-top: 1px solid rgb(57, 62, 75)"/>
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<mj-text>
+  <%= Enum.map @assignments,fn(a)-> %>
+    <%= a.id %>, <%= a.status %>, <%= a.tech_id %>, <%= a.inserted_at %>, <%= a.order_id %>
+    <br/>
+    <br/>
+  <% end %>
+</mj-text>

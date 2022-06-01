@@ -1,0 +1,24 @@
+<h2>Modules</h2>
+
+<span><%= link "New Module", to: Routes.module_path(@conn, :new), class: "btn btn-success mb-2"%></span>
+<table class="table m-0 undefined">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= for module <- @modules do %>
+  <tr>
+    <td><%= module.name %></td>
+
+    <td class="text-right">
+      <span><%= link "Edit", to: Routes.module_path(@conn, :edit, module), class: "btn btn-warning mb-2" %></span>
+      <span><%= link "Delete", to: Routes.module_path(@conn, :delete, module), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger mb-2" %></span>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+

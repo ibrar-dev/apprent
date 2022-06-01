@@ -1,0 +1,54 @@
+<div class="page-header row no-gutters" style="background-color: #f6fbf8; padding-top:50px; padding-bottom:30px; margin-bottom:20px;">
+  <div class="col-10 offset-1 text-sm-left mb-0 d-flex justify-content-start">
+    <div class="col">
+      <h3 class="page-title" style="font-size:17px; color: #3a3c42;">
+        Packages Requiring Pickup
+      </h3>
+      <h3 style="color:#73b939"><%= length(filter_packages(@packages, "Pending")) %></h3>
+    </div>
+    <div class="col">
+      <h3 class="page-title" style="font-size:17px; color: #3a3c42;">
+        Packages Delivered
+      </h3>
+      <h3 style="color:#73b939"><%= length(filter_packages(@packages, "Delivered")) %></h3>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div class="card card-small overflow-hidden mb-4" style="box-shadow: none; border:solid thin #d5d7db;">
+      <%= if length(@packages) == 0 do %>
+        <div class="d-flex justify-content-center">
+          <h3 class="text-muted">
+            No Packages to Display
+          </h3>
+        </div>
+      <% end %>
+      <ul class="list-group list-group-flush">
+        <%= for package <- @packages do %>
+          <li class="list-group-item px-4 d-flex justify-content-between">
+            <div class="d-flex">
+              <div class="d-flex flex-column text-muted">
+                <h4 class="m-0" style="font-weight: 200">
+                  From
+                  <b><%= package.carrier %></b>
+                  on
+                  <span class="text-secondary"><%= Timex.format!(package.inserted_at, "{Mfull} {D}, {YYYY}")%></span>
+                </h4>
+                <div>
+                  Status: <span class="text-<%= color_for_status(package.status) %>"><%= package.status %></span>
+                </div>
+                <div>
+                  Package Type: <%= package.type %>
+                </div>
+                <div class="mb-3">
+                  Tracking Number: <%= package.tracking_number %>
+                </div>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

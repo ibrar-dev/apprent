@@ -1,0 +1,28 @@
+// SCSS For Mentions: https://github.com/signavio/react-mentions
+
+/*
+  I'm not wild about the use of !important here, but this keeps these rules from
+  getting overridden by default style while also establishing a new default
+  style.
+*/
+
+ul.form-control__suggestions__list {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+  border: 1px solid #AAA;
+  text-align: left;
+}
+
+.form-control__suggestions {
+  text-align: left;
+}
+
+.form-control__suggestions__item {
+  padding-left: 0.5em !important;
+  padding-right: 2em !important;
+}
+
+.form-control__suggestions__item--focused {
+  background-color: #4c9f62;
+  color: white;
+}

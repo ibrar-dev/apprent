@@ -1,0 +1,95 @@
+<mj-text>
+	Hello <%= @admin.name %>
+</mj-text>
+<mj-text>
+  <%= @requestor.name %> has submitted an item that needs your attention. Please see the details below.
+</mj-text>
+<mj-table>
+	<tr>
+		<th>
+			Vendor
+		</th>
+		<td>
+			<%= get_payee(@approval.params) %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Amount
+		</th>
+		<td>
+			<%= get_amount(@approval.params) %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Description
+		</th>
+		<td>
+			<%= get_description(@approval.params) %>
+		</td>
+	</tr>
+	<%= if length(@approval.costs) > 0 do %>
+		<tr>
+			<th>Category</th>
+			<th>Amount</th>
+		</tr>
+		<%= Enum.map @approval.costs, fn(c) -> %>
+			<tr>
+				<td><%= c["name"] %></td>
+				<td><%= number_to_currency(c["amount"]) %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	<tr>
+		<th>
+			Number of Attachments
+		</th>
+		<td>
+			<%= length(@approval.attachments) %>
+		</td>
+	</tr>
+	<%= if length(get_status_of_logs(@approval.logs)) > 0 do %>
+		<tr style="border-bottom:1px solid #ecedee;text-align:left;">
+			<th>Approvers (<%= length(get_status_of_logs(@approval.logs)) %>)</th>
+			<th>Status</th>
+		</tr>
+		<%= Enum.map get_status_of_logs(@approval.logs),fn(a)-> %>
+			<tr>
+				<td><%= a["admin"] %></td>
+				<th style="background-color:<%= get_color(a["status"]) %>"><%= a["status"] %></th>
+			</tr>
+		<% end %>
+	<% end %>
+</mj-table>
+<mj-section full-width="full-width">
+	<mj-group>
+		<mj-column>
+			<mj-button href="https://administration.apprent.com/remote_approvals/<%= @token %>/Approved" font-family="Helvetica" background-color="#3fa048" color="black">
+					Approve Request
+			</mj-button>
+		</mj-column>
+		<mj-column>
+			<mj-button href="https://administration.apprent.com/approvals/<%= @token %>/Declined" font-family="Helvetica" background-color="red" color="white">
+					Deny Request
+			</mj-button>
+		</mj-column>
+	</mj-group>
+</mj-section>
+<mj-section>
+	<mj-column>
+		<mj-text>Please note that these buttons to approve or deny this request will only work for 24 hours from the time you received this email. After that you must log in to AppRent to approve.</mj-text>
+		<mj-button href="https://administration.apprent.com/sessions/new" font-family="Helvetica">
+			Log In
+		</mj-button>
+	</mj-column>
+	<mj-column>
+		<mj-button href="https://administration.apprent.com/approvals/<%= @approval.id %>" font-family="Helvetica">
+			View Approval
+		</mj-button>
+	</mj-column>
+</mj-section>
+
+<mj-text>
+  Thank You
+</mj-text>

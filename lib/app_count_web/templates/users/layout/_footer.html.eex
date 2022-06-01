@@ -1,0 +1,16 @@
+<footer class="main-footer d-flex p-2 px-3 bg-white border-top justify-content-between">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">Support</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+  </ul>
+  <%= if Map.get(@conn.assigns, :user) do %>
+    <%= render "_property_badge.html", property: @conn.assigns.user.property %>
+  <% end %>
+</footer>

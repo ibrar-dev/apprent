@@ -1,0 +1,84 @@
+<div class="main-navbar sticky-top bg-white">
+  <nav class="navbar align-items-center justify-content-between navbar-light flex-md-nowrap p-0">
+    <a href="/" class="d-block"><img src="/images/logo.png" class="logo ml-4"/></a>
+    <%= if Map.get(@conn.assigns, :user) do %>
+      <div id="welcomeMessage" style="font-size: 1.4em"></div>
+      <div>
+        <ul class="navbar-nav border-left flex-row">
+          <li class="nav-item border-right dropdown notifications">
+            <a class="nav-link nav-link-icon text-center dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <div class="nav-link-icon__wrapper">
+                <i class="fas fa-medal"></i>
+                <span class="badge badge-pill badge-danger"><%= Enum.count(@conn.assigns.accomplishments) %></span>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-small" aria-labelledby="dropdownMenuLink">
+              <%= Enum.map @conn.assigns.accomplishments, fn accomplishment -> %>
+                <a class="dropdown-item" href="#">
+                  <div class="notification__icon-wrapper">
+                    <div class="notification__icon">
+                      <img class="w-100" src="<%= accomplishment.icon %>"/>
+                    </div>
+                  </div>
+                  <div class="notification__content">
+                    <span class="notification__category"><%= accomplishment.name %></span>
+                    <p>You earned
+                      <span class="text-success text-semibold"><%= accomplishment.amount %> points</span> on <%= Timex.format!(accomplishment.inserted_at, "{WDfull}, {Mfull} {D} {YYYY}") %></p>
+                  </div>
+                </a>
+              <% end %>
+              <a class="dropdown-item notification__all text-center" href="/rewards"> View all Rewards </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown d-flex align-items-center justify-content-center" style="min-width: 159px">
+            <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="d-none d-md-inline-block"><%= @conn.assigns.user.name %></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-small">
+              <%= link to: "/payment", class: "dropdown-item" do %>
+                <i class="material-icons">dashboard</i> Payment
+              <% end %>
+              <%= link to: "/profile", class: "dropdown-item" do %>
+                <i class="material-icons">person</i> Settings
+              <% end %>
+              <%= link to: Routes.user_property_path(@conn, :index), class: "dropdown-item" do %>
+                <i class="material-icons">home</i> Property
+              <% end %>
+              <%= link to: Routes.user_ps_path(@conn, :index), class: "dropdown-item" do %>
+                <i class="material-icons">credit_card</i> Payment Sources
+              <% end %>
+                <%= link to: "/work_orders", class: "dropdown-item" do %>
+                  <i class="material-icons">build</i> Maintenance
+                <% end %>
+              <%= link to: Routes.user_document_path(@conn, :index), class: "dropdown-item" do %>
+                <i class="material-icons">file_copy</i> Documents
+              <% end %>
+              <div class="dropdown-divider"></div>
+              <%= link to: Routes.user_session_path(@conn, :delete), method: :delete, class: "dropdown-item text-danger" do %>
+                <i class="material-icons text-danger">logout</i> Logout
+              <% end %>
+            </div>
+          </li>
+        </ul>
+        <nav class="nav">
+          <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
+            <i class="material-icons"></i>
+          </a>
+        </nav>
+      </div>
+    <% end %>
+  </nav>
+</div>
+<script >
+	function welcomeMessage(name) {
+	  var currentHour = new Date().getHours();
+		if (currentHour < 12) {
+			return `Good Morning ${name}, welcome to AppRent.`
+		} else if (currentHour < 18) {
+			return `Good Afternoon ${name}, welcome to AppRent.`
+		} else {
+			return `Good Evening ${name}, welcome to AppRent.`
+		}
+	}
+	document.getElementById("welcomeMessage").innerText = welcomeMessage("<%= @conn.assigns.user.name %>")
+</script>

@@ -1,0 +1,21 @@
+<mj-text>
+	Hello <%= @payment.recipient_name %>,
+</mj-text>
+
+<mj-text>
+  This email is to let you know that we attempted to process a payment from you
+  on <%= Timex.format!(@payment.attempt_time, "{Mfull} {D}, {YYYY} {h24}:{m}") %>.
+  Unfortunately the payment method was declined for $<%= @payment.amount %>
+</mj-text>
+
+<mj-text>
+  Log in to your account by clicking below or on the AppRent mobile app to update your payment method.
+</mj-text>
+
+<mj-button href="https://residents.apprent.com/login" font-family="Helvetica" background-color="#3fa048" color="black">
+  Log In
+</mj-button>
+
+<mj-text>
+  Thank You.
+</mj-text>

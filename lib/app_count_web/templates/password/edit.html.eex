@@ -1,0 +1,20 @@
+<div>
+  <%= form_for @conn, Routes.password_path(@conn, :update), [method: :patch], fn f -> %>
+    <div class="d-flex justify-content-between">
+      <h1>Reset Password</h1>
+      <div class="pull-right">
+        <img src="../images/logo.png" alt="AppRent Logo"  width="200px">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">New Password</label>
+      <%= password_input f, :password, class: "form-control", placeholder: "Password", minlength: 8  %>
+    </div>
+    <div class="form-group">
+			<label for="exampleInputEmail1">Password Confirmation</label>
+			<%= password_input f, :confirmation, class: "form-control", placeholder: "Confirmation", minlength: 8 %>
+		</div>
+		<%= hidden_input f, :token, value: @token %>
+	 	<%= submit "Submit", class: "btn btn-ngt btn-block mt-4" %>
+  <% end %>
+</div>

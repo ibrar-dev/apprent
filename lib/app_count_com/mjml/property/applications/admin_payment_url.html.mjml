@@ -1,0 +1,15 @@
+<mj-text>
+	Hello <%= @first_person.name %>
+</mj-text>
+<mj-text>
+  Thank you for submitting an application for <%= @property.name %>.
+</mj-text>
+<mj-text>
+	Please click the button below to pay the Administration Fee.
+</mj-text>
+<mj-button href="<%= @url %>">
+	Payment Portal
+</mj-button>
+<mj-text>
+	Thank You
+</mj-text>

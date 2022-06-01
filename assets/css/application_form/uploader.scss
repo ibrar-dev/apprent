@@ -1,0 +1,38 @@
+.uploader-container {
+  width: 100%;
+  padding: 0 3px;
+  position: relative;
+  cursor: copy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  &.dirty {
+    border-color: red;
+    color: red;
+  }
+  &.show {
+    min-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+  .display {
+    min-height: 38px;
+    img {
+      max-width: 22px;
+    }
+  }
+  input {
+    &::-webkit-file-upload-button {
+      cursor: copy
+    }
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    cursor: copy;
+    right: 0;
+  }
+}

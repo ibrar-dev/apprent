@@ -1,0 +1,224 @@
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 text-sm-left mb-0">
+    <h3 class="page-title text-center">
+      Payment Methods
+    </h3>
+  </div>
+</div>
+<div class="row">
+  <div id="ps-table" class="col-lg-8 offset-lg-2">
+    <div class="card card-small mb-4">
+      <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+        <h6 class="m-0" style="color:#8f949a">Payment Sources</h6>
+        <div>
+          <button id="add-cc" class="btn btn-success mr-2" type="button">Add Credit/Debit Card</button>
+          <button id="add-ba" class="btn btn-success mr-2" type="button">Add Bank Account</button>
+          <%= link to: Routes.user_payment_path(@conn, :index), class: "btn btn-success" do %>
+            Make a Payment
+          <% end %>
+        </div>
+      </div>
+      <div class="card-body p-0 pb-3 text-center">
+        <%= if length(@payment_sources) == 0 do %>
+          <h3 class="text-center mt-4">You currently have no payment sources</h3>
+        <% end %>
+        <table class="table mb-0">
+          <tbody>
+            <%= Enum.map @payment_sources, fn ps -> %>
+              <tr>
+                <td class="align-middle" style="color:#8f949a">
+                  <%= cond do %>
+                    <% ps.type == "cc" -> %>
+                      Credit/Debit Card
+                    <% ps.type == "ba" && ps.subtype == "savings" -> %>
+                      Savings Account
+                    <% ps.type == "ba" -> %>
+                      Checking Account
+                  <% end %>
+                </td>
+                <td class="align-middle" style="color:#8f949a">
+                  XXXX XXXX XXXX <%= ps.last_4 %>
+                </td>
+                <td class="align-middle" style="color:#8f949a">
+                  <%= ps.exp %>
+                </td>
+                <td class="align-middle text-nowrap" style="width: 125px">
+                  <%= if ps.type == "cc" do %>
+                    <div class="d-flex justify-content-center">
+                      <div class="card-logo <%= ps.brand %>"></div>
+                    </div>
+                  <% else %>
+                    <%= ps.brand %>
+                  <% end %>
+                </td>
+                <td>
+                </td>
+                <td class="align-middle text-nowrap" style="width: 1px">
+                  <%= link to: Routes.user_ps_path(@conn, :edit, ps.id), class: "btn btn-outline-primary" do %>
+                    Edit
+                  <% end %>
+                </td>
+                <td class="align-middle text-nowrap">
+                  <%= if ps.is_default do %>
+                    Default
+                  <% else %>
+                    <%= button "Make Default", to: Routes.user_ps_payment_source_path(@conn, :make_default, ps.id), class: "btn btn-outline-primary" %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 position-relative" id="add-cc-card" style="display: none">
+    <div class="card card-small mb-4 overflow-hidden">
+      <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+        <h6 class="m-0">Add Credit/Debit Card</h6>
+        <a class="close-ps"><i class="fas fa-times"></i></a>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item p-3">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="card_name">Name on card</label>
+                    <input type="text" name="cc[card_name]" class="form-control" id="card_name">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="number">Card Number</label>
+                    <div class="input-group">
+                      <input type="text" name="cc[num1]" class="form-control" id="number" data-private="redact">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i id="cc-icon" class="card-logo visa invisible" style="font-size: 1.5em"></i>
+                        </span>
+                      </div>
+                      <div class="invalid-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="cvc">CVC</label>
+                    <input name="cc[num2]" class="form-control" id="cvc" placeholder="CVC" data-private="redact">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="exp">Expiration</label>
+                    <input class="form-control" id="exp" placeholder="MM/YY">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                  <div class="form-group col-md-5">
+                    <label for="card_zip">ZIP Code</label>
+                    <input name="cc[zip]" class="form-control" id="card_zip" placeholder="Billing ZIP Code">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <div id="tokenize-feedback"></div>
+                <button id="submit-cc" type="button" class="btn btn-accent float-right">Save Payment Source</button>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="spinner-overlay">
+        <div class="spinner-container">
+          <i class="fas fa-cog fa-spin text-secondary"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4" id="add-ba-card" style="display: none">
+    <div class="card card-small mb-4">
+      <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+        <h6 class="m-0">Add Bank Account</h6>
+        <a class="close-ps"><i class="fas fa-times"></i></a>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item p-3">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="account_name">Account Holder Name</label>
+                    <input name="ba[name]" class="form-control" id="account_name">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="subtype">Account Type</label>
+                      <select class="form-control" aria-label="Account type" id="subtype" name="ba[subtype]">
+                        <option value="checking" selected>Checking</option>
+                        <option value="savings">Savings</option>
+                      </select>
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="account_number">Account Number</label>
+                    <input type="number" name="ba[num1]" class="form-control" id="account_number" data-private="redact">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="routing_number">Routing Number</label>
+                    <input name="ba[num2]" class="form-control" id="routing_number">
+                    <div class="invalid-feedback"></div>
+                  </div>
+                </div>
+                <button type="button" id="submit-ba" class="btn btn-accent float-right">Save Bank Account</button>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="spinner-overlay">
+        <div class="spinner-container">
+          <i class="fas fa-cog fa-spin text-secondary"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="<%= @tokenization_credentials.url %>"></script>
+<script>
+  const ccTokenizationCredentials = {
+    processor: "<%= @tokenization_credentials.processor %>",
+    url: "<%= @tokenization_credentials.url %>",
+    login_id: "<%= @tokenization_credentials.login_id %>",
+    public_key: "<%= @tokenization_credentials.public_key %>"
+  }
+
+  $("#add-cc").click(() => {
+    $("#ps-table").removeClass("offset-lg-2");
+    $("#add-ba-card").hide();
+    $("#add-cc-card").show();
+  });
+  $("#add-ba").click(() => {
+    $("#ps-table").removeClass("offset-lg-2");
+    $("#add-cc-card").hide();
+    $("#add-ba-card").show();
+  });
+  $(".close-ps").click(() => {
+    $("#ps-table").addClass("offset-lg-2");
+    $("#add-cc-card").hide();
+    $("#add-ba-card").hide();
+  });
+  // CC numbers are 15-24 digits long
+  $("#number").mask("9999 9999 9999 999?9999999", {placeholder: " "});
+  $("#cvc").mask("999?9", {placeholder: " "});
+  $("#exp").mask("99/99", {placeholder: " "});
+  // ABA routing numbers are 9 digits long
+  $("#routing_number").mask("999999999", {placeholder: " "});
+</script>

@@ -1,0 +1,15 @@
+<mj-text>
+  Hello
+</mj-text>
+<mj-text>
+  <%= @tech %> has withdrawn from <%= @ticket %>.
+</mj-text>
+<mj-text>
+  The reason they have provided is below.
+</mj-text>
+<mj-text>
+  <%= @assignment.tech_comments %>
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

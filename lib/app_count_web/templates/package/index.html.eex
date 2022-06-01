@@ -1,0 +1,7 @@
+<div id="packages-app">
+</div>
+
+
+<script src="<%= Routes.static_path(@conn, "/js/packages.js") %>"></script>
+
+

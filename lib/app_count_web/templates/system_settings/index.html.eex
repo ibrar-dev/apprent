@@ -1,0 +1,4 @@
+<div id="system-settings-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/systemSettings.js") %>"></script>

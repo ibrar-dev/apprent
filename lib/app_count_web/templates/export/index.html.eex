@@ -1,0 +1,4 @@
+<div id="exports-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/exports.js") %>"></script>

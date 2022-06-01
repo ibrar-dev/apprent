@@ -1,0 +1,30 @@
+<h2> Clients</h2>
+
+<span><%= link "New Client", to: Routes.client_path(@conn, :new), class: "btn btn-success mb-2"%></span>
+<table class="table m-0 undefined">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Schema</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for client <- @clients do %>
+    <tr>
+      <td><%= client.id %></td>
+      <td><%= client.name %></td>
+      <td><%= client.client_schema %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: Routes.client_path(@conn, :show, client), class: "btn btn-success mb-2" %></span>
+        <span><%= link "Edit", to: Routes.client_path(@conn, :edit, client), class: "btn btn-warning mb-2" %></span>
+        <span><%= link "Deactivate", to: Routes.client_path(@conn, :delete, client), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger mb-2" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+

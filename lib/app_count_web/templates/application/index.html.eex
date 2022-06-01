@@ -1,0 +1,4 @@
+<div id="application-forms">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/applicationForms.js") %>"></script>

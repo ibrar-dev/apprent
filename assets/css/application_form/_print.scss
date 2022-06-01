@@ -1,0 +1,29 @@
+@media print {
+  body {
+    background: transparent;
+  }
+  .row {
+    position: relative;
+    display: block;
+  }
+  .card {
+    page-break-inside: avoid;
+    position: relative;
+  }
+  .col-md-6 {
+    margin-top: 1cm;
+    page-break-inside: avoid;
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .margin-row {
+    margin: 0 -15px !important;
+  }
+  .no-print {
+    display: none;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

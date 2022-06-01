@@ -1,0 +1,9 @@
+<mj-text>
+  Hi <%= @name%>,
+</mj-text>
+<mj-text>
+  <%= @creator.name %> created a purchase order and is waiting for your approval. Please check the website and approve or reject this order at <a target="_blank" href=<%= @link_to_purchases %>><%= @link_to_purchases %></a>.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

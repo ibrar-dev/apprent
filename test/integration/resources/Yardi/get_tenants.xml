@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetTenantsResponse xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfCommonData">
+            <GetTenantsResult>
+                <CommonTenantsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+                    <PropertyTenants Code="4010">
+                        <Tenants>
+                            <Tenant tCode="t0044164" pCode="p0207292">
+                                <Status>Future</Status>
+                                <FirstName>RLexis</FirstName>
+                                <LastName>Pugh</LastName>
+                                <Email>pughrlexis@m9t5q.com</Email>
+                                <Phone PhoneType="home">
+                                    <PhoneDescription>Home</PhoneDescription>
+                                    <PhoneNumber>7065737971</PhoneNumber>
+                                </Phone>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>7065737971</PhoneNumber>
+                                </Phone>
+                                <Rent>830.00</Rent>
+                                <UnitCode>4350-117</UnitCode>
+                                <UnitRent>535.00</UnitRent>
+                                <UnitSqFt>681.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>2/17/2021</LeaseFromDate>
+                                <LeaseToDate>2/16/2022</LeaseToDate>
+                                <MoveInDate>2/17/2021</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0037428" pCode="p0158278">
+                                <Status>Notice</Status>
+                                <FirstName>Leonard</FirstName>
+                                <LastName>Pearson</LastName>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>3347777654</PhoneNumber>
+                                </Phone>
+                                <Rent>565.00</Rent>
+                                <UnitCode>4300-115</UnitCode>
+                                <UnitRent>565.00</UnitRent>
+                                <UnitSqFt>700.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>8/1/2019</LeaseFromDate>
+                                <LeaseToDate>7/31/2020</LeaseToDate>
+                                <MoveInDate>8/1/2019</MoveInDate>
+                                <MoveOutDate>4/30/2021</MoveOutDate>
+                                <NoticeDate>1/11/2021</NoticeDate>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0019237" pCode="p0065485">
+                                <Status>Current</Status>
+                                <FirstName>Ruth</FirstName>
+                                <LastName>Stanley*</LastName>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>2152694991</PhoneNumber>
+                                </Phone>
+                                <Rent>960.00</Rent>
+                                <UnitCode>204</UnitCode>
+                                <UnitRent>1089.00</UnitRent>
+                                <UnitSqFt>685.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>10/1/2020</LeaseFromDate>
+                                <LeaseToDate>10/1/2021</LeaseToDate>
+                                <MoveInDate>2/1/2013</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0019507" pCode="p0197927">
+                                <Status>Current</Status>
+                                <FirstName>Amanda</FirstName>
+                                <LastName>Swinehart</LastName>
+                                <Email>aswinehart89@g8p3c.com</Email>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>2159323035</PhoneNumber>
+                                </Phone>
+                                <Rent>1279.00</Rent>
+                                <UnitCode>205</UnitCode>
+                                <UnitRent>1299.00</UnitRent>
+                                <UnitSqFt>980.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>12/31/2020</LeaseFromDate>
+                                <LeaseToDate>12/30/2021</LeaseToDate>
+                                <MoveInDate>11/30/2020</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0019238" pCode="p0065486">
+                                <Status>Current</Status>
+                                <FirstName>Rachel</FirstName>
+                                <LastName>Gegner</LastName>
+                                <Email>rgegner1992@g8p3c.com</Email>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>2674182278</PhoneNumber>
+                                </Phone>
+                                <Rent>1050.00</Rent>
+                                <UnitCode>206</UnitCode>
+                                <UnitRent>1089.00</UnitRent>
+                                <UnitSqFt>685.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>8/1/2020</LeaseFromDate>
+                                <LeaseToDate>8/1/2021</LeaseToDate>
+                                <MoveInDate>8/2/2018</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0019239" pCode="p0065487">
+                                <Status>Current</Status>
+                                <FirstName>Stephanie</FirstName>
+                                <LastName>Ballard</LastName>
+                                <Email>mrsballard1983@g8p3c.com</Email>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>2159545856</PhoneNumber>
+                                </Phone>
+                                <Rent>900.00</Rent>
+                                <UnitCode>207</UnitCode>
+                                <UnitRent>1089.00</UnitRent>
+                                <UnitSqFt>685.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>6/1/2020</LeaseFromDate>
+                                <LeaseToDate>6/1/2021</LeaseToDate>
+                                <MoveInDate>7/1/2015</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0019328" pCode="p0065610">
+                                <Status>Current</Status>
+                                <FirstName>Reggie</FirstName>
+                                <LastName>Heard</LastName>
+                                <Email>rtheard2@g8p3c.com</Email>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>3022982545</PhoneNumber>
+                                </Phone>
+                                <Rent>890.00</Rent>
+                                <UnitCode>208</UnitCode>
+                                <UnitRent>919.00</UnitRent>
+                                <UnitSqFt>385.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>11/1/2020</LeaseFromDate>
+                                <LeaseToDate>11/1/2021</LeaseToDate>
+                                <MoveInDate>11/1/2018</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                            <Tenant tCode="t0051796" pCode="p0264908">
+                                <Status>Applicant</Status>
+                                <FirstName>Annie</FirstName>
+                                <LastName>Roberts</LastName>
+                                <Rent>1039.00</Rent>
+                                <UnitCode>4-2667A</UnitCode>
+                                <UnitRent>1039.00</UnitRent>
+                                <UnitSqFt>735.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <LeaseFromDate>7/8/2021</LeaseFromDate>
+                                <LeaseToDate>7/31/2022</LeaseToDate>
+                                <MoveInDate>7/8/2021</MoveInDate>
+                                <MoveOutDate/>
+                                <NoticeDate/>
+                                <PossessionDate/>
+                            </Tenant>
+                        </Tenants>
+                    </PropertyTenants>
+                </CommonTenantsData>
+            </GetTenantsResult>
+        </GetTenantsResponse>
+    </soap:Body>
+</soap:Envelope>

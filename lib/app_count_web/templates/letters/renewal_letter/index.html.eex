@@ -1,0 +1,123 @@
+<html>
+	<style>
+		body {
+			background-image: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/apprentDasmenWatermark2.png")}" %>');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		/*.footer{margin-bottom: -10px}*/
+		.dasmen_logo {width: 100px; height: 110px;}
+		.footer_logo {width: 60px; height: 75px; opacity: .25; margin-top: 10px;}
+		.right{float: right;}
+		.center{margin: auto; text-align: center}
+		p {font-size: 10pt}
+		.resident_info {line-height:.1;}
+		.acceptance_area {line-height:.5;}
+		.mtm_box, .packages_table {width: 100%; border: 1px solid black;}
+		table, th, td {border: 1px solid black; font-size:10pt; text-align:center; border-collapse:collapse;}
+		ul, li {list-style:none;}
+	</style>
+
+	<body>
+		<div class="header">
+			<div class="center"><span style="font-size:14pt;"><%= @property.name %> Renewal Offer Letter</span></div>
+			<div class="right"><img class="dasmen_logo" src=<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/dasmen_logo_no_name.png")}" %> /></div>
+		</div>
+		<div class="resident_info">
+			<p><b>Lease Renewal Offer Letter</b></p>
+			<p><%= residents(@tenants) %></p>
+			<p><%= @address["street"] %></p>
+      <p><%= @unit %></p>
+      <p><%= @property.address["street"] %>, <%= @property.address["state"] %> <%= @property.address["zip"] %></p>
+		</div>
+		<div class="greeting">
+			<br />
+			<p style="font-size:12pt;">Dear Resident</p>
+			<p>Thank you for being a valued resident in our community.</p>
+			<p>Our entire staff is committed to providing you with exceptional service. The goal of our community is to offer one of the finest apartment communities in the area, a place you can truly be proud to call your home! We look forward to your continued residency with us!</p>
+			<p>As the expiration of your current lease approaches to end on  <strong><%= date_formatter(@end_date) %></strong>, it is necessary to reevaluate your rental rate. As you are aware, costs of services including utilities and other operating expenses continue to increase. We strive to maintain your home in optimum condition and to continue to provide you with the services you are accustomed to and deserve.</p>
+			<p>I would also like to invite you to renew your lease with us. To accept simply complete the lower portion of this letter by choosing one of the lease terms offered, and return it via email at <%= @property.group_email %> or to the Management Office within <strong><u>20 days of today's date <%= date_formatter() %></u></strong>. I would be happy to answer any questions you may have in regards to your options. Please call me to schedule a convenient time to meet. By signing a lease term with us, your new rental rate will be guaranteed for the entire lease term. Your new lease term rental rates are shown below. Please remember that pet rents and storage rentals may not show in your Charge Descriptions, but they will be calculated in your new monthly total.</p>
+		</div>
+		<div class="invitation">
+			<p>I would like to invite you to renew your lease with us. To accept, simply complete the lower portion of this letter by choosing one of the lease terms
+         offered, and return it via email at <%= @property.group_email %> or to the Management Office within 20 days of todays date <%= date_formatter() %>. I would be
+         happy to answer any questions you may have in regards to your options. Please call me to schedule a convenient time to meet. By signing a lease
+         term with us, your new rental rate will be guaranteed for the entire lease term. Your new lease term rental rates are shown below. Please remember
+         that pet rents and storage rentals may not show in your Charge Descriptions, but they will be calculated in your new monthly total.</p>
+		</div>
+		<div class="mtm_div">
+		 	<p>If we do not hear from you by the above date, your rental rate will be automatically renewed at the month-to-month rate starting on <%= date_formatter(Timex.shift(@end_date, days: 1)) %>:</p>
+			<table class="mtm_box">
+				<tr>
+					<th>Market Rent</th>
+					<%= for feature <- default_features(@features) do %>
+						<th><%= feature["name"] %></th>
+					<% end %>
+					<th>Total</th>
+				</tr>
+				<tr>
+					<th>$<%= @market_rent %></th>
+					<%= for feature <- default_features(@features) do %>
+						<th>$<%= feature["price"] %></th>
+					<% end %>
+					<th>$<%= mtm_total(@market_rent, @features) %></th>
+				</tr>
+			</table>
+			<p>Total Base and Month to month fees, this does not include your Trash, Pest, Pet Rent, Valet Trash and any other fees applicable.</p>
+		</div>
+		<div class="not_renewing">
+			<p>The additional total fees will need to be applied to your month to month lease. If your plans require you to leave <%= @property.name %>, we'll be sorry to
+         lose you from our community. Remember, we require <strong><%= @property.notice_period %> days written</strong> notice prior to your moving date. Again, we would like to extend our
+         appreciation for making <%= @property.name %> your home.</p>
+		</div>
+		<div class="resident_info">
+			<p>Sincerely,</p>
+			<p><%= @property.name %></p>
+		</div>
+		<div class="acceptance_area">
+			<p style="font-size:14pt;"><strong>Renewal Acceptance</strong></p>
+			<hr />
+			<p>I would like to renew my lease for the following term:</p>
+		</div>
+		<div class="packages">
+			<table class="packages_table">
+				<tr>
+					<th>Months</th>
+					<th>Months</th>
+					<th>Rent Amount</th>
+					<th>New Total</th>
+				</tr>
+				<%= if(length(@packages) != 0) do %>
+          <%= for pack <- @packages do %>
+            <tr>
+              <td><%= pack.min %></td>
+              <td><%= pack.max %></td>
+              <td>$<%= calculate_rent(pack, @market_rent, @charges) %></td>
+              <td>$<%= calculate_total(pack, @market_rent, @charges, @features) %></td>
+              <td></td>
+            </tr>
+          <% end %>
+				<% else %>
+          <%= for pack <- @custom_packages do %>
+            <tr>
+              <td><%= pack.min %></td>
+              <td><%= pack.max %></td>
+              <td>$<%= pack.amount %></td>
+              <td>$<%= calculate_custom_total(pack, @features) %></td>
+            </tr>
+          <% end %>
+				<% end %>
+			</table>
+		</div>
+		<div class="footer">
+			<img class="footer_logo right" src="<%= @property.icon %>" />
+		</div>
+		<div class="signature">
+			<p>Please send me a new lease, which I will promptly sign and return to your office</p>
+			<br />
+			<span>_________________________________________</span>
+			<p>Signature of Resident(s)</p>
+		</div>
+	</body>
+</html>

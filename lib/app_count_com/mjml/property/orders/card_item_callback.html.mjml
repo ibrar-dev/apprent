@@ -1,0 +1,15 @@
+<mj-text>
+  Hello <%= @name %>,
+</mj-text>
+<mj-text>
+  This is an alert.
+</mj-text>
+<mj-text>
+	The item <%= @name %> previously completed by <%= @previous_admin %> on <%= @date %> has been called back by <%= @current_admin %>.
+</mj-text>
+<mj-text>
+	Please find Unit (<%= @unit %> <%= @property_name %>) on your board and address the issue.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

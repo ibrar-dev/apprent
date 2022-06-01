@@ -1,0 +1,7 @@
+<div id="new-lease-app">
+</div>
+
+<script>
+  window.BASE_LEASE_ID = <%= @conn.assigns.lease_id %>;
+</script>
+<script src="<%= Routes.static_path(@conn, "/js/newLease.js") %>"></script>

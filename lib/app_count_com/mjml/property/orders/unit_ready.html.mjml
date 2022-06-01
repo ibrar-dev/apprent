@@ -1,0 +1,9 @@
+<mj-text>
+  A unit in <%= @property.name %> has been inspected and marked ready
+</mj-text>
+<mj-text>
+  <%= @unit %> is ready and can be leased out.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

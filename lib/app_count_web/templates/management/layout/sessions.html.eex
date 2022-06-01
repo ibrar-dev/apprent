@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Log In | AppRent</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/admin.css") %>">
+    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <link rel="icon" href="<%= Routes.static_path(@conn, "/images/favicon.png") %>" sizes="any" type="image/png">
+</head>
+
+<body class="app flex-row align-items-center">
+    <div class="container">
+    		<%= if get_flash(@conn, :success) do %>
+    			<div class="text-center alert alert-success">
+						<%= get_flash(@conn, :success) %>
+					</div>
+    		<% end %>
+        <%= if get_flash(@conn, :error) do %>
+					<div class="text-center text-danger alert alert-danger">
+							<%= get_flash(@conn, :error) %>
+					</div>
+        <% end %>
+        <div class="card p-5">
+           <%= @inner_content %>
+        </div>
+    </div>
+</body>
+</html>

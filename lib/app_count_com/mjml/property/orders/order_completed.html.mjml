@@ -1,0 +1,15 @@
+<mj-text>
+  Hello from AppRent.
+</mj-text>
+<mj-text>
+  Your work order #<%= @ticket %> has been marked as complete.
+</mj-text>
+<mj-button background-color="#5dbd77" color="white" href="<%= @rate_url %>">
+  Rate Request
+</mj-button>
+<mj-text font-weight="700">
+  Your request:
+</mj-text>
+<mj-text>
+  <%= @notes %>
+</mj-text>

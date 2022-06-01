@@ -1,0 +1,5 @@
+<div id="agents-app">
+</div>
+
+
+<script src="<%= Routes.static_path(@conn, "/js/agents.js") %>"></script>

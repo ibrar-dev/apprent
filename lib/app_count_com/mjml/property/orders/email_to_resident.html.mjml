@@ -1,0 +1,18 @@
+<mj-text>
+	Hello <%= @name %>
+</mj-text>
+
+<mj-text>
+	A note has been added to your maintenance request <%= @order.ticket %> by <%= @admin %>
+</mj-text>
+
+<mj-text>
+	<%= @note %>
+</mj-text>
+
+<mj-text>
+	Thank You
+</mj-text>
+<mj-text>
+	<%= @admin %>
+</mj-text>

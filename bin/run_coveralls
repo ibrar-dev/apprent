@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export MIX_ENV=test
+mix coveralls  | grep "TOTAL" 2>stderr_log
+unset MIX_ENV

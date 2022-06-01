@@ -1,0 +1,111 @@
+<html>
+	<style>
+		body {
+			background-image: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/apprentDasmenWatermark2.png")}" %>');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+		}
+		/*.footer{margin-bottom: -10px}*/
+		.dasmen_logo {width: 100px; height: 110px;}
+		.left {float: left}
+		.right{float: right;}
+		.center{margin: auto; text-align: center}
+		p {font-size: 10pt}
+		.resident_info {width: 100%; margin-top: 125px;}
+		.info_row {width: 15%;}
+		table, th, td {border: 1px solid black; font-size:12pt; text-align:left; border-collapse:collapse; width: 100%;}
+		.ledger_table {width: 100%; margin-top: 75px;}
+		.ledger_header {background-color: #7A8089; text-align: center}
+		.std_ledger_cell {width: 12%;}
+		.accounting_ledger_cell {text-align: right}
+		/*.description_ledger_cell {width: 40%;}*/
+	</style>
+	<body>
+		<div class="header">
+			<div class="left"><img class="dasmen_logo" src=<%= @unit_info.logo %>></div>
+			<div class="center"><span style="font-size:14pt;">Resident Ledger</span></div>
+			<div class="right"><img class="dasmen_logo" src=<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/dasmen_logo_no_name.png")}" %> /></div>
+		</div>
+		<div class="resident_info">
+			<table class="resident_info_table">
+				<tr>
+					<td class="info_row">Identifier</td>
+					<td class="info_row"><%= @tenant.id %></td>
+					<td class="info_row">Property</td>
+					<td class="info_row"><%= @tenant.property %></td>
+					<td class="info_row">Lease From</td>
+					<td class="info_row"><%= date_formatter(@tenant.lease_start) %></td>
+				</tr>
+				<tr>
+					<td class="info_row">Name</td>
+					<td class="info_row"><%= @tenant.name %></td>
+					<td class="info_row">Unit</td>
+					<td class="info_row"><%= @unit_info.unit %></td>
+					<td class="info_row">Lease End</td>
+					<td class="info_row"><%= date_formatter(@tenant.lease_end) %></td>
+				</tr>
+				<tr>
+					<td class="info_row" rowspan="2">Address</td>
+					<td class="info_row"><%= @unit_info.address["street"] %></td>
+					<td class="info_row">Status</td>
+					<td class="info_row"><%= @tenant.status %></td>
+					<td class="info_row">Move In</td>
+					<td class="info_row"><%= date_formatter(@tenant.move_in) %></td>
+				</tr>
+				<tr>
+					<td class="info_row">Apt <%= @unit_info.unit %></td>
+					<td class="info_row">Rent</td>
+					<td class="info_row"><%= @tenant.rent %></td>
+					<td class="info_row">Move Out</td>
+					<td class="info_row"><%= date_formatter(@tenant.move_out) %></td>
+				</tr>
+				<tr>
+					<td class="info_row">City</td>
+					<td class="info_row"><%= address(@unit_info.address) %></td>
+					<td class="info_row">Email</td>
+					<td class="info_row"><%= @tenant.email %></td>
+					<td class="info_row">Phone</td>
+					<td class="info_row"><%= @tenant.phone %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="ledger_table">
+			<table>
+				<thead>
+					<tr>
+						<th class="ledger_header std_ledger_cell">Date</th>
+						<th class="ledger_header std_ledger_cell">Account</th>
+						<th class="ledger_header description_ledger_cell">Description</th>
+						<th class="ledger_header std_ledger_cell">Charge</th>
+						<th class="ledger_header std_ledger_cell">Payment</th>
+						<th class="ledger_header std_ledger_cell">Balance</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%= if(length(@ledger) != 0) do %>
+						<%= for row <- @ledger do %>
+							<tr>
+								<td height="18" class="std_ledger_cell"><%= date_formatter(row.date) %></td>
+								<td height="18" class="std_ledger_cell"><%= row.account %></td>
+								<td height="18" class="description_ledger_cell"><%= row.notes %></td>
+								<td height="18" class="accounting_ledger_cell"><%= accounting_format(get_type(row, "charge")) %></td>
+								<td height="18" class="accounting_ledger_cell"><%= accounting_format(get_type(row, "payment")) %></td>
+								<td height="18" class="accounting_ledger_cell"><%= accounting_format(row.balance) %></td>
+							</tr>
+						<% end %>
+					<% else %>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

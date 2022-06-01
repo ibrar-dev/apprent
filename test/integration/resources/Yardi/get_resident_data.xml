@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetResidentDataResponse xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfResidentData">
+            <GetResidentDataResult>
+                <MITS-ResidentData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+                    <Summary>
+                        <GenerationTimeStamp>2020-12-04T04:17:10</GenerationTimeStamp>
+                        <SourceOrganization>Yardi Systems, Inc.</SourceOrganization>
+                        <TotalLeaseFiles>1</TotalLeaseFiles>
+                        <TotalTenants>1</TotalTenants>
+                        <Messages>
+                            <Warning>appRent does not have permission to read pet data</Warning>
+                        </Messages>
+                    </Summary>
+                    <LeaseFiles>
+                        <LeaseFile>
+                            <Identification IDValue="t0019240" IDType="Current"/>
+                            <Property>
+                                <Identification IDValue="4010"/>
+                                <MarketingName>Lavana Falls</MarketingName>
+                                <LegalName>Lavana Falls</LegalName>
+                                <Address AddressType="property">
+                                    <AddressLine1>7200 Marion Ave</AddressLine1>
+                                    <City>Levittown</City>
+                                    <State>PA</State>
+                                    <PostalCode>19055</PostalCode>
+                                    <Country>United States</Country>
+                                </Address>
+                            </Property>
+                            <Unit>
+                                <Identification IDValue="209"/>
+                                <UnitType>1.1_ee</UnitType>
+                                <UnitTypeDescription>1 Bed 1 Bath</UnitTypeDescription>
+                                <UnitTypeRent>1069</UnitTypeRent>
+                                <UnitTypeSquareFeet>685</UnitTypeSquareFeet>
+                                <UnitBedrooms>1</UnitBedrooms>
+                                <UnitBathrooms>1.000000</UnitBathrooms>
+                                <SquareFootType>internal</SquareFootType>
+                                <UnitRent>1059.00</UnitRent>
+                                <UnitSquareFeet>685</UnitSquareFeet>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <UnitOccupancyStatus>occupied</UnitOccupancyStatus>
+                                <UnitLeasedStatus>leased</UnitLeasedStatus>
+                                <Address AddressType="mailing">
+                                    <Description>Unit</Description>
+                                    <AddressLine1>7200 Marion Ave 209</AddressLine1>
+                                    <City>Levittown</City>
+                                    <State>PA</State>
+                                    <PostalCode>19055</PostalCode>
+                                    <Country>United States</Country>
+                                </Address>
+                            </Unit>
+                            <MoveInDate>2018-09-01</MoveInDate>
+                            <LeaseBegin>2020-09-01</LeaseBegin>
+                            <LeaseEnd>2021-09-01</LeaseEnd>
+                            <MonthlyRentAmount>1050</MonthlyRentAmount>
+                            <DueDay>1</DueDay>
+                            <Tenants>
+                                <Identification IDValue="t0019240" IDType="Current"/>
+                                <PersonDetails>
+                                    <Name>
+                                        <FirstName>Mode</FirstName>
+                                        <LastName>Joanem</LastName>
+                                    </Name>
+                                    <Address AddressType="current">
+                                        <Description>Resident</Description>
+                                        <AddressLine1>7200 Marion Ave 209</AddressLine1>
+                                        <City>Levittown</City>
+                                        <State>PA</State>
+                                        <PostalCode>19055</PostalCode>
+                                    </Address>
+                                    <Phone PhoneType="cell">
+                                        <PhoneDescription>Mobile</PhoneDescription>
+                                        <PhoneNumber>6094988851</PhoneNumber>
+                                    </Phone>
+                                    <Email>gerantfrantz449@moc.liamg.z</Email>
+                                </PersonDetails>
+                                <MoveInDate>2018-09-01</MoveInDate>
+                                <DateOfBirth>0001-01-01</DateOfBirth>
+                                <CustomRecords scope="Resident">
+                                    <Record Field="sFields0" Name="License#" Value=""/>
+                                    <Record Field="sFields1" Name="Car" Value=""/>
+                                    <Record Field="sFields2" Name="Bank" Value=""/>
+                                    <Record Field="sFields3" Name="Account#" Value=""/>
+                                    <Record Field="sFields4" Name="Children" Value=""/>
+                                    <Record Field="sFields5" Name="Ages" Value=""/>
+                                    <Record Field="sFields6" Name="Pets" Value=""/>
+                                    <Record Field="sFields7" Name="Reference" Value=""/>
+                                    <Record Field="sFields8" Name="Guarantor" Value=""/>
+                                    <Record Field="sFields9" Name="Sec Bond Amt $" Value=""/>
+                                    <Record Field="sFields10" Name="SecDep Amount $" Value=""/>
+                                    <Record Field="sFields11" Name="Sec Bond Policy #" Value=""/>
+                                    <Record Field="sFields12" Name="SecDep Refund Amt $" Value=""/>
+                                    <Record Field="sFields13" Name="Regal Waste Date" Value=""/>
+                                </CustomRecords>
+                            </Tenants>
+                            <LeaseCharges>
+                                <LeaseCharge>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeCodeDescription>Rent</ChargeCodeDescription>
+                                    <Amount>900.00</Amount>
+                                    <StartDate>2018-09-01</StartDate>
+                                    <EndDate>2019-08-31</EndDate>
+                                </LeaseCharge>
+                                <LeaseCharge>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeCodeDescription>Rent</ChargeCodeDescription>
+                                    <Amount>1089.00</Amount>
+                                    <StartDate>2019-09-01</StartDate>
+                                    <EndDate>2019-08-31</EndDate>
+                                </LeaseCharge>
+                                <LeaseCharge>
+                                    <ChargeCode>mtm</ChargeCode>
+                                    <ChargeCodeDescription>Month to Month Fees</ChargeCodeDescription>
+                                    <Amount>250.00</Amount>
+                                    <StartDate>2019-09-01</StartDate>
+                                    <EndDate>2019-08-31</EndDate>
+                                </LeaseCharge>
+                                <LeaseCharge>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeCodeDescription>Rent</ChargeCodeDescription>
+                                    <Amount>1025.00</Amount>
+                                    <StartDate>2019-09-01</StartDate>
+                                    <EndDate>2020-08-31</EndDate>
+                                </LeaseCharge>
+                                <LeaseCharge>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeCodeDescription>Rent</ChargeCodeDescription>
+                                    <Amount>1050.00</Amount>
+                                    <StartDate>2020-09-01</StartDate>
+                                </LeaseCharge>
+                            </LeaseCharges>
+                            <Ledger>
+                                <Identification IDValue="0.00" IDType="1900-01-01" OrganizationName="Balance on Date"/>
+                                <Transaction>
+                                    <TransID>600907748</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2018-11-01</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes>:Posted by QuickTrans</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701429245</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2018-11-01</TransDate>
+                                    <ChargeCode>secdep</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Security Deposit Refundable</Description>
+                                    <Notes>:Posted by QuickTrans (secdep)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701475751</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-01-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (01/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>600968322</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-01-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>600968323</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-01-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701536258</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-02-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (02/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701588716</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-02-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>February Late Fee</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701685291</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-03-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (03/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601141606</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-03-13</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601141607</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-03-13</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701930203</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-04-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (04/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601241098</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-04-15</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601241102</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-04-15</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701936165</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-05-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (05/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701979065</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-05-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601274228</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-05-21</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601274229</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-05-21</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>701983996</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-06-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (06/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702095523</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-06-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702141549</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-07-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (07/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702283461</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-07-07</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702294340</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-07-22</TransDate>
+                                    <ChargeCode>nsf</ChargeCode>
+                                    <ChargeAmount>50.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>NSF Fees Income</Description>
+                                    <Notes>NSF Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601484878</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-07-29</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601484880</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-07-29</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702269488</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-08-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (08/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702426726</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-08-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601585356</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-08-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601585370</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-08-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702426727</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-08-19</TransDate>
+                                    <ChargeCode>legal</ChargeCode>
+                                    <ChargeAmount>200.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Legal Fees Income</Description>
+                                    <Notes>Legal Fees Evicition Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702426728</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-08-21</TransDate>
+                                    <ChargeCode>legal</ChargeCode>
+                                    <ChargeAmount>305.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Legal Fees Income</Description>
+                                    <Notes>Legal Fees Evicition Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702384871</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-09-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (09/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702526874</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-09-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>189.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702526875</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-09-01</TransDate>
+                                    <ChargeCode>mtm</ChargeCode>
+                                    <ChargeAmount>250.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Month to Month Fees</Description>
+                                    <Notes>Month to Month Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702526882</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-09-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601629254</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-09-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601629255</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-09-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601629256</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-09-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702524036</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>900.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (10/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702526876</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-01</TransDate>
+                                    <ChargeCode>mtm</ChargeCode>
+                                    <ChargeAmount>250.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Month to Month Fees</Description>
+                                    <Notes>Month to Month Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702526878</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>189.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702629875</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-01</TransDate>
+                                    <ChargeCode>mtm</ChargeCode>
+                                    <ChargeAmount>-250.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Month to Month Fees</Description>
+                                    <Notes>Month to Month Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601709535</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-10-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601709536</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-10-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702629876</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-05</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>-64.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702629878</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-10-10</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601711801</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-10-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601711802</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-10-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601711842</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-10-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702612384</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-11-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (11/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702629877</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-11-10</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601720138</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-11-11</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601720139</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-11-11</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702730751</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-11-15</TransDate>
+                                    <ChargeCode>legal</ChargeCode>
+                                    <ChargeAmount>505.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Legal Fees Income</Description>
+                                    <Notes>Legal Fees Evicition Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601740111</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-11-26</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601740113</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-11-26</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>1000.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702721641</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-12-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (12/2019)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601792497</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2019-12-03</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702730658</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2019-12-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702809142</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-01-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (01/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601864784</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>1000.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601864794</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702849876</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-01-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702849991</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-01-15</TransDate>
+                                    <ChargeCode>legal</ChargeCode>
+                                    <ChargeAmount>505.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Legal Fees Income</Description>
+                                    <Notes>Legal Fees Evicition Fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601897761</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-21</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>927.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>NSFed by ctrl# 1897762 Account Closed</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601897763</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-23</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>463.50</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>NSFed by ctrl# 1897764 Account Closed</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601897762</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-24</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>-927.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>NSF receipt Ctrl# 1897761 Account Closed</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702905289</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-01-24</TransDate>
+                                    <ChargeCode>nsf</ChargeCode>
+                                    <ChargeAmount>50.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>NSF Fees Income</Description>
+                                    <Notes>Returned check charge</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601886982</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-28</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>200.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601886984</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-28</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601897764</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-01-28</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>-463.50</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>NSF receipt Ctrl# 1897763 Account Closed</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702905290</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-01-28</TransDate>
+                                    <ChargeCode>nsf</ChargeCode>
+                                    <ChargeAmount>50.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>NSF Fees Income</Description>
+                                    <Notes>Returned check charge</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702902742</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-02-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (02/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601923961</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-02-04</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>200.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601923962</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-02-04</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702914021</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-02-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>702995872</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-03-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (03/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601968536</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-03-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601968537</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-03-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601972986</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-03-03</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>450.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703002957</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-03-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601988957</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-03-11</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>601995637</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-03-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>500.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602051025</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-04-01</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>208.06</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703099787</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-04-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (04/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703107088</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-04-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703326198</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-04-09</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>-75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602071416</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-04-13</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>333.46</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602071433</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-04-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>247.72</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602084272</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-04-24</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>183.86</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703194098</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-05-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (05/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703196045</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-05-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703326199</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-05-07</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>-75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602145170</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-05-08</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>419.73</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602148841</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-05-14</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>311.83</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602159843</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-05-22</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>231.49</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602159844</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-05-22</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>171.75</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703288772</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-06-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (06/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602219043</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-05</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>391.66</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602219044</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-05</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>290.72</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703294695</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-06-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703326200</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-06-07</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>-75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602226117</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-15</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>235.10</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602232441</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602232442</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602232443</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602233533</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>55.23</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602233588</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-06-19</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602270365</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-07-01</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>Automatically generated apply prepay receipt.</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703387368</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-07-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (07/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703394007</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-07-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602297856</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-07-09</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>206.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602309400</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-07-17</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>515.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602313300</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-07-23</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>377.39</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703486769</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-08-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1025.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (08/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602372881</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-08-06</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>412.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703495167</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-08-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602375953</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-08-07</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>309.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602385802</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-08-17</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>185.40</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602394717</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-08-21</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>193.64</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602414523</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-08-31</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>Automatically generated apply prepay receipt.</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602415397</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-09-01</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen prepayment transfer</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703573334</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-09-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1050.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (09/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602448289</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-09-04</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>515.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703595960</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-09-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602455228</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-09-11</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>309.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602457895</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-09-16</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>150.38</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602462867</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-09-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>150.38</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703684718</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-10-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1050.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (10/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602525821</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-10-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>402.73</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703697234</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-10-07</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602528764</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-10-15</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>517.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602567547</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-10-30</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>204.97</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes/>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703781119</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-11-01</TransDate>
+                                    <ChargeCode>rent</ChargeCode>
+                                    <ChargeAmount>1050.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Rent</Description>
+                                    <Notes>Rent (11/2020)</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703787938</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-11-06</TransDate>
+                                    <ChargeCode>late</ChargeCode>
+                                    <ChargeAmount>75.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Late Fees</Description>
+                                    <Notes>Late Fees Income</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602601997</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>100.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>AppRent Payment</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602601998</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-18</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>AppRent Payment</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602609023</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-25</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>400.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>AppRent Payment</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602610853</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-27</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602610854</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-27</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602610855</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-11-27</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen credit application</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>703819244</TransID>
+                                    <TransType>Charge</TransType>
+                                    <TransDate>2020-11-27</TransDate>
+                                    <ChargeCode>concoth</ChargeCode>
+                                    <ChargeAmount>-225.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Less: Other Concessions</Description>
+                                    <Notes>Payment plan was kept we agreed to wave 3 late fees</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602612560</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-12-02</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>111.00</ChargeAmount>
+                                    <isOpen>true</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>AppRent Payment</Notes>
+                                </Transaction>
+                                <Transaction>
+                                    <TransID>602612561</TransID>
+                                    <TransType>Payment</TransType>
+                                    <TransDate>2020-12-04</TransDate>
+                                    <ChargeCode/>
+                                    <ChargeAmount>0.00</ChargeAmount>
+                                    <isOpen>false</isOpen>
+                                    <isPosted>true</isPosted>
+                                    <Description>Operating Account BOA</Description>
+                                    <Notes>:Prog Gen prepayment transfer</Notes>
+                                </Transaction>
+                            </Ledger>
+                        </LeaseFile>
+                    </LeaseFiles>
+                </MITS-ResidentData>
+            </GetResidentDataResult>
+        </GetResidentDataResponse>
+    </soap:Body>
+</soap:Envelope>

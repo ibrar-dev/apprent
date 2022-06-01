@@ -1,0 +1,12 @@
+<mj-text>
+  Hello <%= @admin.name %>
+</mj-text>
+<mj-text>
+  <%= @prospect.name %> has scheduled a tour for <%= readable_date(@showing.date) %> at <%= readable_time(@showing.start_time) %>
+</mj-text>
+<mj-text>
+  You can contact them at <%= @prospect.email %>
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

@@ -1,0 +1,4 @@
+<div id="leases-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/leaseRenewals.js") %>"></script>

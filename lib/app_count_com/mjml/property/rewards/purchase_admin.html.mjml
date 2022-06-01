@@ -1,0 +1,7 @@
+<mj-text>Hello from AppRent</mj-text>
+<mj-text>
+  <%= @purchase.tenant.first_name %> <%= @purchase.tenant.last_name %> has purchased the following reward through the DASMEN Reward System:
+</mj-text>
+<mj-text>
+  <%= @purchase.reward.name %>: <%= @purchase.points %>
+</mj-text>

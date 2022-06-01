@@ -1,0 +1,34 @@
+<mj-text>
+  Congratulations <%= @tenant.first_name %> <%= @tenant.last_name %> and welcome to <%= @property.name %>!
+</mj-text>
+<mj-text>
+  <%= if @payment do %>
+    We have received your payment of $<%= @payment.amount %>.  Your payment reference number is <%= @payment.transaction_id %>
+  <% end %>
+  <%= if @password do %>
+    Log in to your account now at <a href="https://<%= @property.code %>.apprent.com">https://<%= @property.code %>.apprent.com</a>
+    <br/>
+    <br/>
+    <strong>Username:</strong> <%= @tenant.email %>
+    <br/>
+    <br/>
+    <strong>Password:</strong> <%= @password %>
+  <% end %>
+</mj-text>
+<mj-text>
+  Here are the details of your lease:
+</mj-text>
+<mj-table>
+  <tr>
+    <td><b>Unit Number</b></td>
+    <td><%= @tenant.unit["number"] %></td>
+  </tr>
+  <tr>
+    <td><b>Lease Start</b></td>
+    <td><%= @tenant.lease["start_date"] %></td>
+  </tr>
+  <tr>
+    <td><b>Lease End</b></td>
+    <td><%= @tenant.lease["end_date"] %></td>
+  </tr>
+</mj-table>

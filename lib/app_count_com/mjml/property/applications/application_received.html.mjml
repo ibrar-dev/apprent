@@ -1,0 +1,12 @@
+<mj-text>
+  Thank you for submitting an application for <%= @property.name %>.
+</mj-text>
+<mj-text>
+  We have received your payment of $<%= @payment.amount %>.  Your payment reference number is <%= @payment.transaction_id %>
+</mj-text>
+<mj-text>
+  We will be in touch as soon as possible.
+</mj-text>
+<mj-text>
+  Thank you.
+</mj-text>

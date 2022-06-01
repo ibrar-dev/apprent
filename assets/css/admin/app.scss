@@ -1,0 +1,30 @@
+/* This file is for your main application css. */
+// @import '';
+header.navbar {
+  background-color: #312d45;
+}
+
+.navbar-nav .nav-link, .navbar-nav .navbar .dropdown-toggle, .navbar .navbar-nav .dropdown-toggle {
+  color: #c6ee48;
+}
+
+.test:hover {
+  background-color: transparent !important;
+  color: #e6e6e6;
+}
+
+.test {
+  color: #c6ee48;
+}
+
+.fa-lock:before {
+  content: "";
+  color: #c6ee48;
+}
+
+.button-ar {
+  background-color: #475f78;
+}
+a {
+  cursor: pointer;
+}

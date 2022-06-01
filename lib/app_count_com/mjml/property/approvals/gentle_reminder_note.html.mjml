@@ -1,0 +1,61 @@
+<mj-text>
+	Hello <%= @admin.name %>
+</mj-text>
+<mj-text>
+	<%= @requestor.name %> has mentioned you in a note on an approval.
+</mj-text>
+<mj-text>
+	The note: <%= @note.note %>
+</mj-text>
+<mj-table>
+	<tr>
+		<th>
+			Vendor
+		</th>
+		<td>
+			<%= get_payee(@approval.params) %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Amount
+		</th>
+		<td>
+			<%= get_amount(@approval.params) %>
+		</td>
+	</tr>
+	<%= if length(@approval.costs) > 0 do %>
+		<tr>
+			<th>Category</th>
+			<th>Amount</th>
+		</tr>
+		<%= Enum.map @approval.costs, fn(c) -> %>
+			<tr>
+				<td><%= c["name"] %></td>
+				<td><%= number_to_currency(c["amount"]) %></td>
+			</tr>
+		<% end %>
+	<% end %>
+	<tr>
+		<th>
+			Description
+		</th>
+		<td>
+			<%= get_description(@approval.params) %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Number of Attachments
+		</th>
+		<td>
+			<%= length(@approval.attachments) %>
+		</td>
+	</tr>
+</mj-table>
+<mj-button href="https://administration.apprent.com/approvals/<%= @approval.id %>" font-family="Helvetica" background-color="#3fa048" color="black">
+		View Approval
+</mj-button>
+<mj-text>
+  Thank You
+</mj-text>

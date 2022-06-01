@@ -1,0 +1,27 @@
+<header class="app-header navbar mb-3">
+  <button class="navbar-toggler sidebar-toggler d-sm-block d-pro-none" id="toggle-sidebar" type="button">
+    <i class="fas fa-bars navbar-icon-bar"></i>
+  </button>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="page-title">
+      <h4 style="color: #888a96"class="m-0">
+        <%= @conn.assigns.admin.username %>
+      </h4>
+    </div>
+  </div>
+  <div class="d-flex ml-auto h-100">
+    <!-- <ul class="m-0 list-unstyled h-100 d-flex align-items-center" id="navbar-app"></ul> -->
+    <div class="d-flex align-items-center pr-4">
+      <%= link to: "/sessions", method: :delete, class: "test no-dec h-100 d-flex align-items-center" do %>
+        <i class="fas fa-lock mr-1"></i>
+        Logout
+      <% end %>
+    </div>
+  </div>
+</header>
+<script>
+  document.getElementById('toggle-sidebar').addEventListener('click', () => {
+    document.body.classList.toggle('sidebar-mobile-show');
+  });
+</script>
+<script src="<%= #Routes.static_path(@conn, "/js/navbar.js") %>"></script>

@@ -1,0 +1,17 @@
+<mj-text>
+ <h3>
+  <%= @name %>
+ </h3>
+</mj-text>
+<mj-image src="<%= @image %>" />
+<mj-text>
+    Where - <%= @location %>
+</mj-text>
+<mj-text>
+    When - <%= @date %> at <%= readable_time(@start_time) %>
+</mj-text>
+<mj-text>
+  <h4>
+    <%= @info %>
+  </h4>
+</mj-text>

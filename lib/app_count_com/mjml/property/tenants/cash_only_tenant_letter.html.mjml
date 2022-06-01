@@ -1,0 +1,26 @@
+<mj-text>
+  <h3>Hi
+    <%= @first_name %>,</h3>
+</mj-text>
+<mj-text>
+  Your account exceeded the allowable number of NSF (bounced) payments and has subsequently been locked.
+</mj-text>
+
+<mj-text>
+  Your AutoPay settings has been turned off. Until your account is unlocked, payment will need to be submitted manually.
+</mj-text>
+
+<mj-text>
+  Payment can be made at any MoneyGram location. You can get your MoneyGram
+  information by logging into the Resident portal at
+  <a href="https://residents.apprent.com">https://residents.apprent.com</a> or
+  through the AppRent mobile app.
+</mj-text>
+
+<mj-text>
+  Thank you,
+</mj-text>
+
+<mj-text>
+  The AppRent Team
+</mj-text>

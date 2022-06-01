@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Apply Now | <%= @property.name %> </title>
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/application_form.css") %>">
+  <link rel="icon" href="<%= Routes.static_path(@conn, "/images/favicon.png") %>" sizes="any" type="image/png">
+  <%= use_log_rocket(@property) %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqLqDIp6SKDe0eqM8wjwt8Coh6aWiaPVA&libraries=places"></script>
+  <!-- Start of apprent Zendesk Widget script -->
+  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=b99f7242-1caa-46a1-afff-0e689c2e9a68"> </script>
+  <!-- End of apprent Zendesk Widget script -->
+  <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+</head>
+<body style="background-color:white">
+  <header class="app-header d-flex align-items-center justify-content-between full-width">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <img src="/images/apprent_logo_white.png" style="height:50px"/>
+      </div>
+    </div>
+  </header>
+  <div id="application-form" data-property="<%= @property.id %>"></div>
+  <script>
+      window.PROPERTY_TERMS = `<%= raw @property.terms %>`;
+      window.CLIENT_SCHEMA = `<%= raw @client_schema %>`;
+      <%= if @conn.assigns.mode == "edit" do %>
+        window.APPLICATION_JSON = JSON.parse(`<%= raw @conn.assigns.application %>`);
+        window.PROPERTY_DATA = JSON.parse(`<%= raw @conn.assigns.property_data %>`);
+      <% else %>
+        window.PROSPECT_PARAMS = JSON.parse(`<%= raw Jason.encode!(Map.get(@conn.assigns, :prospect, %{})) %>`);
+      <% end %>
+  </script>
+  <script src="<%= Routes.static_path(@conn, "/js/applicationForm.js") %>"></script>
+</body>
+</html>

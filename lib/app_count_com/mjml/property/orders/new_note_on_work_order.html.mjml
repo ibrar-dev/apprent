@@ -1,0 +1,21 @@
+<mj-text>
+ Hello <%= @recipient_name %>,
+</mj-text>
+<mj-text>
+  <%= @author_name %> mentioned you on work order #<%= @work_order_id %> for
+  <%= @work_order_description %>:
+</mj-text>
+<mj-text font-weight="700">
+  The note:
+</mj-text>
+<mj-text padding-left="80px">
+  <%= @note %>
+</mj-text>
+<mj-text>
+  <%= if String.length(@link) > 0 do %>
+    <a href="<%= @link %>">Click here to see more</a>
+  <% end %>
+</mj-text>
+<mj-text>
+  Thank you!
+</mj-text>

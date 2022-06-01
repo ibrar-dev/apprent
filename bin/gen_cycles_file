@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export MIX_ENV=test
+mix xref graph   --format cycles > docs/cycles.txt
+unset MIX_ENV

@@ -1,0 +1,9 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+   The unit <%= @unit%> currently has no power, handle this as soon as possible.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

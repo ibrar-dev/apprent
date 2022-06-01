@@ -1,0 +1,12 @@
+<mj-text>
+  Thank you for starting an application for <%= @property.name %>.
+</mj-text>
+<mj-text>
+  You can continue your application any time by returning to <%= @url %>/<%= @property.code %> and entering the following PIN number:
+</mj-text>
+<mj-text font-size="21px" font-weight="700">
+  <%= @pin %>
+</mj-text>
+<mj-text>
+  Thank you.
+</mj-text>

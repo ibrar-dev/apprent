@@ -1,0 +1,77 @@
+<mj-text>
+	Hello <%= @requestor.name %>
+</mj-text>
+<mj-text>
+	<%= if @log.status == "Approved" do %>
+		<h3>Your request has been approved by <%= @admin.name %>!</h3>
+		<%= if (length(get_status_of_logs(@approval.logs)) > 0 and all_approved(get_status_of_logs(@approval.logs))) do %>
+			<h4>This is the final approval you needed for this request! All necessary participants have approved the request!</h4>
+			<h5>Your Approval Request number is <%= @approval.num %></h5>
+		<% end %>
+	<% end %>
+</mj-text>
+<mj-text>
+	<%= if @log.status == "Declined" do %>
+		<h3>Your request has been declined by <%= @admin.name %></h3>
+		<h3>The approval can not be approved by anyone else until <%= @admin.name %> removes this status.</h3>
+	<% end %>
+</mj-text>
+<mj-text>
+  The approval you submitted has been updated with <%= @log.status %> by <%= @admin.name %>.
+</mj-text>
+<mj-table>
+	<tr>
+		<th>
+			Vendor
+		</th>
+		<td>
+			<%= get_payee(@approval.params) %>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Amount
+		</th>
+		<td>
+			<%= get_amount(@approval.params) %>
+		</td>
+	</tr>
+	<%= if length(@approval.costs) > 0 do %>
+  		<tr>
+  			<th>Category</th>
+  			<th>Amount</th>
+  		</tr>
+  		<%= Enum.map @approval.costs, fn(c) -> %>
+  			<tr>
+  				<td><%= c["name"] %></td>
+  				<td><%= number_to_currency(c["amount"]) %></td>
+  			</tr>
+  		<% end %>
+  	<% end %>
+	<tr>
+		<th>
+			Description
+		</th>
+		<td>
+			<%= get_description(@approval.params) %>
+		</td>
+	</tr>
+	<%= if length(get_status_of_logs(@approval.logs)) > 0 do %>
+		<tr style="border-bottom:1px solid #ecedee;text-align:left;">
+			<th>Approvers (<%= length(get_status_of_logs(@approval.logs)) %>)</th>
+			<th>Status</th>
+		</tr>
+		<%= Enum.map get_status_of_logs(@approval.logs),fn(a)-> %>
+			<tr>
+				<td><%= a["admin"] %></td>
+				<th style="background-color:<%= get_color(a["status"]) %>"><%= a["status"] %></th>
+			</tr>
+		<% end %>
+	<% end %>
+</mj-table>
+<mj-button href="https://administration.apprent.com/approvals/<%= @approval.id %>" font-family="Helvetica" background-color="#3fa048" color="black">
+		View Approval
+</mj-button>
+<mj-text>
+  Thank You
+</mj-text>

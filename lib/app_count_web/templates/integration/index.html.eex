@@ -1,0 +1,3 @@
+<div id="integrations-app">
+</div>
+<script src="<%= Routes.static_path(@conn, "/js/integrations.js") %>"></script>

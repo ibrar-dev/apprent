@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<getMerchantDetailsResponse
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+    <messages>
+        <resultCode>Ok</resultCode>
+        <message>
+            <code>I00001</code>
+            <text>Successful.</text>
+        </message>
+    </messages>
+    <isTestMode>false</isTestMode>
+    <processors>
+        <processor>
+            <name>First Data Nashville</name>
+            <id>2</id>
+            <cardTypes>
+                <cardType>A</cardType>
+                <cardType>D</cardType>
+                <cardType>J</cardType>
+                <cardType>M</cardType>
+                <cardType>V</cardType>
+            </cardTypes>
+        </processor>
+    </processors>
+    <merchantName>Josef Gitlin</merchantName>
+    <gatewayId>543514</gatewayId>
+    <marketTypes>
+        <marketType>eCommerce</marketType>
+    </marketTypes>
+    <productCodes>
+        <productCode>CNP</productCode>
+    </productCodes>
+    <paymentMethods>
+        <paymentMethod>AmericanExpress</paymentMethod>
+        <paymentMethod>Discover</paymentMethod>
+        <paymentMethod>Echeck</paymentMethod>
+        <paymentMethod>JCB</paymentMethod>
+        <paymentMethod>MasterCard</paymentMethod>
+        <paymentMethod>Visa</paymentMethod>
+    </paymentMethods>
+    <currencies>
+        <currency>USD</currency>
+    </currencies>
+    <publicClientKey>3BDa78By3ZxXpza95xtj9ywhK8TH4DUBGV9fxJmyQ392bU6hZQ3WD62K482F6MqS
+    </publicClientKey>
+    <businessInformation>
+        <company>Josef Gitlin</company>
+        <address>1 Main Street</address>
+        <city>Bellevue</city>
+        <state>WA</state>
+        <zip>98004</zip>
+        <country>US</country>
+        <phoneNumber>425-555-1212</phoneNumber>
+    </businessInformation>
+    <merchantTimeZone>America/Los_Angeles</merchantTimeZone>
+    <contactDetails>
+        <contactDetail>
+            <email>yosef29@gmail.com</email>
+            <firstName>TestFirstName</firstName>
+            <lastName>TestLastName</lastName>
+        </contactDetail>
+    </contactDetails>
+</getMerchantDetailsResponse>

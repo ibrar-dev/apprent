@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: /app_count.tar.gz
+    destination: /var
+  - source: crypto
+    destination: /var
+hooks:
+  AfterInstall:
+    - location: install.sh
+#    - location: Scripts/UnzipDataBundle.sh
+#  AfterInstall:
+#    - location: Scripts/RunResourceTests.sh
+#      timeout: 180
+  ApplicationStart:
+    - location: run.sh
+  ValidateService:
+    - location: verify.sh
+#      timeout: 3600
+#      runas: codedeployuser

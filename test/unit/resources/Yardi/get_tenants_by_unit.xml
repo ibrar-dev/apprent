@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetTenantsByUnitResponse xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfCommonData">
+            <GetTenantsByUnitResult>
+                <GetUnit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+                    <Unit>
+                        <PropertyId>4010</PropertyId>
+                        <UnitId>203</UnitId>
+                        <MarketRent>1059.00</MarketRent>
+                        <UnitSqFt>685.000000</UnitSqFt>
+                        <UnitEconomicStatus>residential</UnitEconomicStatus>
+                        <UnitEconomicStatusDescription>Occupied No Notice</UnitEconomicStatusDescription>
+                        <MITSUnitOccupancyStatus>occupied</MITSUnitOccupancyStatus>
+                        <MITSUnitLeasedStatus>leased</MITSUnitLeasedStatus>
+                        <Residents>
+                            <Resident tCode="t0029810" pCode="p0112272">
+                                <Status>Current</Status>
+                                <MITSCustomerInfo>current resident</MITSCustomerInfo>
+                                <FirstName>James Robert</FirstName>
+                                <LastName>Clark*</LastName>
+                                <CurrentRent>1089.00</CurrentRent>
+                                <LeaseFromDate>2020-09-03</LeaseFromDate>
+                                <LeaseToDate>2021-09-03</LeaseToDate>
+                                <MoveInDate>2019-09-03</MoveInDate>
+                            </Resident>
+                            <Resident tCode="t0019236" pCode="p0065484">
+                                <Status>Moved Out</Status>
+                                <MITSCustomerInfo>former resident</MITSCustomerInfo>
+                                <FirstName>Christopher</FirstName>
+                                <LastName>Williams</LastName>
+                                <CurrentRent>810.00</CurrentRent>
+                                <LeaseFromDate>2015-08-01</LeaseFromDate>
+                                <LeaseToDate>2019-07-31</LeaseToDate>
+                                <MoveInDate>2015-08-01</MoveInDate>
+                                <MoveOutDate>2019-08-02</MoveOutDate>
+                                <NoticeDate>2019-07-31</NoticeDate>
+                            </Resident>
+                        </Residents>
+                    </Unit>
+                </GetUnit>
+            </GetTenantsByUnitResult>
+        </GetTenantsByUnitResponse>
+    </soap:Body>
+</soap:Envelope>

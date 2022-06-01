@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+mix credo list --format oneline > docs/credo.txt
+cat docs/credo.txt  | wc -l

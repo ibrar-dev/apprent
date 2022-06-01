@@ -1,0 +1,55 @@
+<div class="page-header row no-gutters py-4">
+  <div class="col-10 offset-1 text-sm-left mb-0">
+    <h3 class="page-title">
+      My Documents
+    </h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+      <div class="dataTables_length" id="DataTables_Table_0_length">
+        <label>Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select> entries</label></div>
+      <div id="DataTables_Table_0_filter" class="dataTables_filter">
+        <label>Search:<input type="search" class=""
+                             placeholder=""
+                             aria-controls="DataTables_Table_0"></label>
+      </div>
+      <table class="file-manager-list table-responsive dataTable mb-4">
+        <thead>
+        <tr role="row">
+          <th style="width: 7px;"></th>
+          <th class="text-left pl-2" style="width: 428.8px;">Name
+          </th>
+          <th class="text-right pr-4" style="width: 141.8px;">Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= Enum.map @documents, fn d -> %>
+          <tr role="row" class="odd">
+            <td class="file-manager__item-icon text-center" tabindex="0">
+              <a target="_blank" href="<%= d.url %>">
+                <div>
+                  <i class="fas fa-eye"></i>
+                </div>
+              </a>
+            </td>
+            <td class="text-left pl-2">
+              <h5 class="file-manager__item-title m-0"><%= d.name %></h5>
+              <span class="file-manager__item-meta">
+                <%= Timex.format!(d.inserted_at, "{Mfull} {D}, {YYYY}")%>
+              </span>
+            </td>
+            <td class="text-right pr-4"><%= d.type %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

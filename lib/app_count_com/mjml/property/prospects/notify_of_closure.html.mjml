@@ -1,0 +1,12 @@
+<mj-text>
+	Hello <%= @info.name %>
+</mj-text>
+
+<mj-text>
+	You have a tour scheduled for <%= readable_date(@info.date) %> at <%= readable_time(@info.start_time) %>.
+	Unfortunately we need to re schedule this tour for another date.
+</mj-text>
+
+<mj-text>
+	Please contact the leasing office to reschedule the tour or you can schedule a tour online at <%= "#{AppCount.namespaced_url("application")}/showings/#{@property.code}" %>
+</mj-text>

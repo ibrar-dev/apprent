@@ -1,0 +1,31 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:real="http://www.moneygram.com/RealTimeEP">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <real:loadRequest>
+            <real:receiveAgentId>40798657</real:receiveAgentId>
+            <real:receiveCode>1960</real:receiveCode>
+            <real:referenceNumber>12345678</real:referenceNumber>
+            <real:sendDate>2014-01-29T20:31:19.076Z</real:sendDate>
+            <real:receiveISOCurrency>USD</real:receiveISOCurrency>
+            <real:receiveISOCountry>USA</real:receiveISOCountry>
+            <real:receiveAccountNumber>1010123456789</real:receiveAccountNumber>
+            <real:sendISOCurrency>USD</real:sendISOCurrency>
+            <real:sendISOCountry>USA</real:sendISOCountry>
+            <real:sendFxRate>1.00</real:sendFxRate>
+            <real:sendAmount>100.00</real:sendAmount>
+            <real:feeAmount>9.99</real:feeAmount>
+            <real:receiveAmount>100.00</real:receiveAmount>
+            <real:senderFirstName>Mary</real:senderFirstName>
+            <real:senderMiddleName>K</real:senderMiddleName>
+            <real:senderLastName>Smith</real:senderLastName>
+            <real:senderAddress1>1440 UTICIA AVE</real:senderAddress1>
+            <real:senderAddress2>S #100</real:senderAddress2>
+            <real:senderCity>Minneapolis</real:senderCity>
+            <real:senderStateProvince>MN</real:senderStateProvince>
+            <real:senderCountry>USA</real:senderCountry>
+            <real:senderZipPostalCode>55426</real:senderZipPostalCode>
+            <real:senderPhoneNumber>5555555555</real:senderPhoneNumber>
+        </real:loadRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

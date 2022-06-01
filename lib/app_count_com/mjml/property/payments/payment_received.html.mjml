@@ -1,0 +1,29 @@
+<mj-text>
+	Hello <%= @tenant.first_name %> <%= @tenant.last_name %>,
+</mj-text>
+
+<mj-text>
+  This email is to confirm that we have received your online payment to <%= @property.name %>
+  on <%= Timex.format!(@payment.inserted_at, "{Mfull} {D}, {YYYY} {h24}:{m}") %>
+</mj-text>
+
+<mj-text>
+	Amount paid was: <%= number_to_currency(@payment.amount) %>
+</mj-text>
+
+<mj-text>
+	Surcharge: <%= number_to_currency(@payment.surcharge) %>
+</mj-text>
+
+<mj-text>
+	Total: <%= number_to_currency(Decimal.add(@payment.amount, @payment.surcharge)) %>
+</mj-text>
+
+<mj-text>
+	Thank you for your payment!
+</mj-text>
+
+<mj-text>
+	<%= @property.name %>
+</mj-text>
+

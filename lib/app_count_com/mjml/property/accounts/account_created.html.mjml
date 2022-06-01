@@ -1,0 +1,42 @@
+<mj-text>
+  Hello
+  <%= @tenant.first_name %>
+  <%= @tenant.last_name %> and welcome to AppRent!
+</mj-text>
+
+<mj-text>
+ Your resident account has been set up and can be accessed with the below credentials: 
+</mj-text>
+
+<mj-text>
+  <strong>Username:</strong>
+  <%= @username %>
+</mj-text>
+
+<mj-text>
+  <strong>Password:</strong>
+  <%= @password %>
+</mj-text>
+
+<mj-text>
+  You can log in to your account by going to
+    <a href="<%= AppCount.namespaced_url(:residents) %>">
+      <%= AppCount.namespaced_url(:residents) %></a>
+    </a>
+  or downloading the AppRent N app from the
+  <a href="https://apps.apple.com/us/app/apprent-n/id1455119562">iOS App Store</a>
+  or the <a href="https://play.google.com/store/apps/details?id=com.apprent.apprent">Google Play Store</a>!
+</mj-text>
+
+<mj-text>
+  The resident portal gives you access to manage your account 24/7 at the
+  tip of your fingers! You can do anything from making payments and setting
+  up auto-pay to submitting your work requests and rating
+  completed requests! You can also access and manage all your resident
+  reward points and more!
+</mj-text>
+
+<mj-text>
+  If you have any questions about the portal or need assistance,
+  please contact support via email at support@AppRent.com. 
+</mj-text>

@@ -1,0 +1,9 @@
+<html>
+  <head></head>
+  <body>
+    <script type="text/javascript"
+      src=<%= accept_js_url() %>
+      charset="utf-8">
+    </script>
+  </body>
+</html>

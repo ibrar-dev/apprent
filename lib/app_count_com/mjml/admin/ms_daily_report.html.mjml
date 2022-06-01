@@ -1,0 +1,45 @@
+<mj-text>
+  Hello
+</mj-text>
+<mj-table>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+  	<th>Work Orders Created Today</th>
+  	<td><%= @created %></td>
+  </tr>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+    	<th>Work Orders Completed Today</th>
+    	<td><%= @completed %></td>
+	</tr>
+	<tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+		<th>Currently Open Work Orders</th>
+		<td><%= @open %></td>
+	</tr>
+	<tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+		<th>Currently Not Ready Units</th>
+		<td><%= Kernel.length(@not_ready_units) %></td>
+	</tr>
+	<tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+		<th>Active Techs Today</th>
+		<td><%= @techs %></td>
+	</tr>
+</mj-table>
+<mj-text>
+	The below units were marked ready today
+</mj-text>
+<mj-table>
+	<%= Enum.map @make_readies_completed, fn(mr)-> %>
+		<tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+			<th><%= mr.property %></th>
+			<td><%= mr.number %></td>
+		</tr>
+	<% end %>
+</mj-table>
+<mj-text>
+	Notes - <%= @notes %>
+</mj-text>
+<mj-text>
+  If you would like to add some features to a daily report please feel free to reach out to your friendly neighborhood programmer.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

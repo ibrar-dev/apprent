@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export MIX_ENV=test
+cat docs/cycles.txt  | grep "cycles found"
+unset MIX_ENV

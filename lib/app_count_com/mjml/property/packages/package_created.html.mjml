@@ -1,0 +1,17 @@
+<mj-text>
+  Great news <%= @name%>,
+</mj-text>
+<mj-text>
+  Your package has arrived and can be picked up from the mail office during business hours.
+  To retrieve your package please present this pin number to the office staff, <%= @pin %>.
+  Your package will be held for 14 days before being returned to sender.
+</mj-text>
+ <mj-text>
+ <%= if (@type == "Perishable") do %>
+  <br/>
+      <strong>Note: Your item is marked perishable please collect it as soon as possible</strong>
+ <% end %>
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

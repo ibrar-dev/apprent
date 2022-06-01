@@ -1,0 +1,888 @@
+98 cycles found. Showing them in decreasing size:
+
+Cycle of length 18:
+
+    lib/app_count/rent_apply/utils/rent_applications.ex
+    lib/app_count/short_codes/short_codes.ex
+    lib/app_count/short_codes/tenants.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/payment_sources.ex
+    lib/app_count/tenants/tenants.ex
+    lib/app_count/tenants/utils/create_tenant.ex
+    lib/app_count/leases/utils/leases.ex
+    lib/app_count/leases/utils/bluemoon.ex
+    lib/app_count/rent_apply/rent_apply.ex
+    lib/app_count/rent_apply/utils/rent_applications.ex
+
+Cycle of length 15:
+
+    lib/app_count/maintenance/job.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/maintenance/note.ex
+    lib/app_count/maintenance/tech.ex
+    lib/app_count/maintenance/job.ex
+
+Cycle of length 15:
+
+    lib/app_count/maintenance/assignment.ex
+    lib/app_count/maintenance/tech.ex
+    lib/app_count/maintenance/job.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/maintenance/assignment.ex
+
+Cycle of length 15:
+
+    lib/app_count/leases/utils/renewals.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/payment_sources.ex
+    lib/app_count/tenants/tenants.ex
+    lib/app_count/tenants/utils/create_tenant.ex
+    lib/app_count/leases/utils/leases.ex
+    lib/app_count/leases/utils/bluemoon.ex
+    lib/app_count/rent_apply/rent_apply.ex
+    lib/app_count/rent_apply/utils/bluemoon.ex
+    lib/app_count/leases/leases.ex
+    lib/app_count/leases/utils/renewals.ex
+
+Cycle of length 14:
+
+    lib/app_count/rewards/rewards.ex
+    lib/app_count/rewards/utils/purchases.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/payments.ex
+    lib/app_count/yardi/export_payment.ex
+    lib/app_count/ledgers/utils/payments.ex
+    lib/app_count/rewards/rewards.ex
+
+Cycle of length 14:
+
+    lib/app_count/rent_apply/forms/saved_form.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/leases/lease.ex
+    lib/app_count/ledgers/payment.ex
+    lib/app_count/rent_apply/rent_application.ex
+    lib/app_count/rent_apply/forms/saved_form.ex
+
+Cycle of length 14:
+
+    lib/app_count/ledgers/utils/charges.ex
+    lib/app_count/ledgers/utils/payments.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/payment_sources.ex
+    lib/app_count/tenants/tenants.ex
+    lib/app_count/tenants/utils/create_tenant.ex
+    lib/app_count/ledgers/utils/charges.ex
+
+Cycle of length 14:
+
+    lib/app_count/admins/utils/profiles.ex
+    lib/app_count/admins/utils/actions.ex
+    lib/app_count/admins/action.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/utils/profiles.ex
+
+Cycle of length 14:
+
+    lib/app_count/admins/alert_repo.ex
+    lib/app_count/admins/alert.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/utils/alerts.ex
+    lib/app_count/admins/alert_repo.ex
+
+Cycle of length 14:
+
+    lib/app_count/accounting/bank_account.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/leases/lease.ex
+    lib/app_count/ledgers/payment.ex
+    lib/app_count/ledgers/batch.ex
+    lib/app_count/accounting/bank_account.ex
+
+Cycle of length 13:
+
+    lib/app_count/vendors/vendor.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/card_item.ex
+    lib/app_count/vendors/vendor.ex
+
+Cycle of length 13:
+
+    lib/app_count/admins/email_subscriptions_repo.ex
+    lib/app_count/admins/email_subscription.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/email_subscriptions_repo.ex
+
+Cycle of length 12:
+
+    lib/app_count_com/utils/admins.ex
+    lib/app_count_com/utils/sender.ex
+    lib/app_count_com/utils/storage.ex
+    lib/app_count/messaging/utils/emails.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/utils/passwords.ex
+    lib/app_count_com/utils/admins.ex
+
+Cycle of length 12:
+
+    lib/app_count/admins/utils/org_charts.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/utils/org_charts.ex
+
+Cycle of length 12:
+
+    lib/app_count/admins/message.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/message.ex
+
+Cycle of length 12:
+
+    lib/app_count/admins/auth/tokens.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/utils/queries/show_order.ex
+    lib/app_count/admins/admins.ex
+    lib/app_count/admins/auth/tokens.ex
+
+Cycle of length 12:
+
+    lib/app_count/accounts/utils/account_info.ex
+    lib/app_count/rewards/rewards.ex
+    lib/app_count/rewards/utils/purchases.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/account_info.ex
+
+Cycle of length 10:
+
+    lib/app_count/properties/utils/letter_templates.ex
+    lib/app_count/short_codes/short_codes.ex
+    lib/app_count/short_codes/tenants.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/letter_templates.ex
+
+Cycle of length 10:
+
+    lib/app_count/accounts/utils/accounts.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/accounts.ex
+
+Cycle of length 9:
+
+    lib/app_count/maintenance/utils/notes.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/reports.ex
+    lib/app_count/maintenance/utils/orders.ex
+    lib/app_count/maintenance/utils/techs.ex
+    lib/app_count/materials/utils/toolbox_items.ex
+    lib/app_count_web/channels/tech_channel.ex
+    lib/app_count/maintenance/maintenance.ex
+    lib/app_count/maintenance/utils/notes.ex
+
+Cycle of length 9:
+
+    lib/app_count/maintenance/utils/cards.ex
+    lib/app_count/maintenance/utils/assignments.ex
+    lib/app_count_web/channels/tech_channel.ex
+    lib/app_count/maintenance/maintenance.ex
+    lib/app_count/maintenance/utils/techs.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/reports.ex
+    lib/app_count/maintenance/utils/orders.ex
+    lib/app_count/maintenance/utils/cards.ex
+
+Cycle of length 9:
+
+    lib/app_count/leases/screening.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/leases/lease.ex
+    lib/app_count/ledgers/payment.ex
+    lib/app_count/rent_apply/rent_application.ex
+    lib/app_count/rent_apply/person.ex
+    lib/app_count/leases/screening.ex
+
+Cycle of length 9:
+
+    lib/app_count/admins/access_server.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/public/property.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/public/public.ex
+    lib/app_count/admins/utils/admins.ex
+    lib/app_count/admins/access_server.ex
+
+Cycle of length 9:
+
+    lib/app_count/accounts/utils/stats.ex
+    lib/app_count/maintenance/utils/reports.ex
+    lib/app_count/maintenance/utils/orders.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/stats.ex
+
+Cycle of length 9:
+
+    lib/app_count/accounting/check.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/leases/lease.ex
+    lib/app_count/ledgers/payment.ex
+    lib/app_count/ledgers/batch.ex
+    lib/app_count/accounting/bank_account.ex
+    lib/app_count/accounting/check.ex
+
+Cycle of length 8:
+
+    lib/app_count/properties/charge.ex
+    lib/app_count/leases/lease.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/tenants/tenancy.ex
+    lib/app_count/ledgers/customer_ledger.ex
+    lib/app_count/ledgers/payment.ex
+    lib/app_count/ledgers/charge.ex
+    lib/app_count/properties/charge.ex
+
+Cycle of length 8:
+
+    lib/app_count/leases/utils/forms.ex
+    lib/app_count/leases/utils/bluemoon.ex
+    lib/app_count/rent_apply/rent_apply.ex
+    lib/app_count/rent_apply/utils/screening.ex
+    lib/app_count/leases/utils/screenings.ex
+    lib/app_count/tenants/utils/create_tenant.ex
+    lib/app_count/leases/leases.ex
+    lib/app_count/leases/utils/forms.ex
+
+Cycle of length 8:
+
+    lib/app_count/jobs/jobs.ex
+    lib/app_count/jobs/utils/jobs.ex
+    lib/app_count/jobs/server.ex
+    lib/app_count/jobs/runner.ex
+    lib/app_count/tasks/enqueue.ex
+    lib/app_count/tasks/queue.ex
+    lib/app_count/tasks/runner.ex
+    lib/app_count/jobs/jobs.ex
+
+Cycle of length 7:
+
+    lib/app_count/public/client_repo.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/public/public.ex
+    lib/app_count/admins/utils/admins.ex
+    lib/app_count/public/client_repo.ex
+
+Cycle of length 7:
+
+    lib/app_count/admins/admin_repo.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/public/public.ex
+    lib/app_count/admins/utils/admins.ex
+    lib/app_count/admins/admin_repo.ex
+
+Cycle of length 7:
+
+    lib/app_count/accounts/utils/passwords.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/recurring_letters.ex
+    lib/app_count/tasks/workers/recurring_letters.ex
+    lib/app_count/properties/utils/resident_params.ex
+    lib/app_count/accounts/accounts.ex
+    lib/app_count/accounts/utils/passwords.ex
+
+Cycle of length 6:
+
+    lib/app_count_web/views/letter_template.ex
+    lib/app_count_web/endpoint.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/application_controller.ex
+    lib/app_count_web/letter_previewer.ex
+    lib/app_count_web/views/letter_template.ex
+
+Cycle of length 6:
+
+    lib/app_count_web/views/checks/check_template_view.ex
+    lib/app_count_web/endpoint.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/application_controller.ex
+    lib/app_count_web/letter_previewer.ex
+    lib/app_count_web/views/checks/check_template_view.ex
+
+Cycle of length 6:
+
+    lib/app_count_web/controllers/api/invoice_payment_controller.ex
+    lib/app_count_web/letter_previewer.ex
+    lib/app_count_web/views/letter_template.ex
+    lib/app_count_web/endpoint.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/invoice_payment_controller.ex
+
+Cycle of length 6:
+
+    lib/app_count_web/controllers/api/check_controller.ex
+    lib/app_count_web/letter_previewer.ex
+    lib/app_count_web/views/letter_template.ex
+    lib/app_count_web/endpoint.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/check_controller.ex
+
+Cycle of length 6:
+
+    lib/app_count/rent_apply/utils/processing.ex
+    lib/app_count/tenants/utils/create_tenant.ex
+    lib/app_count/leases/utils/leases.ex
+    lib/app_count/leases/utils/bluemoon.ex
+    lib/app_count/rent_apply/rent_apply.ex
+    lib/app_count/rent_apply/utils/processing.ex
+
+Cycle of length 6:
+
+    lib/app_count/public/client_features.ex
+    lib/app_count/public/client.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/public/public.ex
+    lib/app_count/public/client_features.ex
+
+Cycle of length 6:
+
+    lib/app_count/properties/utils/evictions.ex
+    lib/app_count/tenants/utils/tenants.ex
+    lib/app_count/messaging/messaging.ex
+    lib/app_count/messaging/utils/mailings.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/evictions.ex
+
+Cycle of length 6:
+
+    lib/app_count/accounts/password_reset.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/accounts/password_reset.ex
+
+Cycle of length 6:
+
+    lib/app_count/accounts/lock.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/public/user.ex
+    lib/app_count/public/accounts.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/accounts/lock.ex
+
+Cycle of length 5:
+
+    lib/app_count_web/controllers/api/tenant_controller.ex
+    lib/app_count_web/views/exports/resident_ledger_view.ex
+    lib/app_count_web/endpoint.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/tenant_controller.ex
+
+Cycle of length 5:
+
+    lib/app_count/maintenance/card.ex
+    lib/app_count/properties/unit.ex
+    lib/app_count/maintenance/order.ex
+    lib/app_count/maintenance/card_item.ex
+    lib/app_count/maintenance/card.ex
+
+Cycle of length 4:
+
+    lib/app_count_web/views/users/layout_view.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/users/password_controller.ex
+    lib/app_count_web/views/users/layout_view.ex
+
+Cycle of length 4:
+
+    lib/app_count_web/controllers/users/session_controller.ex
+    lib/app_count_web/views/users/layout_view.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/users/session_controller.ex
+
+Cycle of length 4:
+
+    lib/app_count/materials/utils/toolbox_items.ex
+    lib/app_count_web/channels/tech_channel.ex
+    lib/app_count/materials/materials.ex
+    lib/app_count/materials/utils/toolbox_items.ex
+
+Cycle of length 4:
+
+    lib/app_count/maintenance/utils/timecards.ex
+    lib/app_count_web/channels/tech_channel.ex
+    lib/app_count/maintenance/maintenance.ex
+    lib/app_count/maintenance/utils/timecards.ex
+
+Cycle of length 4:
+
+    lib/app_count/maintenance/utils/parts.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/reports.ex
+    lib/app_count/maintenance/utils/parts.ex
+
+Cycle of length 4:
+
+    lib/app_count/data/utils/uploads.ex
+    lib/app_count/upload_server/upload_server.ex
+    lib/app_count/data/data.ex
+    lib/app_count/data/utils/uploads.ex
+
+Cycle of length 4:
+
+    lib/app_count/approvals/utils/approvals.ex
+    lib/app_count/approvals/approvals.ex
+    lib/app_count/approvals/utils/approvals_logs.ex
+    lib/app_count/approvals/utils/approvals.ex
+
+Cycle of length 4:
+
+    lib/app_count/accounts/autopay.ex
+    lib/app_count/accounts/payment_source.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/accounts/autopay.ex
+
+Cycle of length 3:
+
+    lib/integrations/bluemoon/requests/request_signature.ex
+    lib/integrations/bluemoon/bluemoon.ex
+    lib/integrations/bluemoon/requests/request_signature.ex
+
+Cycle of length 3:
+
+    lib/integrations/bluemoon/requests/get_lease_pdf.ex
+    lib/integrations/bluemoon/bluemoon.ex
+    lib/integrations/bluemoon/requests/get_lease_pdf.ex
+
+Cycle of length 3:
+
+    lib/integrations/bluemoon/request.ex
+    lib/integrations/bluemoon/auth.ex
+    lib/integrations/bluemoon/request.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/views/management/layout_view.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/views/management/layout_view.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/plugs/authenticate_user_plug.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/plugs/authenticate_user_plug.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/plugs/authenticate_plug.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/plugs/authenticate_plug.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/live/modal_component.ex
+    lib/app_count_web/live/live_helpers.ex
+    lib/app_count_web/live/modal_component.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/users/social_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/users/social_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/users/payment_source_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/users/payment_source_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/users/order_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/users/order_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/session_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/session_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/password_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/password_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/management/session_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/management/session_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/management/client_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/management/client_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/maintenance_insight_report_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/maintenance_insight_report_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/api/letter_template_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/api/letter_template_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count_web/controllers/admin_user_session_controller.ex
+    lib/app_count_web/router.ex
+    lib/app_count_web/controllers/admin_user_session_controller.ex
+
+Cycle of length 3:
+
+    lib/app_count/vendors/utils/vendors.ex
+    lib/app_count/vendors/vendors.ex
+    lib/app_count/vendors/utils/vendors.ex
+
+Cycle of length 3:
+
+    lib/app_count/tasks/queue.ex
+    lib/app_count/tasks/runner.ex
+    lib/app_count/tasks/queue.ex
+
+Cycle of length 3:
+
+    lib/app_count/rewards/purchase.ex
+    lib/app_count/rewards/reward.ex
+    lib/app_count/rewards/purchase.ex
+
+Cycle of length 3:
+
+    lib/app_count/rewards/accomplshment.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/rewards/accomplshment.ex
+
+Cycle of length 3:
+
+    lib/app_count/rent_apply/document.ex
+    lib/app_count/rent_apply/rent_application.ex
+    lib/app_count/rent_apply/document.ex
+
+Cycle of length 3:
+
+    lib/app_count/public/utils/properties.ex
+    lib/app_count/properties/property_repo.ex
+    lib/app_count/public/utils/properties.ex
+
+Cycle of length 3:
+
+    lib/app_count/prospects/utils/closures.ex
+    lib/app_count/prospects/prospects.ex
+    lib/app_count/prospects/utils/closures.ex
+
+Cycle of length 3:
+
+    lib/app_count/properties/utils/packages.ex
+    lib/app_count/properties/properties.ex
+    lib/app_count/properties/utils/packages.ex
+
+Cycle of length 3:
+
+    lib/app_count/properties/server/mini_property_repo.ex
+    lib/app_count/properties/server/mini_property.ex
+    lib/app_count/properties/server/mini_property_repo.ex
+
+Cycle of length 3:
+
+    lib/app_count/properties/document.ex
+    lib/app_count/tenants/tenant.ex
+    lib/app_count/properties/document.ex
+
+Cycle of length 3:
+
+    lib/app_count/messaging/phone_number.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/messaging/phone_number.ex
+
+Cycle of length 3:
+
+    lib/app_count/materials/utils/logs.ex
+    lib/app_count/materials/materials.ex
+    lib/app_count/materials/utils/logs.ex
+
+Cycle of length 3:
+
+    lib/app_count/maintenance/skill.ex
+    lib/app_count/maintenance/tech.ex
+    lib/app_count/maintenance/skill.ex
+
+Cycle of length 3:
+
+    lib/app_count/maintenance/insight_reports/report_manager.ex
+    lib/app_count/maintenance/insight_reports/reports.ex
+    lib/app_count/maintenance/insight_reports/report_manager.ex
+
+Cycle of length 3:
+
+    lib/app_count/maintenance/insight_report.ex
+    lib/app_count/properties/property.ex
+    lib/app_count/maintenance/insight_report.ex
+
+Cycle of length 3:
+
+    lib/app_count/leasing/charge.ex
+    lib/app_count/leasing/lease.ex
+    lib/app_count/leasing/charge.ex
+
+Cycle of length 3:
+
+    lib/app_count/exports/ledger.ex
+    lib/app_count/tenants/tenants.ex
+    lib/app_count/exports/ledger.ex
+
+Cycle of length 3:
+
+    lib/app_count/exports/gross_potential_rent.ex
+    lib/app_count/reports/reports.ex
+    lib/app_count/exports/gross_potential_rent.ex
+
+Cycle of length 3:
+
+    lib/app_count/exports/dq_report.ex
+    lib/app_count/reports/reports.ex
+    lib/app_count/exports/dq_report.ex
+
+Cycle of length 3:
+
+    lib/app_count/exports/accounting_report.ex
+    lib/app_count/reports/reports.ex
+    lib/app_count/exports/accounting_report.ex
+
+Cycle of length 3:
+
+    lib/app_count/data/utils/pdf.ex
+    lib/app_count/data/data.ex
+    lib/app_count/data/utils/pdf.ex
+
+Cycle of length 3:
+
+    lib/app_count/approvals/utils/approvals_notes.ex
+    lib/app_count/approvals/approvals.ex
+    lib/app_count/approvals/utils/approvals_notes.ex
+
+Cycle of length 3:
+
+    lib/app_count/approvals/utils/approvals_admin_data.ex
+    lib/app_count/approvals/approvals.ex
+    lib/app_count/approvals/utils/approvals_admin_data.ex
+
+Cycle of length 3:
+
+    lib/app_count/approvals/approval.ex
+    lib/app_count/approvals/approval_note.ex
+    lib/app_count/approvals/approval.ex
+
+Cycle of length 3:
+
+    lib/app_count/admins/role.ex
+    lib/app_count/admins/admin_role.ex
+    lib/app_count/admins/role.ex
+
+Cycle of length 3:
+
+    lib/app_count/admins/auth/authentication.ex
+    lib/app_count/admins/admin.ex
+    lib/app_count/admins/auth/authentication.ex
+
+Cycle of length 3:
+
+    lib/app_count/accounts/login.ex
+    lib/app_count/accounts/account.ex
+    lib/app_count/accounts/login.ex
+
+Cycle of length 3:
+
+    lib/app_count/accounting/utils/report_templates.ex
+    lib/app_count/accounting/accounting.ex
+    lib/app_count/accounting/utils/report_templates.ex
+
+Cycle of length 3:
+
+    lib/app_count/accounting/utils/invoices.ex
+    lib/app_count/accounting/accounting.ex
+    lib/app_count/accounting/utils/invoices.ex
+
+Cycle of length 3:
+
+    lib/app_count/accounting/utils/categories.ex
+    lib/app_count/accounting/accounting.ex
+    lib/app_count/accounting/utils/categories.ex
+
+Cycle of length 3:
+
+    lib/app_count/accounting/utils/accounts.ex
+    lib/app_count/accounting/accounting.ex
+    lib/app_count/accounting/utils/accounts.ex
+

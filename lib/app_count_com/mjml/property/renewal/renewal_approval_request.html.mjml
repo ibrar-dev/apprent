@@ -1,0 +1,10 @@
+<mj-text>
+  Hi <%= @name %>,
+</mj-text>
+<mj-text>
+  There is a renewal approval request from <%= @admin_name %>.
+  Please review this request at <a target="_blank" href="<%= @url %>"><%= @url %></a>.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

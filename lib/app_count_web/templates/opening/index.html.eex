@@ -1,0 +1,4 @@
+<div id="openings-app">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/openings.js") %>"></script>

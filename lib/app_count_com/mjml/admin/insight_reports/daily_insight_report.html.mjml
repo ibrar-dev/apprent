@@ -1,0 +1,37 @@
+<mj-text color="#555">
+  <i><%= readable_datetime(@issued_date) %></i>
+</mj-text>
+<mj-text>
+  <p>
+    Hi <%= @recipient_name %>!
+  </p>
+  <p>
+    Here's your daily maintenance insight report for <%= @property.name %> (<a href="<%= constructed_link("maintenance_insight_reports/#{@report_id}") %>">view it on the web</a>).
+  </p>
+  <%= for comment <- (@data[:detail_comments] || []) do %>
+    <p><%= comment %></p>
+  <% end %>
+</mj-text>
+<mj-divider border-width="1px" border-color="#AAA"/>
+<mj-table>
+  <tr>
+    <th colspan="2" color="#FFF" style="background-color: #4C9F62; color: #FFF">Today's Numbers</th>
+  </tr>
+  <%= for reading_item <- (@data[:synopsis] || []) do %>
+    <tr>
+      <td><%= reading_item.title%></td>
+      <td>
+        <a href="<%= constructed_link(reading_item) %>">
+          <%= formatted_insight_string(reading_item) %>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</mj-table>
+<mj-divider border-width="1px" border-color="#AAA"/>
+<mj-text padding-left="75px" padding-top="40px">
+  Thanks, and have a lovely <%= @weekday %>!
+  <br>
+  <br>
+  <i>- The AppRent Team</i>
+</mj-text>

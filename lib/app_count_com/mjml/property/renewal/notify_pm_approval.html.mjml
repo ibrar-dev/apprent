@@ -1,0 +1,11 @@
+<mj-text>
+  Hi <%= @manager_name %>,
+</mj-text>
+<mj-text>
+  There is a renewal approval request from <%= @resident_name %>.
+  <%= @resident_name %> requested a renewal for <%= @package.min %> - <%= @package.max %> months.
+  Please review this renewal request <a target="_blank" href="<%= @url %>"><%= @url %></a>.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

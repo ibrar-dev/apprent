@@ -1,0 +1,13 @@
+<mj-text>
+  Congratulations!  Your application to <%= @property.name %> has been approved!
+</mj-text>
+<mj-text>
+  In order to finalize your application please pay the $150 administration fee using the link below.
+
+</mj-text>
+<mj-text>
+  Please note that your lease cannot be reserved until this fee is paid.
+</mj-text>
+<mj-button href="<%= AppCount.namespaced_url(:application) %>/payment/<%= @crypt %>">
+  Click here to complete your application
+</mj-button>

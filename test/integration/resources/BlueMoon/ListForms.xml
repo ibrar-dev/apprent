@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ns1="https://www.bluemoonforms.com/services/lease.php">
+    <SOAP-ENV:Body>
+        <ns1:ListFormsResponse>
+            <ListFormsResult>
+                <item>
+                    <Id>LEADHAZD</Id>
+                    <Title>Lead Hazard Disclosure Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>6</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>APTLEASE</Id>
+                    <Title>Apartment Lease Form</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>8</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>SHLEASE</Id>
+                    <Title>Student Housing Lease Contract</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>10</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ADDSPECPROV</Id>
+                    <Title>Additional Special Provisions</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>INVENTRY</Id>
+                    <Title>Inventory and Condition Form</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>3</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PETAGREE</Id>
+                    <Title>Animal Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>UTILITY</Id>
+                    <Title>All-In-One Utility Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>3</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>BEDBUGADD</Id>
+                    <Title>Bed Bug Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>3</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PHILLEAD</Id>
+                    <Title>Philadelphia Lead Disclosure and Certification Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>MOLDADDN</Id>
+                    <Title>Mold Information and Prevention Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ADDGAHP</Id>
+                    <Title>Addendum for Affordable Housing</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>MOVEOUT</Id>
+                    <Title>Notice of Intent to Move Out</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ASBESTOS</Id>
+                    <Title>Asbestos Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>EARLYTM</Id>
+                    <Title>Lease Contract Buy-Out Agreement</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>SATELIT2</Id>
+                    <Title>Satellite Dish or Antenna Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ENCGARA2</Id>
+                    <Title>Enclosed Garage Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>LMWVMDR2</Id>
+                    <Title>Limited Waiver and Modification of Rights (SCRA)</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>POLICIES</Id>
+                    <Title>Community Policies, Rules, &amp; Regulations</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>3</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>SURETY</Id>
+                    <Title>Surety Bond Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>RENTCON2</Id>
+                    <Title>Addendum for Rent Concession</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>RENTINS2</Id>
+                    <Title>Renter's or Liability Insurance Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ADDGATE2</Id>
+                    <Title>Remote Control, Card or Code Access Gate Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>ADDINALM</Id>
+                    <Title>Intrusion Alarm Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>NOSMOKE</Id>
+                    <Title>No-Smoking Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>SUPPORTANIMAL</Id>
+                    <Title>Assistance Animal Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PARKINGADD</Id>
+                    <Title>Parking Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>MEDMARIJUANA</Id>
+                    <Title>Addendum Regarding Marijuana Use and Landlord's Commitment to Enforcement of Crime Free
+                        Addendum
+                    </Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>CRIMEDRUG</Id>
+                    <Title>Crime/Drug Free Housing Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>MIXEDUSE</Id>
+                    <Title>Mixed Use Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>AIRBNB</Id>
+                    <Title>Short-Term Subletting or Rental Prohibited</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PAPHILGHP</Id>
+                    <Title>Philadelphia Partners for Good Housing</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>17</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>WASHDRYADD</Id>
+                    <Title>Washer and Dryer Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PKGACCEPT</Id>
+                    <Title>Package Acceptance Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PHOTORELS</Id>
+                    <Title>Photo, Video, and Statement Release Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>RAMFPOLICY</Id>
+                    <Title>Reasonable Modifications and Accommodations Policy</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>CLASSACTION</Id>
+                    <Title>Class Action Waiver Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>VAWAADDEN</Id>
+                    <Title>Violence Against Women Act Lease Addendum</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>VAWACERT</Id>
+                    <Title>Certification of Domestic Violence, Dating Violence, Sexual Assault or Stalking</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>VAWATRANSFER</Id>
+                    <Title>Emergency Transfer Request for Certain Victims of Domestic Violence</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>2</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>VAWARIGHTS</Id>
+                    <Title>Notice of Occupancy Rights under Violence Against Women Act</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>letter</PageSize>
+                    <Language>english</Language>
+                    <PageCount>8</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PAACKRECEIPT</Id>
+                    <Title>Philadelphia Acknowledgment of Receipt of Required Documents</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>PAWASTERECYCLE</Id>
+                    <Title>City of Pittsburgh Waste and Recycling Fact Sheet</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>COV19WAIVER2</Id>
+                    <Title>Notice of Temporary Waiver of Late Fees</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+                <item>
+                    <Id>COV19PAYPLAN2</Id>
+                    <Title>Payment Plan Agreement</Title>
+                    <Copies>0</Copies>
+                    <Cost xsi:nil="true"/>
+                    <PageSize>legal</PageSize>
+                    <Language>english</Language>
+                    <PageCount>1</PageCount>
+                    <FormSection>lease</FormSection>
+                    <Status xsi:nil="true"/>
+                    <FormType>standard</FormType>
+                </item>
+            </ListFormsResult>
+        </ns1:ListFormsResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stock</title>
+  </head>
+
+ <body style="padding: 0.3in">
+    <table border="1" style="border-spacing: 0">
+      <%= Enum.map Enum.chunk_every(@materials, 4), fn(row) -> %>
+        <tr style="page-break-inside: avoid">
+          <%= Enum.map row, fn(material) -> %>
+            <td style="text-align: center; padding: 0.1in">
+              <div><%= material.name %></div>
+              <img style="max-width: 80%" src="data:image/png;base64,<%= material.code %>" />
+              <div><%= material.ref_number %></div>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+ </body>
+<script>window.print()</script>
+</html>

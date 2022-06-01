@@ -1,0 +1,14 @@
+<mj-text font-style="italic"
+				 font-size="20px"
+				 font-family="Helvetica Neue"
+				 color="#626262">You have a new Alert!
+</mj-text>
+
+<mj-text color="#525252">
+	Sender: <%= @alert.sender %>
+</mj-text>
+
+<mj-text color="#525252">
+	<%= @alert.note %>
+</mj-text>
+	

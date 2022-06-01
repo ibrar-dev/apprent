@@ -1,0 +1,4 @@
+<div class="d-flex align-items-center">
+  <img src="<%= @property.icon %>" style="max-width: 26px"/>
+  <h5 class="ml-2 mb-0"><%= @property.name %></h5>
+</div>

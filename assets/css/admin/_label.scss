@@ -1,0 +1,31 @@
+.labeled-box {
+  position: relative;
+  .labeled-box-label {
+    display: inline-block;
+    background: white;
+    font-size: 70%;
+    position: absolute;
+    left: 10px;
+    top: -6px;
+    padding: 0 3px;
+    color: #5b697a;
+    z-index: 10;
+  }
+  .labeled-box-right {
+    display: inline-block;
+    background: white;
+    font-size: 70%;
+    position: absolute;
+    right: 10px;
+    top: -6px;
+    padding: 0 3px;
+    color: #5b697a;
+    z-index: 10;
+  }
+  input:focus + .labeled-box-label {
+    color: black;
+  }
+  input:disabled {
+    background-color: #ffffff;
+  }
+}

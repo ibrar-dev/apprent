@@ -1,0 +1,110 @@
+<html>
+    <style>
+      @font-face {
+        font-family: 'MICREncoding';
+        src: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/fonts/MICREncoding.eot")}" %>');
+        src: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/fonts/MICREncoding.ttf")}" %>') format('truetype'),
+        url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/fonts/MICREncoding.woff")}" %>') format('woff'),
+        url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/fonts/MICREncoding.svg")}" %>') format('svg');
+      }
+      body{font-family: sans-serif;}
+      .serif{ font-family: Courier;}
+      .header{ width: 300px; height: 100px; float: left; }
+      .right{ width: 260px; height: 100px; float: right; text-align: right; position: relative; }
+      .text_center{ text-align: center; }
+      .regular_text{ font-size: 15px; }
+      .medium_text{ font-size: 18px; }
+      .title_text{ font-size: 21px; }
+      .top{ position: absolute; top: 0; right: 0 }
+      .bottom{ position: absolute; bottom: 15px; right: 0; }
+      .left{ float: left; width: 100px; margin-bottom: 15px; }
+      .fl_left{float: left;}
+      .ml-5{margin-left: 15px;} .mr-5{margin-right: 15px;}
+      .micro{ text-align: center; font-family: 'MICREncoding'; }
+      .margin_bottom{ margin-bottom: 10px; margin-left: 100px; }
+      .invoice_header{ margin-top:35px; float: left; width: 100%;}
+    </style>
+    <body>
+        <div id="check">
+            <div >
+               <div class="header">
+                <div class="title_text"><%= @bank_account.name %></div>
+                <div class="regular_text"><%= @bank_account.address["street"] %></div>
+                <div class="regular_text"><%= @bank_account.address["city"] %> <%= @bank_account.address["state"] %> <%= @bank_account.address["zip"] %></div>
+               </div>
+               <div class="header text_center">
+                 <div class="medium_text"><%= @bank_account.bank_name %></div>
+               </div>
+               <div class="right">
+                 <div class="title_text top"><%= @number %></div>
+                 <div class="medium_text bottom"><%= date_formatter(@date) %></div>
+               </div>
+            </div>
+            <br />
+            <div class="margin_bottom serif" style="text-transform: uppercase;">
+              ****<%= @amount_lang %> DOLLARS
+            </div>
+            <div>
+                <div class="left">
+                    <span class="regular_text">TO THE</span>
+                    <span>ORDER OF</span>
+                </div>
+                <div style="float: right;">
+                    <span class="medium_text" style="text-align: right;">$<%= format_amount(@amount) %></span>
+                </div>
+                <div>
+                    <br />
+                    <br />
+                    <div style="margin-top: 20px; float: left;">
+                        <span class="medium_text serif"><%= @payee %></span>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 80px;">
+                <br />
+                <div>MEMO</div>
+                <br />
+                <div style="margin-top: 30px; font-size: 30px;" class="micro">
+                    c<%= prepad(@number) %>ca<%= @bank_account.routing_number %>a<%= @bank_account.account_number %>c
+                </div>
+            </div>
+        </div>
+        <div id="invoicing">
+            <%= if(length(@invoicings) != 0) do %>
+                <div class="invoice_header serif">
+                    <div style="font-size: 15px;" class="fl_left">DATE: <%= date_formatter(@date) %></div>
+                    <div style="font-size: 15px;" class="fl_left ml-5">CK# <%= @number %></div>
+                    <div style="font-size: 15px;" class="fl_left ml-5 mr-5">TOTAL: $<%= format_amount(@amount) %> ***</div>
+                    <div style="font-size: 15px;" >BANK: <%= @bank_account.name %></div>
+                </div>
+                <br />
+                <div style="font-size: 15px;" class="serif">PAYEE: <%= @payee %></div>
+                <br />
+                <table style="width: 100%">
+                <thead>
+                    <th align="left">Property</th>
+                    <th align="left">Account</th>
+                    <th align="left">Invoice - Date</th>
+                    <th align="left">Amount</th>
+                </thead>
+                <tbody>
+                    <%= for invoice <- @invoicings do %>
+                        <tr>
+                            <td style="font-size: 13px;"><%= invoice["property"] %></td>
+                            <td style="font-size: 13px;"><%= invoice["account"] %></td>
+                            <td style="font-size: 13px;"><%= invoice["invoice_number"] %> - <%= invoice_date_formatter(invoice["invoice_date"]) %></td>
+                            <td style="font-size: 13px; text-align: right;"><%= format_amount(invoice["amount"]) %></td>
+                        </tr>
+                    <% end %>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td style="border-top: 1px solid black; text-align: right;"><%= find_total(@invoicings) %></td>
+                    </tr>
+                </tbody>
+                </table>
+            <% end %>
+        </div>
+    </body>
+</html>

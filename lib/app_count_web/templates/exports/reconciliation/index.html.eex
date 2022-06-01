@@ -1,0 +1,73 @@
+<html>
+	<style>
+  .body {
+    padding: 25px 50px 75px 100px;
+  }
+  .header-container{
+    background-color: gainsboro;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    float: left;
+  }
+  .header {
+    padding: 5px;
+  }
+  .header-item {
+    padding: 5px;
+    float: left;
+  }
+	</style>
+	<body>
+	  <div class='header-container'>
+      <div class='header'>
+        <div class='header-item'>
+          <div class='item-desc'><strong>Start Date</strong></div>
+          <div class='item'><%= @posting.start_date%></div>
+        </div>
+        <div class='header-item'>
+          <div class='item-desc'><strong>End Date</strong></div>
+          <div class='item'><%= @posting.end_date%></div>
+        </div>
+        <div class='header-item'>
+          <div class='item-desc'><strong>Cleared Depostis</strong></div>
+          <div class='item'>$<%=@deposits%></div>
+        </div>
+        <div class='header-item'>
+          <div class='item-desc'><strong>Cleared Checks</strong></div>
+          <div class='item'>$<%=@payments%></div>
+        </div>
+        <div class='header-item'>
+          <div class='item-desc'><strong>Cleared Other</strong></div>
+          <div class='item'>$<%=@other%></div>
+        </div>
+      </div>
+    </div>
+	  <div>
+	    <table>
+	     <thead>
+	      <th>Date</th>
+	      <th>Reference</th>
+	      <th>Clear Date</th>
+	      <th>Type</th>
+        <th>Withdrawel</th>
+        <th>Deposit</th>
+        <th>Memo</th>
+	     </thead>
+	     <tbody>
+	       <%= Enum.map @reconciliations, fn r -> %>
+	         <tr>
+	           <td><%=r["date"]%></td>
+	           <td><%=r["ref"]%></td>
+	           <td><%=r["clear_date"]%></td>
+	           <td><%=get_type(r["type"])%></td>
+             <td><%=if is_payment(r["type"]) do r["amount"] end %></td>
+             <td><%=if is_deposit(r["type"]) do r["amount"] end %></td>
+             <td><%=r["memo"]%></td>
+	         </tr>
+	       <% end %>
+	     </tbody>
+	    </table>
+	  </div>
+	</body>
+</html>

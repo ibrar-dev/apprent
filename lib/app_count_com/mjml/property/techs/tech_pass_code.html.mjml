@@ -1,0 +1,6 @@
+<mj-text>
+    Hello <%= @name %>
+</mj-text>
+<mj-text>
+  You have been issued a new pass code: <%= @code %>.
+</mj-text>

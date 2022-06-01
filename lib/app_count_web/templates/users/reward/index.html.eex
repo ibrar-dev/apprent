@@ -1,0 +1,295 @@
+
+<script>
+  function openPrizeModal(element){
+    const name = element.childNodes[3].childNodes[1].childNodes[1].textContent
+    const points = element.childNodes[3].childNodes[3].childNodes[1].childNodes[5].textContent
+    const id = element.id;
+    sessionStorage.selectedPrize = JSON.stringify({name: name, points: points, id: id, pointsNum: points.replace(/\D/g,'')});
+    if(!element.className.includes("disabledPrize")) $('#prizeModal').modal('toggle')
+    $('#prizeName')[0].textContent = "";
+    $('#prizePoints')[0].textContent = "";
+    $('#prizeName')[0].append(document.createTextNode(name))
+    $('#prizePoints')[0].append(document.createTextNode(points))
+  }
+  window.onload = function () {
+    updateCart();
+    updatePoints();
+  };
+  function updatePoints(){
+    var currentPoints = <%= Poison.encode!(@points) %>;
+    cartPoints = localStorage.getItem('cart') &&
+    JSON.parse(localStorage.getItem('cart')).reduce((acc, val) => {
+      return acc + parseInt(val.pointsNum, 10)
+    }, 0);
+    sessionStorage.userPoints = currentPoints - cartPoints;
+    $('#userPoints')[0].textContent = currentPoints - cartPoints;
+    $('#cartSum')[0].textContent =  cartPoints;
+  }
+  function removeFromCart(item){
+    const itemId = parseInt(item.id.replace('cancel', ''),10)
+    var cart = JSON.parse(localStorage.getItem('cart'));
+    const cartIndex = cart.findIndex((x) => { return x.id == itemId});
+    cart.splice(cartIndex,1)
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCart();
+  }
+  function updateCart(){
+    var prizeCart = $('#prizeCart');
+    if ($('#prizeCart')[0]) {
+      prizeCart = $('#prizeCart')[0]
+      while (prizeCart.firstChild) {
+        prizeCart.removeChild(prizeCart.firstChild);
+      }
+    }
+    const cartItems = JSON.parse(localStorage.getItem('cart'));
+    if (cartItems) {
+        cartItems.forEach((item) => {
+        var itemRow = document.createElement("TR");
+        var itemName = document.createElement("TD");
+        var cancelImage = document.createElement("I");
+        cancelImage.id = "cancel" + item.id;
+        cancelImage.onclick = function(){removeFromCart(this)}
+        cancelImage.className = "fas fa-times"
+        cancelImage.style = "position: absolute; right: 30px; font-size:15px; color: #ff5c5c; cursor: pointer"
+        itemName.textContent = item.name;
+        var itemPoints = document.createElement("TD");
+        itemPoints.textContent = item.points;
+        itemPoints.appendChild(cancelImage);
+        itemRow.appendChild(itemName);
+        itemRow.appendChild(itemPoints);
+        prizeCart.appendChild(itemRow);
+      })
+    }
+  }
+  function addPrize(element){
+    if (parseInt(JSON.parse(sessionStorage.selectedPrize).points.replace(/\D/g,''), 10) <= JSON.parse(sessionStorage.userPoints)){
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(JSON.parse(sessionStorage.selectedPrize));
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCart()
+      updatePoints()
+    } else {
+      alert("You dont have enough points!")
+    }
+  }
+</script>
+
+<div class="page-header row no-gutters py-4">
+  <div class="col-12 text-sm-left mb-0">
+  </div>
+</div>
+<div class="container">
+  <div class="row mt-4" >
+    <div class="col-lg-4">
+      <div class="card card-small mb-4 overflow-hidden">
+        <div class="card-header " style="background-color:#f6fbf8; padding-left:40px">
+          <h6 class="d-flex justify-content-between mb-0">
+            <span style="font-size:13px; color:#73b939">Points Activity</span>
+          </h6>
+        </div>
+        <div style="padding-left:40px; padding-right:40px;height:220px; overflow-y: scroll">
+          <table class="table mb-0 data-table">
+            <tbody>
+              <%= Enum.map @history, fn h -> %>
+                <tr>
+                  <td style="padding-Left:0px; padding-top:9px; padding-bottom:9px">
+                    <div>
+                      <div class="d-flex align-items-center" style="font-weight: bold; font-size:12px;"><%= h.name %></div>
+                      <div style="color:#a9aeb5; font-size:12px;"><%= Timex.format!(h.inserted_at, "{M}/{D}/{YYYY}")%></div>
+                    </div>
+                  </td>
+                  <td style="padding-Left:0px; padding-top:9px; padding-bottom:9px">
+                    <div style="color:#a9aeb5; font-size:12px">Points</div>
+                    <div style="color:#a9aeb5; font-size:12px">
+                      <%= if h.type == "accomplishment" do h.amount else "-#{h.points}" end %>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+          <!--
+          <tr>
+            <td colspan="5" class="text-right align-middle">
+              <h4 class="m-0">Total:</h4>
+            </td>
+            <td class="align-middle">
+              <h4 class="m-0"><%= format_number(@points) %></h4>
+            </td>
+          </tr>
+          -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <div style="background-color: transparent; box-shadow:none; border-bottom:solid thin #d5d7db">
+      <div style="padding-top:16px; padding-bottom:16px; border-bottom:solid thin #d5d7db">
+        <div class="d-flex justify-content-between mb-0">
+          <i style="font-size:18px; color:#73b939; padding-right:5px; padding-left:5px;" class="fas fa-shopping-cart"></i>
+          <div class=" d-flex align-items-center" >
+            <i style="font-size:18px; color:#73b939; margin-right:10px; margin-bottom:0px; padding-right:5px; padding-left:5px;" class="fas fa-user"></i>
+            <h6 id="userPoints" style="margin-bottom:0px">
+
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div style="padding-left:40px; padding-right:40px;">
+        <table class="table mb-0 data-table" >
+          <tbody id="prizeCart">
+          </tbody>
+        </table>
+      </div>
+      <button type="submit" style="margin:15px; background-color:#22994c" class="btn btn-primary reward-btn">Checkout</button>
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="card" id="search" style="z-index:9; position:absolute; width:96%">
+      <div class="col card-body" style="padding-top:15px; padding-bottom:13px;">
+        <div class="d-flex" style="height:100%">
+          <div class="d-flex align-items-center" style="height:100%; width:65%">
+            <input type="text" id='search_rewards'style="margin-left:10px; border: none; color:#8d9196; font-size:19px; width:100%"placeholder="Search..">
+          </div>
+          <div class="d-flex justify-content-end  align-items-center" style=" height:100%; width:35%; padding-right:20px;">
+          <%= link to: Routes.user_reward_path(@conn, :index, page: @p_number - 1) do %>
+            <%= if @p_number > 1 do %>
+              <i class="fas fa-arrow-left" style="font-size:20px; color:#5A6169; margin-right:20px;"></i>
+            <% else %>
+              <i class="fas fa-arrow-left" style="font-size:20px; color:#a9aeb5; margin-right:20px;"></i>
+            <% end %>
+          <% end %>
+          <ul class="pagination" style="margin-bottom:0px;">
+            <%= Enum.map @link_array, fn link -> %>
+              <%= link to: Routes.user_reward_path(@conn, :index, page: link) do %>
+                <%= if @p_number == link do %>
+                  <li class="page-item">
+                    <h6 style="font-size:17px; margin-bottom: 0px; margin-left:10px; margin-right:10px; color:#5A6169; font-weight:bold"href="#">
+                      <%= link %>
+                    </h6>
+                  </li>
+                <% else %>
+                  <li class="page-item">
+                    <h6 style="font-size:16px; margin-bottom: 0px; margin-left:10px; margin-right:10px; color:#a9aeb5;"href="#">
+                      <%= link %>
+                    </h6>
+                  </li>
+                <% end %>
+              <% end %>
+            <% end %>
+          </ul>
+          <%= link to: Routes.user_reward_path(@conn, :index, page: @p_number + 1) do %>
+            <%= if @p_number < @total_page do %>
+              <i class="fas fa-arrow-right" style="font-size:20px; color:#5A6169; margin-left:20px;"></i>
+            <% else %>
+              <i class="fas fa-arrow-right" style="font-size:20px; color:#a9aeb5; margin-left:20px;"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-flex collapse" id="searchResult" style="width:100%;">
+        <ul class="list-group" id="rewardSearchList" style="width:100%; margin-top:5px;">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:70px;">
+    <%= Enum.map @rewards, fn reward -> %>
+      <% percent = Decimal.div(@points, Decimal.new(reward.points)) |> Decimal.mult(Decimal.new(100)) %>
+      <div class="col-md-4" style="height:210px;">
+        <div onclick="openPrizeModal(this)" class="card prize" id=<%= reward.id %> style="cursor: pointer; height:180px; margin-bottom: 15px; margin-top: 15px; padding: 20px; box-shadow:none; border:solid thin #d5d7db">
+              <!--
+                <div>
+                  <div class="circle-icon mr-2 d-flex align-items-center">
+                    <img class="w-100" src="<%= reward.icon %>"/>
+                  </div>
+                </div>
+                -->
+                <div style="flex: auto">
+                  <div class="d-flex justify-content-center" style=" padding-bottom:10px;">
+                    <strong class="clamp-this-module" style="color:#3a3c42; font-size:12px; text-overflow: ellipsis; height:33px; align-text:center"><%= reward.name %></strong>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div style="width:100%">
+                     <div class="d-flex justify-content-center" style="margin-bottom: 10px;">
+                        <div style="border-bottom: solid 1px #a9aeb5; width:25%;margin-right:15px; height:20px;"></div>
+                        <div class="d-flex justify-content-center">
+                          <div class="circle-icon d-flex align-items-center"> <img class="w-100" src="<%= reward.icon %>"/> </div>
+                        </div>
+                        <div style="border-bottom: solid 1px #a9aeb5; width:25%; margin-left:15px; height:20px;"></div>
+                     </div>
+                     <div class="progress progress-sm mt-0 mr-3" style="height:20px; width:100%;">
+                        <div id="progress-bar-example-1" class="progress-bar" style="width: <%= percent %>%; background-color:#73b939">
+                        <div class="badge badge-primary badge-pill" style="background-color:#73b939"><%= Decimal.round(percent) %> %</div></div>
+                     </div>
+                     <div style="text-align: center; color:#22994c; font-size:10px; margin-top:15px" class="d-block"><%= format_number(reward.points) %> Points</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="modal fade" id="prizeModal" tabindex="-1" role="dialog" aria-labelledby="prizeModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                  <img src="smiley.gif" alt="Smiley face" >
+                        <h6 id="prizeName" style="color:#3a3c42"></h6>
+                  <h6 id="prizePoints" style="color:#22994c"></h6>
+                <div class="d-flex justify-content-end">
+                  <button style="margin-right:10px" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button onclick="addPrize(this)" type="button" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+</div>
+
+
+
+<script type='text/javascript' src='/helpers/clamp.js'>
+</script>
+<script>
+var list = document.getElementsByClassName("clamp-this-module");
+for (let item of list) {
+    $clamp(item, {clamp: 2, truncationChar:"..."});
+}
+var prizes = document.getElementsByClassName("prize");
+var points = <%= Poison.encode!(@points) %>
+for (let prize of prizes) {
+   const prizePoints = parseInt(prize.childNodes[3].childNodes[3].childNodes[1].childNodes[5].innerHTML.replace(/,/g, ''));
+   const tenantPoints = points;
+   if(prizePoints > tenantPoints ) {
+   prize.style = "opacity:.6; height:180px; margin-bottom: 15px; margin-top: 15px; padding: 20px; box-shadow:none; border:solid thin #d5d7db"
+   prize.className = "card prize disabledPrize"
+   }
+}
+$(document).click(function(event) {
+  $target = $(event.target);
+  if(!$target.closest('#search').length &&
+  $('#rewardSearchList')[0].childNodes.length > 0) {
+    var myNode = $('#rewardSearchList')[0];
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+  }
+});
+$('#search_rewards').on('input', function(event) {
+  const search = $(event.target).val();
+  if(search == ""){
+    var myNode = $('#rewardSearchList')[0];
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+    $('#searchResult').toggle()
+  }
+  if(search.length == 1  && $('#searchResult').attr('aria-expanded') == 'false'){
+    $('#searchResult').toggle()
+  }
+});
+</script>

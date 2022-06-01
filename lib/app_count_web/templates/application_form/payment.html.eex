@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Dasmen Residential -- Application Payment</title>
+  <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/application_form.css") %>">
+</head>
+<body>
+<header class="app-header d-flex align-items-center">
+  <h2 class="ml-3 mb-0">
+    <%= @application.property.name %> Rental Application
+  </h2>
+</header>
+<p>&nbsp;</p>
+<div class="row mt-4">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-header">Administration Fee</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-unstyled border-0">
+              <%= Enum.map @application.persons, fn(p) -> %>
+                <li><%= p.status %>: <%= p.full_name %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled m-0 text-right border-0">
+              <%= if @unit do %>
+								<li>Unit: <%= @unit.number %></li>
+								<li>Monthly Rent: $<%= AppCount.RentApply.ApprovalParams.rent(@application.approval_params) %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div id="payment-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  window.APPLICATION_ID = <%= @application.id %>;
+  window.PROPERTY_ID = <%= @application.property_id %>;
+  window.PROPERTY_NAME = '<%= @application.property.name %>';
+  window.ADMIN_FEE = '<%= @application.property.setting.admin_fee %>';
+</script>
+<script src="<%= Routes.static_path(@conn, "/js/applicationPayment.js") %>"></script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+<div id="properties-app" class="position-relative">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/properties.js") %>"></script>

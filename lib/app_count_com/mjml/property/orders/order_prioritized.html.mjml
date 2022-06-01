@@ -1,0 +1,9 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+   The work order(<%= @category%>) for unit <%= @unit%> at <%= @propName%> has been marked as a priority. Please handle accordingly.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

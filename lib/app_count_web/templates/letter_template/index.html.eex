@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Arizonia&display=swap" rel="stylesheet">
+		<style>
+			body {
+				background-image: url('<%= "#{AppCount.namespaced_url("administration")}#{AppCountWeb.Endpoint.static_path("/images/apprentDasmenWatermark2.png")}" %>');
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+			}
+		</style>
+	</head>
+	<body>
+		<%= raw(@html) %>
+	</body>
+</html>

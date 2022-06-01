@@ -1,0 +1,157 @@
+[R] ↗ lib/app_count/accounting/utils/checks.ex:181:7 The condition of `if` should not be wrapped in parentheses.
+[R] ↗ lib/app_count/accounting/utils/checks.ex:196:5 The condition of `if` should not be wrapped in parentheses.
+[F] → lib/app_count/accounting/utils/invoices.ex:22:7 Function is too complex (CC is 15, max is 9).
+[F] → lib/app_count/accounting/utils/invoices.ex:24:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:33:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:42:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:51:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:183:7 Function is too complex (CC is 13, max is 9).
+[F] → lib/app_count/accounting/utils/invoices.ex:185:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:194:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounting/utils/invoices.ex:203:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[R] ↗ lib/app_count/accounting/utils/invoices.ex:434:9 Variable names should be written in snake_case.
+[F] → lib/app_count/accounting/utils/reconciliations.ex:16:7 Function is too complex (CC is 11, max is 9).
+[F] → lib/app_count/accounts/utils/account_info.ex:244:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/accounts/utils/payments.ex:43:7 Function is too complex (CC is 10, max is 9).
+[F] ↗ lib/app_count/accounts/utils/payments.ex:72:5 Unless conditions should avoid having an `else` block.
+[R] ↗ lib/app_count/adapters/twilio_adapter.ex:16:34 Large numbers should be written with underscores: 21_211
+[W] ↗ lib/app_count/adapters/zendesk_adapter.ex:115:8 There should be no calls to IO.inspect/1.
+[R] ↗ lib/app_count/admins/auth/devices.ex:39:53 Large numbers should be written with underscores: 65_537
+[F] → lib/app_count/admins/utils/admins.ex:181:13 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/admins/utils/alerts_functions.ex:26:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[R] ↗ lib/app_count/approvals/approvals_queries/analytics_functions.ex:219:7 Function/macro/guard names should be written in snake_case.
+[F] → lib/app_count/approvals/approvals_queries/analytics_functions.ex:263:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/approvals/utils/approvals.ex:54:11 Function body is nested too deep (max depth is 2, was 3).
+[F] ↗ lib/app_count/core/repos/generic_repo.ex:22:5 Avoid long quote blocks.
+[R] ↗ lib/app_count/crypto/crypto.ex:3:15 Large numbers should be written with underscores: 65_537
+[R] ↗ lib/app_count/crypto/crypto.ex:4 Module attribute names should be written in snake_case.
+[R] ↗ lib/app_count/crypto/crypto.ex:6 Module attribute names should be written in snake_case.
+[R] ↗ lib/app_count/crypto/crypto.ex:87:25 Module attribute names should be written in snake_case.
+[R] ↗ lib/app_count/crypto/migrate.ex:2:15 Large numbers should be written with underscores: 65_537
+[F] → lib/app_count/ecto_types/upload.ex:15:12 Function is too complex (CC is 20, max is 9).
+[F] → lib/app_count/leases/utils/bluemoon.ex:329:38 Function body is nested too deep (max depth is 2, was 3).
+[F] ↗ lib/app_count/leases/utils/leases.ex:37:9 Unless conditions should avoid having an `else` block.
+[F] → lib/app_count/leases/utils/leases.ex:49:16 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/leases/utils/leases.ex:174:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/leases/utils/renewals.ex:115:16 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/leases/utils/reports.ex:9:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/leasing/monthly_charges/compute.ex:57:8 Function is too complex (CC is 17, max is 9).
+[F] → lib/app_count/leasing/utils/create_lease.ex:36:16 Function body is nested too deep (max depth is 2, was 3).
+[R] ↗ lib/app_count/leasing/utils/renewal_letters.ex:40:7 The condition of `if` should not be wrapped in parentheses.
+[R] ↗ lib/app_count/ledgers/utils/batches.ex:96:7 The condition of `if` should not be wrapped in parentheses.
+[F] → lib/app_count/ledgers/utils/payments.ex:379:40 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/maintenance/insight_reports/duration.ex:130:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[W] ↗ lib/app_count/maintenance/insight_reports/probes/tech_low_completion_probe.ex:40:53 length(techs) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[F] → lib/app_count/maintenance/utils/cards.ex:142:7 Function is too complex (CC is 30, max is 9).
+[F] → lib/app_count/maintenance/utils/cards.ex:197:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/maintenance/utils/orders.ex:687:11 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/maintenance/utils/orders.ex:687:11 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/maintenance/utils/public/orders.ex:304:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/maintenance/utils/reports.ex:267:8 Function is too complex (CC is 14, max is 9).
+[F] → lib/app_count/maintenance/utils/techs.ex:1000:8 Function is too complex (CC is 13, max is 9).
+[F] → lib/app_count/materials/utils/logs.ex:91:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/messaging/utils/text_message_replies.ex:57:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[W] ↗ lib/app_count/multi_repo.ex:11 Module attribute @unsafe_db_warning makes use of unsafe Application configuration call Application.get_env/2
+[F] → lib/app_count/properties/server/mini_property.ex:122:43 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/properties/utils/calculations.ex:39:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/properties/utils/charges.ex:35:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/properties/utils/letter_templates.ex:147:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[R] ↗ lib/app_count/properties/utils/packages.ex:109:9 Variable names should be written in snake_case.
+[R] ↗ lib/app_count/properties/utils/packages.ex:122:5 Variable names should be written in snake_case.
+[F] → lib/app_count/properties/utils/resident_params.ex:61:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/properties/utils/resident_params.ex:76:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/properties/utils/resident_params.ex:87:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/properties/utils/units.ex:596:8 Function is too complex (CC is 11, max is 9).
+[F] → lib/app_count/prospects/utils/showings.ex:120:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/prospects/utils/showings.ex:141:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/public/public.ex:127:13 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/reports/aging_report.ex:72:7 Function is too complex (CC is 11, max is 9).
+[F] → lib/app_count/reports/daily_deposit.ex:17:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/daily_deposit.ex:27:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/effective_rent_report.ex:45:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/effective_rent_report.ex:52:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/effective_rent_report.ex:59:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/maintenance_report.ex:21:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/property/box_score/availability.ex:122:39 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/reports/queries/effective_rent.ex:15:7 Function is too complex (CC is 14, max is 9).
+[F] → lib/app_count/reports/queries/effective_rent.ex:188:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/queries/effective_rent.ex:195:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/reports/queries/unit_status.ex:47:7 Function is too complex (CC is 11, max is 9).
+[F] → lib/app_count/reports/rent_roll.ex:174:7 Function is too complex (CC is 12, max is 9).
+[F] → lib/app_count/reports/rent_roll.ex:348:9 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/rewards/utils/purchases.ex:72:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/tasks/workers/charges.ex:305:8 Function is too complex (CC is 18, max is 9).
+[F] → lib/app_count/tasks/workers/send_application_report.ex:68:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/tasks/workers/showing_alert.ex:28:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] ↗ lib/app_count/tasks/workers/text_pay_monthly_offer.ex:79 `with` contains only one <- clause and an `else` branch, use a `case` instead
+[F] → lib/app_count/tenants/utils/create_tenant.ex:274:16 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count/vendors/utils/orders.ex:345:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count/vendors/utils/orders.ex:384:9 Function body is nested too deep (max depth is 2, was 3).
+[W] ↗ lib/app_count_com/mjml_compiler.ex:11:5 There should be no calls to IO.inspect/1.
+[F] → lib/app_count_web/controllers/api/approvals_logs_controller.ex:8:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[R] ↗ lib/app_count_web/controllers/api/property_report_controller.ex:90:7 The condition of `if` should not be wrapped in parentheses.
+[F] ↗ lib/app_count_web/controllers/api/session_controller.ex:5 `with` contains only one <- clause and an `else` branch, use a `case` instead
+[F] ↗ lib/app_count_web/controllers/api/v1/tech_controller.ex:27 `with` contains only one <- clause and an `else` branch, use a `case` instead
+[F] → lib/app_count_web/controllers/users/api/v1/account_controller.ex:73:39 Function body is nested too deep (max depth is 2, was 3).
+[F] → lib/app_count_web/controllers/users/social_controller.ex:18:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count_web/controllers/users/social_controller.ex:29:7 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] ↗ lib/app_count_web/live/region/region_live.ex:14 `with` contains only one <- clause and an `else` branch, use a `case` instead
+[F] → lib/app_count_web/views/exports/resident_ledger_view.ex:20:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count_web/views/letters/renewal_letter_view.ex:28:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count_web/views/letters/renewal_letter_view.ex:46:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[F] → lib/app_count_web/views/letters/renewal_letter_view.ex:61:5 Cond statements should contain at least two conditions besides `true`, consider using `if` instead.
+[R] ↗ lib/decimal/operators.ex:9 Function/macro/guard names should be written in snake_case.
+[F] → lib/hebrew_date/hebrew_date.ex:63:7 Function is too complex (CC is 10, max is 9).
+[F] → lib/integrations/bluemoon/data/params.ex:4:7 Function is too complex (CC is 11, max is 9).
+[F] → lib/integrations/external_service.ex:19:7 Function is too complex (CC is 10, max is 9).
+[F] → lib/integrations/external_service.ex:110:8 Function is too complex (CC is 20, max is 9).
+[R] ↗ lib/mix/tasks/tail_logs.ex:13:15 Large numbers should be written with underscores: 16_384
+[F] → lib/mix/tasks/test_credentials.ex:26:9 Function body is nested too deep (max depth is 2, was 3).
+[R] ↗ lib/utils.ex:12:60 Large numbers should be written with underscores: 12_000
+[R] ↗ lib/utils.ex:12:81 Large numbers should be written with underscores: 12_000
+[R] ↗ test/integration/requests/users/payments_test.exs:64:30 Large numbers should be written with underscores: 10_000
+[R] ↗ test/integration/requests/users/payments_test.exs:77:43 Large numbers should be written with underscores: 10_000
+[F] ↗ test/support/properties_factory.ex:6:5 Avoid long quote blocks.
+[W] ↗ test/unit/app_count/accounting/payment_analytics_repo_test.exs:109:14 length(res) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[W] ↗ test/unit/app_count/accounting/payment_analytics_repo_test.exs:122:14 length(res) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[W] ↗ test/unit/app_count/accounting/payment_analytics_repo_test.exs:179:14 length(res) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[W] ↗ test/unit/app_count/accounts/repos/account_repo_test.exs:52:12 length(res.logins) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[R] ↗ test/unit/app_count/adapters/soft_ledger_adapter_test.exs:141:34 Large numbers should be written with underscores: 86_400
+[R] ↗ test/unit/app_count/adapters/soft_ledger_adapter_test.exs:155:37 Large numbers should be written with underscores: 86_400
+[R] ↗ test/unit/app_count/adapters/soft_ledger_adapter_test.exs:373:43 Large numbers should be written with underscores: 43_232
+[R] ↗ test/unit/app_count/admins/access_server_test.exs:111:24 Large numbers should be written with underscores: 84_848
+[R] ↗ test/unit/app_count/admins/admin_repo_test.exs:49:5 Variable names should be written in snake_case.
+[R] ↗ test/unit/app_count/admins/admin_repo_test.exs:62:5 Variable names should be written in snake_case.
+[R] ↗ test/unit/app_count/admins/admin_test.exs:127:5 Variable names should be written in snake_case.
+[R] ↗ test/unit/app_count/admins/admin_test.exs:133:5 Variable names should be written in snake_case.
+[R] ↗ test/unit/app_count/admins/admin_test.exs:135:5 Variable names should be written in snake_case.
+[R] ↗ test/unit/app_count/admins/admin_test.exs:153:5 Variable names should be written in snake_case.
+[W] ↗ test/unit/app_count/admins/alert_repo_test.exs:22:14 length(res) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[W] ↗ test/unit/app_count/admins/alert_repo_test.exs:71:14 length(res) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[R] ↗ test/unit/app_count/core/cache_test.exs:15:31 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/core/cache_test.exs:21:31 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/core/payments/payment_boundary_test.exs:242:13 Large numbers should be written with underscores: 44_444
+[R] ↗ test/unit/app_count/core/payments/payment_boundary_test.exs:257:39 Large numbers should be written with underscores: 44_444
+[R] ↗ test/unit/app_count/core/payments/payment_boundary_test.exs:334:13 Large numbers should be written with underscores: 44_444
+[R] ↗ test/unit/app_count/core/ports/soft_ledger_behaviour_test.exs:365:26 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/core/ports/soft_ledger_behaviour_test.exs:383:26 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/core/ports/soft_ledger_behaviour_test.exs:401:26 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/finance/finance_port_test.exs:120:27 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/finance/invoice_saga_test.exs:89:18 Large numbers should be written with underscores: 55_555
+[R] ↗ test/unit/app_count/finance/invoice_saga_test.exs:518:70 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count/maintenance/insight_reports/insight_report_formatter_test.exs:64:16 Large numbers should be written with underscores: 18_360
+[R] ↗ test/unit/app_count/properties/server/property_server_test.exs:173:51 Large numbers should be written with underscores: 99_999
+[R] ↗ test/unit/app_count/rewards/rewards_boundary_test.exs:73 Predicate function names should not start with 'is', and should end in a question mark.
+[W] ↗ test/unit/app_count/tasks/autopay_test.exs:47:12 length(result) == 0 is expensive. Prefer Enum.empty?/1 or list == []
+[R] ↗ test/unit/app_count_web/controllers/api/admin_controller_test.exs:190:11 Large numbers should be written with underscores: 73_482
+[R] ↗ test/unit/app_count_web/controllers/api/order_controller_test.exs:10:15 Large numbers should be written with underscores: 57_899
+[R] ↗ test/unit/app_count_web/controllers/api/order_controller_test.exs:32:20 Large numbers should be written with underscores: 40_742
+[R] ↗ test/unit/app_count_web/controllers/api/order_controller_test.exs:80:13 Large numbers should be written with underscores: 44_467
+[R] ↗ test/unit/app_count_web/controllers/api/order_controller_test.exs:90:17 Large numbers should be written with underscores: 44_467
+[R] ↗ test/unit/app_count_web/controllers/api/order_controller_test.exs:372:15 Large numbers should be written with underscores: 57_899
+[R] ↗ test/unit/app_count_web/controllers/users/api/v1/autopay_controller_test.exs:33:19 Large numbers should be written with underscores: 17_762
+[R] ↗ test/unit/app_count_web/controllers/users/api/v1/autopay_controller_test.exs:40:11 Large numbers should be written with underscores: 79_759
+[R] ↗ test/unit/app_count_web/controllers/users/api/v1/autopay_controller_test.exs:61:30 Large numbers should be written with underscores: 12_345
+[R] ↗ test/unit/app_count_web/controllers/users/api/v1/autopay_controller_test.exs:81:33 Large numbers should be written with underscores: 17_762
+[R] ↗ test/unit/app_count_web/controllers/users/reward_controller_test.exs:29:39 Large numbers should be written with underscores: 10_000
+[R] ↗ test/unit/external_api/soft_ledger_adapter_test.exs:19:42 Large numbers should be written with underscores: 86_400

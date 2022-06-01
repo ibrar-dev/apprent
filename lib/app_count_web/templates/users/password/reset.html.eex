@@ -1,0 +1,13 @@
+<h5 class="auth-form__title text-center mb-4">Enter Your New Password</h5>
+<%= form_for @conn, Routes.user_password_path(@conn, :update), [as: :reset, method: :patch], fn f -> %>
+  <%= hidden_input f, :token, value: @token %>
+  <div class="form-group">
+    <label for="email-input">Password</label>
+    <%= password_input f, :password, class: "form-control", id: "pwd-input", placeholder: "Password" %>
+  </div>
+  <div class="form-group">
+    <label for="pwd-input">Confirm Password</label>
+    <%= password_input f, :confirmation, class: "form-control", id: "pwd-input", placeholder: "Confirm Password" %>
+  </div>
+  <button type="submit" class="btn btn-pill btn-accent d-table mx-auto">Reset Password</button>
+<% end %>

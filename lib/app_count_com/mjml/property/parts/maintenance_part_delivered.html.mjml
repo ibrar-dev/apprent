@@ -1,0 +1,23 @@
+<mj-text>
+	Hello <%= @name %>
+</mj-text>
+
+<mj-text>
+	You are receiving this notification because the part, <%= @part.name %> has been received.
+</mj-text>
+
+<mj-text>
+	We will be assigning your order to a tech shortly.
+</mj-text>
+
+<mj-text>
+	There is no further action needed on your end.
+</mj-text>
+
+<mj-text>
+	We will notify you when the tech begins working on your order.
+</mj-text>
+
+<mj-text>
+	Thank You
+</mj-text>

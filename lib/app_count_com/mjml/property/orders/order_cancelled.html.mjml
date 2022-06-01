@@ -1,0 +1,15 @@
+<mj-text>
+  Hello <%= @name %>
+</mj-text>
+<mj-text>
+  Your service request #<%= @ticket %> has been cancelled.
+</mj-text>
+<mj-text>
+  The reason provided for cancellation is <%= @reason %>
+</mj-text>
+<mj-text>
+  Please feel free to reach out to the office with any questions or concerns.
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

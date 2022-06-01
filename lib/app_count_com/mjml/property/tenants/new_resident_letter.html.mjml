@@ -1,0 +1,11 @@
+<mj-text>
+ <h3>
+  Hello <%= @name %>
+ </h3>
+</mj-text>
+<mj-text>
+	You have a new letter, <%= @letter %> available for you on your resident portal.
+</mj-text>
+<mj-text>
+	Please visit your documents on the resident portal at https://residents.apprent.com or login on your mobile app to view the document.
+</mj-text>

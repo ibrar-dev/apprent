@@ -1,0 +1,120 @@
+<%= form_for with_parsed_features(@changeset), @action, fn f -> %>
+<%= if @changeset.action do %>
+<div class="alert alert-danger">
+  <p>
+    Oops, something went wrong! Please check the errors below.
+  </p>
+</div>
+<% end %>
+
+
+<div class="ml-4 mt-4">
+  <div>
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b>  <%= label f, :name %></b>
+      </div>
+      <div class="col-sm-4">
+        <%= text_input f, :name, class: "form-control" %>
+        <%= error_tag f, :name %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b>  <%= label f, :client_schema %></b>
+      </div>
+      <div class="col-sm-4">
+        <%= text_input f, :client_schema, class: "form-control"  %>
+        <%= error_tag f, :client_schema %>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b>  <%= label f, :client_modules %></b>
+      </div>
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <%= inputs_for f, :client_modules, fn p -> %>
+          <div class="d-flex align-items-center">
+            <%= hidden_input(p, :module_id, value: p.data.module_id) %>
+            <%= checkbox(p, :enabled) %>
+            <%= label(p, :enabled, Enum.find(@modules, & p.data.module_id == &1.id).name, class: "mb-0 ml-2 mr-3") %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3 mt-10 text-muted">
+        <b> Admin Info</b>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b>Name</b>
+      </div>
+      <div class="col-sm-4">
+        <%= inputs_for f, :users, fn p -> %>
+        <div class="form-group">
+          <%= text_input p, :name, class: "form-control" %>
+          <%= error_tag p, :name %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b> Username</b>
+      </div>
+      <div class="col-sm-4">
+        <%= inputs_for f, :users, fn p -> %>
+        <div class="form-group">
+
+          <%= text_input p, :username, class: "form-control" %>
+          <%= error_tag p, :username %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b> Email</b>
+      </div>
+      <div class="col-sm-4">
+        <%= inputs_for f, :users, fn p -> %>
+        <div class="form-group">
+
+          <%= text_input p, :email, class: "form-control" %>
+          <%= error_tag p, :email %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="d-flex align-items-center nowrap col-sm-3">
+        <b> Password</b>
+      </div>
+      <div class="col-sm-4">
+        <%= inputs_for f, :users, fn p -> %>
+        <div class="form-group">
+          <%= text_input p, :password, class: "form-control" %>
+          <%= error_tag p, :password %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-4">
+        <!-- <button type="button" class="btn btn-success">Save</button>
+        <button type="button" class="ml-2 btn btn-danger">Cancel</button> -->
+        <%= submit "Save", class: "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>
+        <% end %>

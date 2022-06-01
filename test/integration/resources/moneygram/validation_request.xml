@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:par="http://moneygram.com/service/partnerproxyservice_v1"
+                  xmlns:com="http://moneygram.com/common_v1" xmlns:val="http://www.moneygram.com/Validation20"
+                  xmlns:real="http://www.moneygram.com/RealTimeEP">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <real:validationRequest>
+            <real:processDateTime>2019-11-01T10:15:41.000-05:00</real:processDateTime>
+            <real:receiveAgentId>72194766</real:receiveAgentId>
+            <real:receiveCode>17842</real:receiveCode>
+            <real:receiveISOCurrency>USD</real:receiveISOCurrency>
+            <real:receiveISOCountry>USA</real:receiveISOCountry>
+            <real:receiveAccountNumber>1010123456789</real:receiveAccountNumber>
+            <real:sendISOCurrency>USD</real:sendISOCurrency>
+            <real:sendISOCountry>USA</real:sendISOCountry>
+            <real:sendFxRate>1.00000000000</real:sendFxRate>
+            <real:sendAmount>10.00</real:sendAmount>
+            <real:feeAmount>9.99</real:feeAmount>
+            <real:receiveAmount>10.00</real:receiveAmount>
+            <real:senderFirstName>Edith</real:senderFirstName>
+            <real:senderMiddleName/>
+            <real:senderLastName>Debnam</real:senderLastName>
+            <real:senderAddress1>Address</real:senderAddress1>
+            <real:senderAddress2/>
+            <real:senderCity>NY</real:senderCity>
+            <real:senderStateProvince>TX</real:senderStateProvince>
+            <real:senderCountry>USA</real:senderCountry>
+            <real:senderZipPostalCode>12345</real:senderZipPostalCode>
+            <real:senderPhoneNumber/>
+            <real:senderDateOfBirth/>
+            <real:senderPhotoIdType/>
+            <real:senderPhotoIdNumber/>
+            <real:senderPhotoIdStateProvince/>
+            <real:senderPhotoIdCountry/>
+            <real:senderLegalIdType/>
+            <real:senderLegalIdNumber/>
+            <real:receiverFirstName/>
+            <real:receiverMiddleName/>
+            <real:receiverLastName/>
+            <real:receiveAccountNumberExpStr/>
+            <real:purposeOfFunds/>
+        </real:validationRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

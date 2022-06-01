@@ -1,0 +1,15 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+    <%= if String.length(@old_date) > 0 do %>
+        This is a notice that the order for <%= @order%> for unit <%= @unit%> has been changed from <%= @old_date %> and scheduled to be worked on <%= @new_date%>.
+     <% end %>
+       <%= if String.length(@old_date) === 0 do %>
+        This is a notice that the order for <%= @order%> for unit <%= @unit%> has been scheduled to be worked on <%= @new_date%>.
+        <% end %>
+
+</mj-text>
+<mj-text>
+  Thank You
+</mj-text>

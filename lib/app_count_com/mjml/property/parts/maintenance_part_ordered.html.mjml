@@ -1,0 +1,23 @@
+<mj-text>
+	Hello <%= @name %>
+</mj-text>
+
+<mj-text>
+	You are receiving this notification because the part, <%= @part.name %> has been ordered.
+</mj-text>
+
+<mj-text>
+	Please allow up to 10 days for it to arrive.
+</mj-text>
+
+<mj-text>
+	There is no further action needed on your end.
+</mj-text>
+
+<mj-text>
+	We will notify you when the part has been delivered.
+</mj-text>
+
+<mj-text>
+	Thank You
+</mj-text>

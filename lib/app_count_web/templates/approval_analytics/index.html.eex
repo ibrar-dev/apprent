@@ -1,0 +1,4 @@
+<div id="approvals-analytics-app" data-attribute="change">
+</div>
+
+<script src="<%= Routes.static_path(@conn, "/js/approvalsAnalytics.js") %>"></script>

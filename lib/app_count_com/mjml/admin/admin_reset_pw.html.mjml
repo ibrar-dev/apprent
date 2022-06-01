@@ -1,0 +1,12 @@
+<mj-text>
+  Hello,
+</mj-text>
+<mj-text>
+  Someone has requested a link to change your password. You can do this through the link below.
+</mj-text>
+<mj-button href="<%= AppCount.namespaced_url(:administration) %>/forgot_password?token=<%= @token %>">
+  Click here to reset your password
+</mj-button>
+<mj-text>
+  The above link will only be valid for 30 minutes.
+</mj-text>

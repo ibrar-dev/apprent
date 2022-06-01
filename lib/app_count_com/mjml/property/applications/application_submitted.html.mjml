@@ -1,0 +1,34 @@
+<mj-text>Hello <%= @admin.name %></mj-text>
+
+<mj-text>
+  Great job! <%= @application_info.applicants %> has submitted a new
+  Rental Application
+  <%= if not is_nil(@application_info.floor_plan) do %>
+    for a <%= @application_info.floor_plan %>
+  <% end %>
+  at <%= @property.name %>
+</mj-text>
+
+<mj-text>
+  AppRent collected $<%= @application_info.payment.total %>. You can <a href="<%= AppCount.namespaced_url("administration") %>/payments/<%= @application_info.payment.id %>">view the payment here</a> and the breakdown can be seen below.
+</mj-text>
+
+<mj-table>
+  <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+    <th style="padding: 0 15px 0 0;">Charge Code</th>
+    <th style="padding: 0 15px;">Amount</th>
+  </tr>
+  <tr>
+    <td style="padding: 0 15px 0 0;">Application Fee</td>
+    <td style="padding: 0 15px;">$<%= @application_info.payment.application_fee %></td>
+  </tr>
+  <tr>
+    <td style="padding: 0 15px 0 0;">Admin Fee</td>
+    <td style="padding: 0 15px;">$<%= @application_info.payment.admin_fee %></td>
+  </tr>
+</mj-table>
+
+<mj-text>
+  Let's process the application and get back to them ASAP!
+  You can click <a href="<%= AppCount.namespaced_url("administration") %>/applications/<%= @application_info.id %>">here to view</a> the application.
+</mj-text>

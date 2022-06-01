@@ -1,0 +1,27 @@
+<mj-text>
+  Hello <%= @name%>,
+</mj-text>
+<mj-text>
+  We want to remind you that you have <%= @info.total %> package(s) waiting for you at the leasing office.
+  Please stop by during business hours with your pin <%= @pin %> to pick it up. If not picked up
+  it will be returned 2 weeks after the date of delivery.
+</mj-text>
+<mj-table>
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+            <th style="padding: 0 15px 0 0;">Carrier</th>
+            <th style="padding: 0 15px;">Delivery Date</th>
+          </tr>
+          <%= Enum.map @info.packages, fn(pack) -> %>
+          <tr>
+                <td>
+                  <%= pack["carrier"]%>
+                </td>
+                <td>
+                  <%= pack["inserted_at"]%>
+                </td>
+              </tr>
+          <% end %>
+        </mj-table>
+<mj-text>
+  Thank You
+</mj-text>
